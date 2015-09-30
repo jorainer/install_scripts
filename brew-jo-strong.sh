@@ -7,7 +7,7 @@ echo 'We are assuming that brew has been installed using ruby -e "$(curl -fsSL h
 read -p "Press [Enter] to start installation..."
 
 echo "Setting up repositories:\n"
-brew tap nwoolls/xgminer
+## brew tap nwoolls/xgminer
 brew tap homebrew/science
 
 ## system tools
@@ -97,11 +97,11 @@ pip install pyserial
 pip install pygments-style-solarized
 echo "\n\nDone\n\n"
 
-## other stuff:
-echo "________________________________________________________________________________"
-echo "Installing mining related things:\n"
-brew install bfgminer --HEAD
-echo "\n\nDone\n\n"
+# ## other stuff:
+# echo "________________________________________________________________________________"
+# echo "Installing mining related things:\n"
+# brew install bfgminer --HEAD
+# echo "\n\nDone\n\n"
 
 ## multimedia stuff:
 echo "________________________________________________________________________________"
@@ -116,6 +116,8 @@ echo "__________________________________________________________________________
 echo "Installing cask:\n"
 brew install caskroom/cask/brew-cask
 brew cask install osxfuse
+brew cask install firefox
+brew cask install lisanet-gimp
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
@@ -132,6 +134,7 @@ echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 echo "\nCongratulations!\n"
 echo "At last you should install MacTex from http://www.tug.org/mactex\n"
+
 
 brew linkapps
 
