@@ -111,17 +111,6 @@ brew install --HEAD mpv-player/mpv/libass-ct
 brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua mpv
 echo "\n\nDone\n\n"
 
-## cask stuff
-echo "________________________________________________________________________________"
-echo "Installing cask:\n"
-brew install caskroom/cask/brew-cask
-brew cask install osxfuse
-brew cask install firefox
-brew cask install lisanet-gimp
-echo "\n\nDone\n\n"
-echo "\-----------------------------------------------\n"
-
-
 ## packages for bioconductor/bioinfo stuff
 echo "________________________________________________________________________________"
 echo "Installing bioinfo stuff:\n"
@@ -134,6 +123,7 @@ echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 echo "\nCongratulations!\n"
 echo "At last you should install MacTex from http://www.tug.org/mactex\n"
+
 
 
 brew linkapps
