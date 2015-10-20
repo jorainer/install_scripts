@@ -21,7 +21,9 @@ brew install libxml2 libxml++
 brew install terminal-notifier
 brew install ctags gettext
 ## system tools
-brew install mc htop fping sshfs
+brew install mc 
+brew install htop fping
+brew install sshfs
 brew install unrar
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
@@ -37,6 +39,7 @@ brew install librsvg
 brew install pandoc pandoc-citeproc
 brew install cask
 brew install markdown
+brew install fping
 echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
@@ -70,9 +73,9 @@ cpanm Carp::Clan
 cpanm DBI
 cpanm DBI::DBD
 cpanm Class::DBI::mysql
-cpanm DBD::mysql
-cpanm Cairo
-cpanm Gtk2
+cpanm --force DBD::mysql
+cpanm --notest Cairo
+cpanm --notest Gtk2
 cpanm Class::Base
 cpanm Class::DBI
 cpanm Class::Errorhandler
@@ -114,9 +117,10 @@ echo "\n\nDone\n\n"
 ## packages for bioconductor/bioinfo stuff
 echo "________________________________________________________________________________"
 echo "Installing bioinfo stuff:\n"
-brew install bamtools bamutil hdf5 exonerate arpack blast bowtie2
+brew install bamtools bamutil hdf5 exonerate arpack bowtie2
 brew install netcdf sratoolkit samtools
 brew install enblend-enfuse
+## brew install blast
 ## brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
 ## not working: viennarna
 echo "\n\nDone\n\n"

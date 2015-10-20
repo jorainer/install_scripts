@@ -22,6 +22,7 @@ brew cask install lytro-desktop
 brew cask install machacha
 brew cask install transmission
 brew cask install filebot
+brew cask install kindle
 ## brew cask install macpass
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"

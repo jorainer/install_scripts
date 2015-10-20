@@ -108,6 +108,8 @@ rmarkdown
 igraph
 pheatmap
 WriteXLS
+survey
+devtools
 #################
 ## Metabolomics
 xcms
