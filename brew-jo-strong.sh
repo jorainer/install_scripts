@@ -21,7 +21,7 @@ brew install libxml2 libxml++
 brew install terminal-notifier
 brew install ctags gettext
 ## system tools
-brew install mc 
+brew install mc
 brew install htop fping
 brew install sshfs
 brew install unrar
@@ -40,6 +40,7 @@ brew install pandoc pandoc-citeproc
 brew install cask
 brew install markdown
 brew install fping
+brew install qpdf
 echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
