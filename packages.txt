@@ -63,6 +63,8 @@ DESeq2
 edgeR
 gmapR
 Sushi
+ggbio
+Gviz
 ################
 ## Machine learning and classification
 MLInterfaces
