@@ -37,6 +37,10 @@ EnsDb.Hsapiens.v75
 AnnotationHub
 hpar
 ################
+## Variants etc
+VariantAnnotation
+VariantTools
+################
 ## category and GO analysis
 GOstats
 topGO

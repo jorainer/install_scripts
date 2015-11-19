@@ -120,6 +120,7 @@ echo "__________________________________________________________________________
 echo "Installing bioinfo stuff:\n"
 brew install bamtools bamutil hdf5 exonerate arpack bowtie2
 brew install netcdf sratoolkit samtools
+brew install bedtools
 brew install enblend-enfuse
 ## brew install blast
 ## brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
