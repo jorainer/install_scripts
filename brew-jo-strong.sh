@@ -41,6 +41,8 @@ brew install cask
 brew install markdown
 brew install fping
 brew install qpdf
+brew install texinfo
+brew install texi2html
 echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
