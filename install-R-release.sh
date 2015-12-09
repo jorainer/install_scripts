@@ -63,7 +63,6 @@ arch=x86_64
 	    OBJC="clang" \
 	    F77="gfortran -arch x86_64" \
 	    FC="gfortran -arch x86_64" \
-	    --with-system-zlib \
 	    --with-blas='-framework Accelerate' \
 	    --with-lapack \
 	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
@@ -75,6 +74,7 @@ arch=x86_64
 ## old options
 ##	    --enable-R-shlib \
 ##	    --enable-BLAS-shlib \
+##	    --with-system-zlib \
 
 ##
 read -p "Press [Enter] key to start compilation..."
