@@ -130,4 +130,5 @@ Rdisop
 ## genetics, kinship etc
 gap
 kinship2
+FamAgg
 
