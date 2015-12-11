@@ -8,7 +8,7 @@ biocLite()
 cat("\nnow installing additional packages...\n")
 packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[,1]
 
-biocLite( packs )
+biocLite(packs)
 
 cat("\n\nInstalling stuff from github:\n")
 library(devtools)
@@ -17,8 +17,20 @@ install_github("jotsetung/mirtarbase-db")
 install_github("jotsetung/generalgcrma")
 install_github("jotsetung/GenomePlotR")
 
+cat("\nfinished\n")
 
-cat( "\nfinished\njust check warnings() if some packages did not install\n" )
 
+## Now we're going to check which packages should be still installed.
+instPacks <- installed.packages()
+notInst <- packs[!(packs %in% instPacks[, "Package"])]
 
+if(length(notInst) > 0){
+    cat(paste0("\n----------------------------------------\n\n", length(notInst),
+               " package(s) was/were not installed:\n"))
+    cat(paste("-", notInst, "\n"))
+    cat("\nYou might have to install them manually.")
+}else{
+    cat(paste0("\n----------------------------------------\n\n",
+               "Congratulations! All packages installed successfully!\n"))
+}
 
