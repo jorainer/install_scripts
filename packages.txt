@@ -36,6 +36,7 @@ ensembldb
 EnsDb.Hsapiens.v75
 AnnotationHub
 hpar
+OrganismDbi
 ################
 ## Variants etc
 VariantAnnotation
