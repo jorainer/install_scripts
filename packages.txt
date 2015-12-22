@@ -119,6 +119,7 @@ pheatmap
 WriteXLS
 survey
 devtools
+DT
 #################
 ## Metabolomics
 xcms
