@@ -75,13 +75,13 @@ cpanm Carp::Assert
 cpanm Carp::Clan
 cpanm DBI
 cpanm DBI::DBD
-cpanm Class::DBI::mysql
+cpanm --force Class::DBI::mysql
 cpanm --force DBD::mysql
 cpanm --notest Cairo
 cpanm --notest Gtk2
 cpanm Class::Base
 cpanm Class::DBI
-cpanm Class::Errorhandler
+##cpanm Class::Errorhandler
 cpanm Compress::Bzip2
 cpanm Exception::Class
 cpanm Getopt::Simple
