@@ -133,4 +133,7 @@ Rdisop
 gap
 kinship2
 FamAgg
+################
+## Stuff needed to compile packages on the system:
+TxDb.Hsapiens.UCSC.hg19.knownGene
 
