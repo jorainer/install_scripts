@@ -31,7 +31,8 @@ echo "__________________________________________________________________________
 echo "Cask stuff that needs user interaction:\n"
 brew cask install xquartz
 brew cask install tuxera-ntfs
-brew cask install osxfuse
+## That has to be installed manually!!!
+## brew cask install osxfuse
 brew cask install bartender
 brew cask install flux
 brew cask install hugin

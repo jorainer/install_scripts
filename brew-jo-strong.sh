@@ -43,6 +43,7 @@ brew install fping
 brew install qpdf
 brew install texinfo
 brew install texi2html
+brew install carthage
 echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
