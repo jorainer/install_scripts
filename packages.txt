@@ -139,3 +139,7 @@ TxDb.Hsapiens.UCSC.hg19.knownGene
 TxDb.Dmelanogaster.UCSC.dm3.ensGene
 BSgenome.Celegans.UCSC.ce2
 faahKO
+msdata
+RANN
+ncdf4
+
