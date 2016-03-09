@@ -120,6 +120,7 @@ WriteXLS
 survey
 devtools
 DT
+yaml
 #################
 ## Metabolomics
 xcms
