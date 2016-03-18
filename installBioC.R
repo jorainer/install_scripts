@@ -21,6 +21,8 @@ install_github("jotsetung/MirhostDb.Hsapiens.v75.v20")
 install_github("jotsetung/mirtarbase")
 install_github("jotsetung/SeqUtils")
 
+install_github("glibiseller/IPO")
+
 install_github("jimhester/covr")
 cat("\nfinished\n")
 
