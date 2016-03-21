@@ -37,6 +37,7 @@ EnsDb.Hsapiens.v75
 AnnotationHub
 hpar
 OrganismDbi
+KEGGREST
 ################
 ## Variants etc
 VariantAnnotation
