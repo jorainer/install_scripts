@@ -43,7 +43,7 @@ tar fxz R-$1.tar.gz
 
 # changing to the unpacked sources
 if [ $1 = "latest" ]; then
-    cd R-patched
+    cd R-alpha
 elif [ $1 = "beta" ]; then
     cd R-beta
 else

@@ -2,6 +2,7 @@
 source( "http://www.bioconductor.org/biocLite.R" )
 ##source( "/Volumes/jodata/mirror/biocLite.R" )
 
+##useDevel()
 biocLite()
 ## what if library(BiocInstaller) and useDevel()
 

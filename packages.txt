@@ -1,6 +1,6 @@
 ###############
 ## microarray
-ALL
+## ALL
 affy
 affxparser
 affyPLM
@@ -21,15 +21,15 @@ DEGraph
 biomaRt
 annotate
 GO.db
-hgu133plus2.db
-hgu133plus2cdf
-hgu133plus2probe
+##hgu133plus2.db
+##hgu133plus2cdf
+##hgu133plus2probe
 org.Hs.eg.db
 org.Mm.eg.db
 reactome.db
-mouse4302.db
-mouse4302cdf
-mouse4302probe
+##mouse4302.db
+##mouse4302cdf
+##mouse4302probe
 BSgenome.Hsapiens.UCSC.hg19
 mirbase.db
 ensembldb
@@ -63,7 +63,7 @@ flowUtils
 ShortRead
 chipseq
 ChIPpeakAnno
-HilbertVis
+##HilbertVis
 Rsubread
 DESeq
 DESeq2
@@ -101,15 +101,15 @@ robustbase
 ## unsorted
 RUnit
 ascii
-googleVis
+##googleVis
 RMySQL
-#symp
+##symp
 gplots
 GEOquery
 EBImage
 Rgraphviz
 Hmisc
-#GenomeGraph
+##GenomeGraph
 idiogram
 BiocStyle
 knitr
@@ -130,6 +130,8 @@ MassSpecWavelet
 metabolomics
 CAMERA
 Rdisop
+ProtGenerics
+MSnbase
 ################
 ## genetics, kinship etc
 gap
