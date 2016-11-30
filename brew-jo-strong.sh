@@ -15,7 +15,8 @@ echo "__________________________________________________________________________
 echo "Installing system tools:\n"
 ## note: have to install gcc instead of gfortran; gfortran has been added to this bottle
 ## compilers and dev tools
-brew install readline gcc ocaml glib
+brew install autoconf automake
+brew install readline gcc glib
 brew install curl wget git git-extras git-lfs svn cvs
 brew install libxml2 libxml++
 brew install terminal-notifier
