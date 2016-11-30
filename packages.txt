@@ -6,7 +6,6 @@ affxparser
 affyPLM
 gcrma
 frma
-#arrayQualityMetrics
 makecdfenv
 vsn
 geneplotter
@@ -15,21 +14,13 @@ limma
 statmod
 multtest
 DEGraph
-#maDB
 ################
 ## annotation
 biomaRt
 annotate
 GO.db
-##hgu133plus2.db
-##hgu133plus2cdf
-##hgu133plus2probe
 org.Hs.eg.db
-org.Mm.eg.db
 reactome.db
-##mouse4302.db
-##mouse4302cdf
-##mouse4302probe
 BSgenome.Hsapiens.UCSC.hg19
 mirbase.db
 ensembldb
@@ -54,18 +45,18 @@ graphite
 goseq
 ################
 ## FACS data
-flowCore
-flowViz
-flowClust
-flowUtils
+## flowCore
+## flowViz
+## flowClust
+## flowUtils
 ################
 ## HTS, RNAseq
 ShortRead
-chipseq
-ChIPpeakAnno
-##HilbertVis
+## chipseq
+## ChIPpeakAnno
+## HilbertVis
 Rsubread
-DESeq
+## DESeq
 DESeq2
 edgeR
 gmapR
@@ -99,39 +90,43 @@ scatterplot3d
 robustbase
 ################
 ## unsorted
-RUnit
 ascii
-##googleVis
 RMySQL
-##symp
 gplots
 GEOquery
 EBImage
 Rgraphviz
 Hmisc
-##GenomeGraph
 idiogram
 BiocStyle
-knitr
-rmarkdown
-##snow
+snow
 igraph
 pheatmap
 WriteXLS
 survey
-devtools
 DT
 yaml
+shiny
+shinyjs
 #################
-## Metabolomics
+## Package development
+roxygen2
+devtools
+knitr
+rmarkdown
+microbenchmark
+testthat
+RUnit
+#################
+## Metabolomics and proteomics
 xcms
-##ProMetab
 MassSpecWavelet
 metabolomics
 CAMERA
 Rdisop
 ProtGenerics
 MSnbase
+Pbase
 ################
 ## genetics, kinship etc
 gap
@@ -146,4 +141,13 @@ faahKO
 msdata
 RANN
 ncdf4
+rpx
+rols
+pRoloc
+pRolocdata
+imputeLCMD
+norm
+pryr
+BSgenome.Hsapiens.NCBI.GRCh38
+TxDb.Hsapiens.UCSC.hg38.knownGene
 

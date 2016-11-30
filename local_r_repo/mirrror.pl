@@ -75,8 +75,10 @@ if( system( "cd $basepath && rm -f biocLite.R && wget http://bioconductor.org/bi
 }
 ## add lines that point to the local CRAN and bioconductor.
 open( INSTALL, ">> $basepath/biocLite.R");
-print INSTALL "options( \"repos\"= c( CRAN=\"file://$basepath/CRAN\" ) )\n";
-print INSTALL "options( \"BioC_mirror\"=\"file://$basepath/bioconductor\" )\n";
+print INSTALL "#options(\"repos\"= c(CRAN=\"file://$basepath/CRAN\"))\n";
+print INSTALL "#options(\"BioC_mirror\"=\"file://$basepath/bioconductor\")\n";
+print INSTALL "options(\"repos\"= c(CRAN=\"file://data/shared/bioinf/mirror/CRAN/\"))\n";
+print INSTALL "options(\"BioC_mirror\"=\"file://data/shared/bioinf/mirror/bioconductor\")\n";
 close( INSTALL );
 
 

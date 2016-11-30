@@ -63,13 +63,22 @@ arch=x86_64
 	    OBJC="clang" \
 	    F77="gfortran -arch x86_64" \
 	    FC="gfortran -arch x86_64" \
+	    --enable-R-framework=no \
+	    --enable-R-shlib \
+	    --with-valgrind-instrumentation=2 \
 	    --with-blas='-framework Accelerate' \
 	    --with-lapack \
 	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
 	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
-	    --enable-R-framework=no \
-	    --enable-memory-profiling \
-	    --enable-R-shlib
+	    --enable-memory-profiling
+
+
+#	    --with-blas='-framework Accelerate' \
+#	    --with-lapack \
+#	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
+#	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
+#	    --enable-memory-profiling \
+
 
 ## old options
 ##	    --enable-R-shlib \

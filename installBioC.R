@@ -1,18 +1,25 @@
 ## installing Bioconductor packages...
-source( "http://www.bioconductor.org/biocLite.R" )
+##source( "http://www.bioconductor.org/biocLite.R" )
 ##source( "/Volumes/jodata/mirror/biocLite.R" )
-
+library(BiocInstaller)
 ##useDevel()
-biocLite()
+cat("Installing core packages\n\n")
+
+suppressMessages(
+    biocLite(ask = FALSE)
+)
 ## what if library(BiocInstaller) and useDevel()
 
-cat("\nnow installing additional packages...\n")
+cat("\n\nNow installing additional packages...\n")
 packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[,1]
 
-biocLite(packs)
+suppressMessages(
+    biocLite(packs, ask = FALSE)
+)
 
 cat("\n\nInstalling stuff from github:\n")
 library(devtools)
+cat("\njotsetung\n")
 install_github("jotsetung/unsoRted")
 ##install_github("jotsetung/mirtarbase-db")
 install_github("jotsetung/generalgcrma")
@@ -21,11 +28,16 @@ install_github("jotsetung/mirhostgenes")
 install_github("jotsetung/MirhostDb.Hsapiens.v75.v20")
 install_github("jotsetung/mirtarbase")
 install_github("jotsetung/SeqUtils")
+install_github("jotsetung/xcmsExtensions")
+install_github("jotsetung/atc")
 
+cat("\nglibiseller\n")
 install_github("glibiseller/IPO")
 
+cat("\njimhester\n")
 install_github("jimhester/covr")
-cat("\nfinished\n")
+
+cat("\n\n---- finished ---\n\n")
 
 
 ## Now we're going to check which packages should be still installed.

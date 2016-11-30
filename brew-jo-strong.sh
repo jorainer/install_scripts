@@ -16,7 +16,7 @@ echo "Installing system tools:\n"
 ## note: have to install gcc instead of gfortran; gfortran has been added to this bottle
 ## compilers and dev tools
 brew install readline gcc ocaml glib
-brew install curl wget git git-extras svn cvs
+brew install curl wget git git-extras git-lfs svn cvs
 brew install libxml2 libxml++
 brew install terminal-notifier
 brew install ctags gettext
@@ -121,7 +121,7 @@ echo "\n\nDone\n\n"
 ## packages for bioconductor/bioinfo stuff
 echo "________________________________________________________________________________"
 echo "Installing bioinfo stuff:\n"
-brew install bamtools bamutil hdf5 exonerate arpack bowtie2
+brew install bamtools bamutil hdf5 exonerate arpack
 brew install netcdf sratoolkit samtools
 brew install bedtools
 brew install enblend-enfuse
