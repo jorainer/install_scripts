@@ -30,7 +30,7 @@ if [ $1 = "latest" ]; then
     curl -O http://cran.r-project.org/src/base-prerelease/R-$1.tar.gz
 elif [ $1 = "devel" ]; then
     echo "Downloading devel version R-$1.tar.gz from ftp://ftp.stat.math.ethz.ch/Software/R/"
-    curl -O ftp://ftp.stat.math.ethz.ch/Software/R/R-$1.tar.gz
+    curl -O https://stat.ethz.ch/R/daily/R-$1.tar.gz
 else
     # download R
     echo "Downloading R-$1.tar.gz from http://cran.r-project.org/src/base/R-$mainV/R-$1.tar.gz"

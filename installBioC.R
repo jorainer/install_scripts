@@ -1,6 +1,10 @@
 ## installing Bioconductor packages...
 ##source( "http://www.bioconductor.org/biocLite.R" )
 ##source( "/Volumes/jodata/mirror/biocLite.R" )
+
+## Eventually change cran mirror:
+##options(repos = c(CRAN = "file:///Volumes/jodata/mirror/CRAN/"))
+
 library(BiocInstaller)
 ##useDevel()
 cat("Installing core packages\n\n")

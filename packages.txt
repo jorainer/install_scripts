@@ -90,7 +90,9 @@ scatterplot3d
 robustbase
 ################
 ## unsorted
+VennDiagram
 ascii
+pander
 RMySQL
 gplots
 GEOquery
@@ -108,6 +110,7 @@ DT
 yaml
 shiny
 shinyjs
+matrixStats
 #################
 ## Package development
 roxygen2
@@ -150,4 +153,23 @@ norm
 pryr
 BSgenome.Hsapiens.NCBI.GRCh38
 TxDb.Hsapiens.UCSC.hg38.knownGene
-
+rjson
+rcdk
+ontoCAT
+enviPat
+## For xcms dependent packages
+mtbls2
+PtH2O2lipids
+plsgenomics
+agricolae
+svDialogs
+biocViews
+pracma
+metaMSdata
+msPurityData
+doSNOW
+fastcluster
+sapa
+ropls
+plasFIA
+Risa
