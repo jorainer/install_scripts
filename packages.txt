@@ -120,6 +120,7 @@ rmarkdown
 microbenchmark
 testthat
 RUnit
+profvis
 #################
 ## Metabolomics and proteomics
 xcms
@@ -173,3 +174,7 @@ sapa
 ropls
 plasFIA
 Risa
+RMassBankData
+Heatplus
+gcspikelite
+
