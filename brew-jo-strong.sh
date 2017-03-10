@@ -17,10 +17,10 @@ echo "Installing system tools:\n"
 ## compilers and dev tools
 brew install autoconf automake
 brew install readline gcc glib
-brew install curl wget git git-extras git-lfs svn cvs
+brew install curl wget git git-extras git-lfs svn cvs hub
 brew install libxml2 libxml++
 brew install terminal-notifier
-brew install ctags gettext
+brew install ctags gettext udunits
 ## system tools
 brew install mc
 brew install htop fping

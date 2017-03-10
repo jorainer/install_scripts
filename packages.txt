@@ -111,10 +111,13 @@ yaml
 shiny
 shinyjs
 matrixStats
+ggforce
+ggtree
 #################
 ## Package development
 roxygen2
 devtools
+BiocCheck
 knitr
 rmarkdown
 microbenchmark

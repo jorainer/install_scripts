@@ -56,22 +56,25 @@ arch=x86_64
 ./configure SHELL='/bin/bash' \
 	    --prefix=$PREFIX \
 	    r_arch=x86_64 \
-	    --x-includes=/usr/X11/include/ \
-	    --x-libraries=/usr/X11/lib/ \
+	    --enable-R-shlib \
 	    CC="clang" \
 	    CXX="clang++" \
 	    OBJC="clang" \
 	    F77="gfortran -arch x86_64" \
 	    FC="gfortran -arch x86_64" \
+	    CPPFLAGS="-D__ACCELERATE__" \
 	    --enable-R-framework=no \
-	    --enable-R-shlib \
-	    --with-valgrind-instrumentation=2 \
-	    --with-blas='-framework Accelerate' \
-	    --with-lapack \
-	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
-	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
 	    --enable-memory-profiling
 
+#	    --with-blas='-framework Accelerate' \
+#	    --with-lapack \
+#	    --with-valgrind-instrumentation=2 \
+#	    --x-includes=/usr/X11/include/ \
+#	    --x-libraries=/usr/X11/lib/ \
+#	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
+#	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
+#	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
+#	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
 
 #	    --with-blas='-framework Accelerate' \
 #	    --with-lapack \
