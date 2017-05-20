@@ -43,7 +43,7 @@ tar fxz R-$1.tar.gz
 
 # changing to the unpacked sources
 if [ $1 = "latest" ]; then
-    cd R-alpha
+    cd R-rc
 elif [ $1 = "beta" ]; then
     cd R-beta
 else
@@ -56,7 +56,11 @@ arch=x86_64
 ./configure SHELL='/bin/bash' \
 	    --prefix=$PREFIX \
 	    r_arch=x86_64 \
+	    --x-includes=/usr/X11/include/ \
+	    --x-libraries=/usr/X11/lib/ \
 	    --enable-R-shlib \
+	    --with-blas='-framework Accelerate' \
+	    --with-lapack \
 	    CC="clang" \
 	    CXX="clang++" \
 	    OBJC="clang" \

@@ -1,22 +1,22 @@
 ###############
 ## microarray
 ## ALL
-affy
-affxparser
-affyPLM
-gcrma
-frma
-makecdfenv
+## affy
+## affxparser
+## affyPLM
+## gcrma
+## frma
+## makecdfenv
 vsn
-geneplotter
+## geneplotter
 genefilter
 limma
 statmod
 multtest
-DEGraph
+## DEGraph
 ################
 ## annotation
-biomaRt
+## biomaRt
 annotate
 GO.db
 org.Hs.eg.db
@@ -28,7 +28,9 @@ EnsDb.Hsapiens.v75
 AnnotationHub
 hpar
 OrganismDbi
-KEGGREST
+## KEGGREST
+AnnotationFilter
+## AHEnsDbs
 ################
 ## Variants etc
 VariantAnnotation
@@ -37,12 +39,12 @@ VariantFiltering
 ################
 ## category and GO analysis
 GOstats
-topGO
+## topGO
 Category
-KEGGgraph
+## KEGGgraph
 pathview
-graphite
-goseq
+## graphite
+## goseq
 ################
 ## FACS data
 ## flowCore
@@ -75,9 +77,9 @@ FD
 caret
 ################
 ## real time qPCR
-ReadqPCR
-NormqPCR
-HTqPCR
+## ReadqPCR
+## NormqPCR
+## HTqPCR
 ################
 ## linear models and regression analysis
 car
@@ -95,7 +97,7 @@ ascii
 pander
 RMySQL
 gplots
-GEOquery
+## GEOquery
 EBImage
 Rgraphviz
 Hmisc
@@ -180,4 +182,20 @@ Risa
 RMassBankData
 Heatplus
 gcspikelite
-
+## For ensembldb depdendent packages
+regioneR
+seqinr
+idr
+BSgenome.Ecoli.NCBI.20080805
+motifStack
+trackViewer
+org.Ce.eg.db
+EnsDb.Hsapiens.v79
+BSgenome.Drerio.UCSC.danRer7
+BSgenome.Celegans.UCSC.ce10
+ensemblVEP
+speedglm
+RCircos
+Homo.sapiens
+chipseq
+TxDb.Mmusculus.UCSC.mm9.knownGene

@@ -20,7 +20,7 @@ brew install readline gcc glib
 brew install curl wget git git-extras git-lfs svn cvs hub
 brew install libxml2 libxml++
 brew install terminal-notifier
-brew install ctags gettext udunits
+brew install ctags gettext udunits cmake
 ## system tools
 brew install mc
 brew install htop fping
@@ -65,7 +65,9 @@ echo "Installing Perl\n"
 curl -L http://install.perlbrew.pl | bash
 echo "source ~/perl5/perlbrew/etc/bashrc" >> ~/.profile
 source ~/.profile
-perlbrew install stable
+perlbrew install perl-5.18.2
+perlbrew switch perl-5.18.2
+## perlbrew install stable
 perlbrew install-cpanm
 cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 cpanm Config::Simple
@@ -90,7 +92,9 @@ cpanm Getopt::Simple
 cpanm IO::Stringy
 cpanm BioPerl
 cpanm Sort::Naturally
-cpanm Tk
+cpanm --force Tk
+cpanm List::MoreUtils
+cpanm Exporter::Tiny
 
 echo "\n\nDone\n\n"
 
