@@ -1,8 +1,16 @@
 ## That's the installation script for linux mint.
+echo "Installing additional repos"
+add-apt-repository ppa:ravefinity-project/ppa
+
+apt-get update
+
 echo "Installing system tools"
 apt-get -y install mc
 apt-get -y install htop
 apt-get -y install cifs-utils dosfstools mtools ntfs-3g hfsutils macutils
+apt-get -y install wicd
+apt-get -y install gkrellm gkrellm-hdplop gkrellm-ibam gkrellm-reminder gkrellm-thinkbat gkrellm-volume gkrellm-xkb gkrelltop gkrellweather gkrellxmms2
+apt-get -y install keepass2
 
 echo "Installing desktop system"
 apt-get -y install agenda.app
@@ -21,15 +29,16 @@ apt-get -y install viewpdf.app
 apt-get -y install volumecontrol.app
 apt-get -y install wmaker wmaker-data
 apt-get -y install alltray
-apt-get -y install wbar asmon wmcpuload wmifs wmmixer wmmemload wmnd wmnet
+apt-get -y install asmon wmcpuload wmifs wmmixer wmmemload wmnd wmnet
 apt-get -y install wmweather
 apt-get -y install mint-themes mint-x-icons mint-y-icons mint-y-theme
 apt-get -y install light-theme
 apt-get -y install gnome-icon-theme-* mate-themes oxygen-icon-theme
 apt-get -y install fvwm fvwm-crystal fvwm-icons
-
+apt-get -y install xterm ttf-bitstream-vera xcompmgr suckless-tools xautolock dmz-cursor-themes
 apt-get -y install syslinux-themes-linuxmint-cinnamon
 apt-get -y install cinnamon-themes
+apt-get -y install ambiance-flat-colors radiance-flat-colors vibrancy-colors vivacious-colors vivacious-colors-gtk-dark vivacious-colors-gtk-light
 
 echo "Installing development tools"
 apt-get -y install gcc
@@ -48,7 +57,15 @@ apt-get -y install perlbrew
 apt-get -y install cmake automake autotools-dev pkgconf autoconf
 apt-get -y install g++ gcj-jdk gobjc
 apt-get -y install emacs
-
+apt-get -y install openssl openvpn libssl-dev
+apt-get -y install fftw-dev libfftw3-bin libfftw3-dev
+apt-get -y install mysql-client mysql-server libmysqld-dev libmysqlclient-dev mysql-common
+apt-get -y install libudunits2-0 libudunits2-dev
+apt-get -y install openjdk-8-jdk
+apt-get -y install libgsl-dev libgsl2
+apt-get -y install scilab scilab-data scilab-include
+apt-get -y install autoconf automake libtool libharfbuzz-dev libfreetype6-dev libfontconfig1-dev libx11-dev libxrandr-dev libvdpau-dev libva-dev mesa-common-dev libegl1-mesa-dev yasm libasound2-dev libpulse-dev libuchardet-dev zlib1g-dev libfribidi-dev git libgnutls-dev libgl1-mesa-dev libsdl2-dev cmake
+apt-get -y install python-pip python-setuptools python-setuptools-git
 
 echo "Installing productivity tools"
 apt-get -y install texlive-full
@@ -64,4 +81,13 @@ apt-get -y install gimp
 apt-get -y install vlc
 apt-get -y install mplayer gnome-mplayer
 apt-get -y install kodi kodi-addons-dev kodi-data
+apt-get -y install mpv libmpv-dev
+apt-get -y install rhythmbox rhythmbox-plugins
+apt-get -y install xmms2 xmms2-plugin-all
+apt-get -y install darktable
+##apt-get -y install ffmpeg ffmpegthumbnailer libavcodec-extra libavcodec-dev
+apt-get -y install qt5-default qt5-qmake
+apt-get -y install ninja
+
+
 
