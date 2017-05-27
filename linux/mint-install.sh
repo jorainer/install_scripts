@@ -1,7 +1,7 @@
 ## That's the installation script for linux mint.
 echo "Installing additional repos"
 add-apt-repository ppa:ravefinity-project/ppa
-
+add-apt-repository ppa:nathan-renniewaldock/flux
 apt-get update
 
 echo "Installing system tools"
@@ -11,6 +11,8 @@ apt-get -y install cifs-utils dosfstools mtools ntfs-3g hfsutils macutils
 apt-get -y install wicd
 apt-get -y install gkrellm gkrellm-hdplop gkrellm-ibam gkrellm-reminder gkrellm-thinkbat gkrellm-volume gkrellm-xkb gkrelltop gkrellweather gkrellxmms2
 apt-get -y install keepass2
+apt-get -y install fluxgui
+apt-get -y install owncloud-client csync-owncloud
 
 echo "Installing desktop system"
 apt-get -y install agenda.app
@@ -66,6 +68,15 @@ apt-get -y install libgsl-dev libgsl2
 apt-get -y install scilab scilab-data scilab-include
 apt-get -y install autoconf automake libtool libharfbuzz-dev libfreetype6-dev libfontconfig1-dev libx11-dev libxrandr-dev libvdpau-dev libva-dev mesa-common-dev libegl1-mesa-dev yasm libasound2-dev libpulse-dev libuchardet-dev zlib1g-dev libfribidi-dev git libgnutls-dev libgl1-mesa-dev libsdl2-dev cmake
 apt-get -y install python-pip python-setuptools python-setuptools-git
+apt-get -y install xserver-xorg-dev x11proto-xinerama-dev libx11-xcb-dev
+apt-get -y build-dep libgl1-mesa-dri libxcb-glx0-dev
+
+echo "Installing python libs"
+pip install --upgrade setuptools
+pip install --upgrade pip
+pip install numpy
+pip install pyserial
+pip install pygments-style-solarized
 
 echo "Installing productivity tools"
 apt-get -y install texlive-full
@@ -89,5 +100,17 @@ apt-get -y install darktable
 apt-get -y install qt5-default qt5-qmake
 apt-get -y install ninja
 
+
+# apt-get -y install libconfig-simple-perl
+# apt-get -y install libarray-compare-perl
+# apt-get -y install libparallel-forkmanager-perl
+# apt-get -y install libmoosex-getopt-perl
+# apt-get -y install libcarp-always-perl libcarp-assert-perl libcarp-clan-perl
+# apt-get -y install libclass-base-perl
+# apt-get -y install libdbi-perl libdbd-mysql-perl libclass-dbi-perl libclass-dbi-mysql-perl
+# apt-get -y install libcompress-bzip2-perl libio-compress-perl libcompress-raw-zlib-perl
+# apt-get -y install libexception-class-perl libsort-naturally-perl
+# apt-get -y install libgetopt-simple-perl libio-stringy-perl
+# apt-get -y install liblist-moreutils-perl libexporter-tiny-perl
 
 
