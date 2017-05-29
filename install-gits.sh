@@ -20,6 +20,8 @@ cd ~/Projects/git
 git clone https://github.com/jotsetung/ensembldb
 git clone https://github.com/jotsetung/FamAgg
 git clone https://github.com/jotsetung/memacs
+git clone https://github.com/jotsetung/atc
+git clone https://github.com/jotsetung/install_scripts
 
 echo "sneumann stuff"
 git clone https://github.com/sneumann/xcms
@@ -27,4 +29,8 @@ git clone https://github.com/sneumann/mzR
 
 echo "lgatto etc stuff"
 git clone https://github.com/lgatto/MSnbase
+git clone https://github.com/ComputationalProteomicsUnit/Pbase
 
+echo "Bioconductor stuff"
+git clone https://github.com/Bioconductor/BiocStickers
+git cline https://github.com/Bioconductor/AnnotationFilter
