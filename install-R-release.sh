@@ -64,11 +64,12 @@ arch=x86_64
 	    CC="clang" \
 	    CXX="clang++" \
 	    OBJC="clang" \
-	    F77="gfortran -arch x86_64" \
-	    FC="gfortran -arch x86_64" \
+	    F77="/usr/local/gfortran/bin/gfortran -arch x86_64" \
+	    FC="/usr/local/gfortran/bin/gfortran -arch x86_64" \
 	    CPPFLAGS="-D__ACCELERATE__" \
 	    --enable-R-framework=no \
-	    --enable-memory-profiling
+	    --enable-memory-profiling \
+	    --disable-openmp
 
 #	    --with-blas='-framework Accelerate' \
 #	    --with-lapack \
