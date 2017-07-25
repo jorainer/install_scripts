@@ -38,8 +38,8 @@ apt-get -y install light-theme
 apt-get -y install gnome-icon-theme-* mate-themes oxygen-icon-theme
 apt-get -y install fvwm fvwm-crystal fvwm-icons
 apt-get -y install xterm ttf-bitstream-vera xcompmgr suckless-tools xautolock dmz-cursor-themes
-apt-get -y install syslinux-themes-linuxmint-cinnamon
-apt-get -y install cinnamon-themes
+# apt-get -y install syslinux-themes-linuxmint-cinnamon
+# apt-get -y install cinnamon-themes
 apt-get -y install ambiance-flat-colors radiance-flat-colors vibrancy-colors vivacious-colors vivacious-colors-gtk-dark vivacious-colors-gtk-light
 
 echo "Installing development tools"

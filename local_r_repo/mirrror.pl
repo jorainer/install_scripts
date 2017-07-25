@@ -22,7 +22,7 @@ getopts("l:r:s:h",\%option);
 
 my $switch = "bioc";
 ## define which files/folders we would like to exclude.
-my $excludes = "--exclude '**windows*' --exclude '**macosx/'";
+my $excludes = "--exclude '**windows*' --exclude '**macosx/' --exclude '*data/experiment*'";
 
 if( $option{ h } ){
 ## print help... obviously...

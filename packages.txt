@@ -126,6 +126,8 @@ microbenchmark
 testthat
 RUnit
 profvis
+lineprof
+pryr
 #################
 ## Metabolomics and proteomics
 xcms
@@ -156,7 +158,6 @@ pRoloc
 pRolocdata
 imputeLCMD
 norm
-pryr
 BSgenome.Hsapiens.NCBI.GRCh38
 TxDb.Hsapiens.UCSC.hg38.knownGene
 rjson
@@ -199,3 +200,5 @@ RCircos
 Homo.sapiens
 chipseq
 TxDb.Mmusculus.UCSC.mm9.knownGene
+rgl
+
