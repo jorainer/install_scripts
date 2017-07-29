@@ -14,9 +14,13 @@ brew tap homebrew/science
 echo "________________________________________________________________________________"
 echo "Installing system tools:\n"
 ## note: have to install gcc instead of gfortran; gfortran has been added to this bottle
+## Update: don't use the gcc/gfortran, but download gfortran from:
+## https://cran.r-project.org/bin/macosx/tools/
+## or directly from https://gcc.gnu.org/wiki/GFortranBinaries#MacOS
 ## compilers and dev tools
 brew install autoconf automake
-brew install readline gcc glib
+brew install readline glib
+## brew install gcc
 brew install curl wget git git-extras git-lfs svn cvs hub
 brew install libxml2 libxml++
 brew install terminal-notifier
