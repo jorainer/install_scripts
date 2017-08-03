@@ -22,9 +22,16 @@ git clone https://github.com/jimeh/build-emacs-for-osx
 echo "jotsetung stuff"
 mkdir -p ~/Projects/git/jotsetung/
 cd ~/Projects/git/jotsetung/
-git clone https://github.com/jotsetung/ensembldb
-git clone https://github.com/jotsetung/memacs
+git clone https://github.com/jotsetung/AHEnsDbs
+git clone https://github.com/jotsetung/BioC2016-ensembldb
+git clone https://github.com/jotsetung/EuroBioC2016-ensembldb
 git clone https://github.com/jotsetung/atc
+git clone https://github.com/jotsetung/ensembldb
+git clone https://github.com/jotsetung/flatui-emacs
+git clone https://github.com/jotsetung/gruvbox-emacs
+git clone https://github.com/jotsetung/memacs
+git clone https://github.com/jotsetung/mirhostgenes
+git clone https://github.com/jotsetung/mirtarbase
 git clone https://github.com/jotsetung/mzR
 
 mkdir -p ~/Projects/git/sneumann/
