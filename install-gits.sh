@@ -52,7 +52,7 @@ echo "Bioconductor stuff"
 mkdir -p ~/Projects/git/Bioconductor/
 cd ~/Projects/git/Bioconductor/
 git clone https://github.com/Bioconductor/BiocStickers
-git cline https://github.com/Bioconductor/AnnotationFilter
+git clone https://github.com/Bioconductor/AnnotationFilter
 
 echo "EuracBiomedicalResearch stuff"
 mkdir -p ~/Projects/git/EuracBiomedicalResearch/
