@@ -1,7 +1,6 @@
 ## Installing a lot of stuff from github.
 
 echo "installing ensembl stuff"
-if [ -d ]
 mkdir -p ~/ensembl
 mkdir -p ~/ensembl/API
 cd ~/ensembl/API
@@ -22,40 +21,40 @@ git clone https://github.com/jimeh/build-emacs-for-osx
 echo "jotsetung stuff"
 mkdir -p ~/Projects/git/jotsetung/
 cd ~/Projects/git/jotsetung/
-git clone https://github.com/jotsetung/AHEnsDbs
-git clone https://github.com/jotsetung/BioC2016-ensembldb
-git clone https://github.com/jotsetung/EuroBioC2016-ensembldb
-git clone https://github.com/jotsetung/atc
-git clone https://github.com/jotsetung/ensembldb
-git clone https://github.com/jotsetung/flatui-emacs
-git clone https://github.com/jotsetung/gruvbox-emacs
-git clone https://github.com/jotsetung/memacs
-git clone https://github.com/jotsetung/mirhostgenes
-git clone https://github.com/jotsetung/mirtarbase
-git clone https://github.com/jotsetung/mzR
+if [ ! -d AHEnsDbs ]; then git clone https://github.com/jotsetung/AHEnsDbs; fi
+if [ ! -d BioC2016-ensembldb ]; then git clone https://github.com/jotsetung/BioC2016-ensembldb; fi
+if [ ! -d EuroBioC2016-ensembldb ]; then git clone https://github.com/jotsetung/EuroBioC2016-ensembldb; fi
+if [ ! -d atc ]; then git clone https://github.com/jotsetung/atc; fi
+if [ ! -d ensembldb ]; then git clone https://github.com/jotsetung/ensembldb; fi
+if [ ! -d flatui-emacs ]; then git clone https://github.com/jotsetung/flatui-emacs; fi
+if [ ! -d gruvbox-emacs ]; then git clone https://github.com/jotsetung/gruvbox-emacs; fi
+if [ ! -d memacs ]; then git clone https://github.com/jotsetung/memacs; fi
+if [ ! -d mirhostgenes ]; then git clone https://github.com/jotsetung/mirhostgenes; fi
+if [ ! -d mirtarbase ]; then git clone https://github.com/jotsetung/mirtarbase; fi
+if [ ! -d mzR ]; then git clone https://github.com/jotsetung/mzR; fi
 
 mkdir -p ~/Projects/git/sneumann/
 cd ~/Projects/git/sneumann/
 echo "sneumann stuff"
-git clone https://github.com/sneumann/xcms
-git clone https://github.com/sneumann/mzR
+if [ ! -d xcms ]; then git clone https://github.com/sneumann/xcms; fi
+if [ ! -d mzR ]; then git clone https://github.com/sneumann/mzR; fi
 
 echo "lgatto etc stuff"
 mkdir -p ~/Projects/git/lgatto/
 cd ~/Projects/git/lgatto/
-git clone https://github.com/lgatto/MSnbase
+if [ ! -d MSnbase ]; then git clone https://github.com/lgatto/MSnbase; fi
 mkdir -p ~/Projects/git/ComputationalProteomicsUnit/
 cd ~/Projects/git/ComputationalProteomicsUnit/
-git clone https://github.com/ComputationalProteomicsUnit/Pbase
+if [ ! -d Pbase ]; then git clone https://github.com/ComputationalProteomicsUnit/Pbase; fi
 
 echo "Bioconductor stuff"
 mkdir -p ~/Projects/git/Bioconductor/
 cd ~/Projects/git/Bioconductor/
-git clone https://github.com/Bioconductor/BiocStickers
-git clone https://github.com/Bioconductor/AnnotationFilter
+if [ ! -d BiocStickers ]; then git clone https://github.com/Bioconductor/BiocStickers; fi
+if [ ! -d AnnotationFilter ]; then git clone https://github.com/Bioconductor/AnnotationFilter; fi
 
 echo "EuracBiomedicalResearch stuff"
 mkdir -p ~/Projects/git/EuracBiomedicalResearch/
 cd ~/Projects/git/EuracBiomedicalResearch/
-git clone https://github.com/EuracBiomedicalResearch/FamAgg
-git clone https://github.com/EuracBiomedicalResearch/chrisUtils
+if [ ! -d FamAgg ]; then git clone https://github.com/EuracBiomedicalResearch/FamAgg; fi
+if [ ! -d chrisUtils ]; then git clone https://github.com/EuracBiomedicalResearch/chrisUtils; fi
