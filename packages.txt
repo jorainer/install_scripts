@@ -138,6 +138,7 @@ Rdisop
 ProtGenerics
 MSnbase
 Pbase
+MetNorm
 ################
 ## genetics, kinship etc
 gap
