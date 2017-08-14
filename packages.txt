@@ -115,6 +115,7 @@ shinyjs
 matrixStats
 ggforce
 ggtree
+sinaplot
 #################
 ## Package development
 roxygen2
