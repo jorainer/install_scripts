@@ -127,7 +127,6 @@ microbenchmark
 testthat
 RUnit
 profvis
-lineprof
 pryr
 #################
 ## Metabolomics and proteomics

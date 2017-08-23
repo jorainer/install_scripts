@@ -7,6 +7,8 @@
 ## usage: e.g. install-R-release.sh 3.0.1
 # this script should be executed using sudo
 # e.g.: sudo ./install-R-release.sh 2.13.0
+# REQUIRES: gfortran: https://gcc.gnu.org/wiki/GFortranBinaries#MacOS
+
 
 string=$1
 
