@@ -41,7 +41,6 @@ install_github("glibiseller/IPO")
 cat("\njimhester\n")
 install_github("jimhester/covr")
 
-
 cat("\n\n---- finished ---\n\n")
 
 
