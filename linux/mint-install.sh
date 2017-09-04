@@ -3,6 +3,7 @@ echo "Installing additional repos"
 add-apt-repository ppa:ravefinity-project/ppa
 add-apt-repository ppa:nathan-renniewaldock/flux
 add-apt-repository ppa:stebbins/handbrake-releases
+sudo add-apt-repository ppa:ozmartian/apps
 apt-get update
 
 echo "Installing system tools"
@@ -102,6 +103,7 @@ apt-get -y install qt5-default qt5-qmake
 apt-get -y install ninja
 apt-get -y install handbrake-gtk
 apt-get -y install ffmpeg ffmpegthumbnailer ffmpegthumbs
+apt-get -y install vidcutter
 
 # apt-get -y install libconfig-simple-perl
 # apt-get -y install libarray-compare-perl
