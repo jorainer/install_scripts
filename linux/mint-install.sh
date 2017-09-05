@@ -3,7 +3,8 @@ echo "Installing additional repos"
 add-apt-repository ppa:ravefinity-project/ppa
 add-apt-repository ppa:nathan-renniewaldock/flux
 add-apt-repository ppa:stebbins/handbrake-releases
-sudo add-apt-repository ppa:ozmartian/apps
+add-apt-repository ppa:ozmartian/apps
+add-apt-repository ppa:tiheum/equinox
 apt-get update
 
 echo "Installing system tools"
@@ -43,6 +44,7 @@ apt-get -y install xterm ttf-bitstream-vera xcompmgr suckless-tools xautolock dm
 # apt-get -y install syslinux-themes-linuxmint-cinnamon
 # apt-get -y install cinnamon-themes
 apt-get -y install ambiance-flat-colors radiance-flat-colors vibrancy-colors vivacious-colors vivacious-colors-gtk-dark vivacious-colors-gtk-light
+apt-get -y install faenza-icon-theme
 
 echo "Installing development tools"
 apt-get -y install gcc

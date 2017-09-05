@@ -1,0 +1,52 @@
+* Linux Mint install
+
+Some comments, hints etc related to the installation of Linux Mint on an Lenovo
+Thinkpad X1 Yoga (1st generation) are collected in this documents.
+
+** Installation
+
+Get Linux mint from: https://www.linuxmint.com/. We focus here on the MATE
+desktop distribution.
+
+*** Create installation USB on macOS
+
++ Open disk utility program: format USB drive as FAT32 (FAT), MBR partition.
++ Convert ISO to IMG: =hdiutil convert -format UDRW -o linuxmint.img
+  linuxmint.iso=.
++ Rename the file (i.e. remove the dmg): =mv linuxmint.img.dmg linuxmint.img=.
++ List all disks to identify the USB: =diskutil list=.
++ Unmount the disk e.g. =diskutil unmountDisk /dev/disk5=.
++ Copy the img onto the USB disk: sudo dd if=linuxmint.img of=/dev/thedisk
+  bs=1m.
+
+
+*** Configuring desktops
+
+Network config: use =wicd= as a general wireless network configuration tool.
+
+**** xfce4
+
+Starting points to customize xfce4:
++  https://github.com/NicoHood/NicoHood.github.io/wiki/Xfce4-Desktop-Environment-Customization
++ https://www.lifewire.com/customize-xfce-desktop-environment-2202080,
+  specifically add =cairo-dock=.
+
+Themes: grap them at http://xfce-look.org, extract and put into =~/.theme=.
++ icon theme: https://github.com/madmaxms/iconpack-obsidian/
+
+***** =xfwm= themes
+
++ /BubbleTux/: https://www.xfce-look.org/p/1137072/
++ /Arc-Red-OSX/: https://www.xfce-look.org/p/1167460/
++ /Axiom/: https://www.xfce-look.org/p/1016679/
++ /Mint-Y-Borderless/: https://www.xfce-look.org/p/1175693/
+
+***** =gtk2= themes
+
++ /phlat/: https://github.com/sixsixfive/phlat
+
+***** icon sets
+
++ /monochrome/: https://www.xfce-look.org/p/1002558/
++ /faenza/: installed /via/ ppa.
++ /obsidian/: https://www.xfce-look.org/p/1169579/
