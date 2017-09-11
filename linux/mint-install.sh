@@ -86,6 +86,7 @@ apt-get -y install autoconf automake libtool libharfbuzz-dev libfreetype6-dev li
 apt-get -y install python-pip python-setuptools python-setuptools-git
 apt-get -y install xserver-xorg-dev x11proto-xinerama-dev libx11-xcb-dev
 apt-get -y build-dep libgl1-mesa-dri libxcb-glx0-dev
+apt-get -y install python3-pip
 
 echo "Installing python libs"
 pip install --upgrade setuptools
@@ -93,6 +94,8 @@ pip install --upgrade pip
 pip install numpy
 pip install pyserial
 pip install pygments-style-solarized
+pip3 install setuptools
+pip3 install --upgrade PyOpenGL
 
 echo "Installing productivity tools"
 apt-get -y install texlive-full
