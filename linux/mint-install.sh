@@ -5,6 +5,7 @@ add-apt-repository ppa:nathan-renniewaldock/flux
 add-apt-repository ppa:stebbins/handbrake-releases
 add-apt-repository ppa:ozmartian/apps
 add-apt-repository ppa:tiheum/equinox
+sudo add-apt-repository ppa:webupd8team/java
 apt-get update
 
 echo "Installing system tools"
@@ -41,6 +42,17 @@ apt-get -y install light-theme
 apt-get -y install gnome-icon-theme-* mate-themes oxygen-icon-theme
 apt-get -y install fvwm fvwm-crystal fvwm-icons
 apt-get -y install xterm ttf-bitstream-vera xcompmgr suckless-tools xautolock dmz-cursor-themes
+## XFCE4
+apt-get -y install xfdesktop4 xfe xfpanel-switch xfwm4 xfwm4-themes osx-arc-collection
+apt-get -y install xfconf xfce4-xkb-plugin xfce4-wmdock-plugin xfce4-wavelan-plugin
+apt-get -y install xfce4-volumed xfce4-terminal xfce4-settings xfce4-session
+apt-get -y install xfce4-sensors-plugin xfce4-quicklauncher-plugin xfce4-power-manager
+apt-get -y install xfce4-power-manager-plugins xfce4-places-plugin xfce4-panel
+apt-get -y install xfce4-netload-plugin xfce4-mpc-plugin xfce4-mount-plugin
+apt-get -y install xfce4-goodies xfce4-mailwatch-plugin xfce4-datetime-plugin
+apt-get -y install xfce4-cpugraph-plugin xfce4-battery-plugin xfce4-artwork
+apt-get -y install xfce4 wbar thunar ristretto orage alltray gtk2-engines-xfce gtk3-engines-xfce
+
 # apt-get -y install syslinux-themes-linuxmint-cinnamon
 # apt-get -y install cinnamon-themes
 apt-get -y install ambiance-flat-colors radiance-flat-colors vibrancy-colors vivacious-colors vivacious-colors-gtk-dark vivacious-colors-gtk-light
@@ -106,6 +118,7 @@ apt-get -y install ninja
 apt-get -y install handbrake-gtk
 apt-get -y install ffmpeg ffmpegthumbnailer ffmpegthumbs
 apt-get -y install vidcutter
+apt-get -y install tumbler tumbler-plugins-extra
 
 # apt-get -y install libconfig-simple-perl
 # apt-get -y install libarray-compare-perl
@@ -119,4 +132,8 @@ apt-get -y install vidcutter
 # apt-get -y install libgetopt-simple-perl libio-stringy-perl
 # apt-get -y install liblist-moreutils-perl libexporter-tiny-perl
 
-
+echo "installing filebot"
+sudo apt-get purge openjdk*
+sudo apt-get install oracle-java8-installer gdebi
+wget https://sourceforge.net/projects/filebot/files/filebot/FileBot_4.7.9/filebot_4.7.9_amd64.deb
+sudo gdebi filebot_4.7.9_amd64.deb
