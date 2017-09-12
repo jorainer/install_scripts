@@ -105,6 +105,10 @@ apt-get -y install libreoffice writer2latex
 apt-get -y install fonts-inconsolata fonts-ricty-diminished texlive-fonts-extra
 apt-get -y install biber latexmk
 apt-get -y install fonts-oxygen fonts-noto-mono fonts-jura
+## installing all xfonts - otherwise we get an error in rmarkdown complaining
+## that some fonts are missing - at some point we might try to identify which
+## fonts could be specifically installed instead of installing all of em.
+apt-get -y install xfonts*
 
 echo "Installing multimedia packages"
 apt-get -y install gimp
