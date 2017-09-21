@@ -2,7 +2,7 @@
 ## cask stuff
 echo "________________________________________________________________________________"
 echo "Installing cask:\n"
-brew install caskroom/cask/brew-cask
+## brew install caskroom/cask/brew-cask
 brew cask install firefox
 brew cask install lisanet-gimp
 brew cask install libreoffice
