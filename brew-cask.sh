@@ -22,15 +22,16 @@ brew cask install lytro-desktop
 # brew cask install machacha
 brew cask install transmission
 brew cask install filebot
-brew cask install mactex
 # brew cask install kindle
 ## brew cask install macpass
-brew cask install java
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
 echo "________________________________________________________________________________"
 echo "Cask stuff that needs user interaction:\n"
+brew cask install mactex
+brew cask install java
+brew cask install vmware-fusion
 # brew cask install xquartz
 brew cask install tuxera-ntfs
 ## That has to be installed manually!!!
