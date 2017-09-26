@@ -25,6 +25,7 @@ brew cask install filebot
 brew cask install mactex
 # brew cask install kindle
 ## brew cask install macpass
+brew cask install java
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
