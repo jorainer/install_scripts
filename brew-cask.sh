@@ -38,6 +38,7 @@ brew cask install tuxera-ntfs
 ## brew cask install osxfuse
 # brew cask install bartender
 brew cask install flux
+brew cask install hma-pro-vpn
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
