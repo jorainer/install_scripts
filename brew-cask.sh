@@ -42,6 +42,7 @@ brew cask install hma-pro-vpn
 brew cask install microsoft-office
 brew cask install skype
 brew cask install menubar-stats
+brew cask install adobe-photoshop-lightroom
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
