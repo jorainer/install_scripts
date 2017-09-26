@@ -39,6 +39,9 @@ brew cask install tuxera-ntfs
 # brew cask install bartender
 brew cask install flux
 brew cask install hma-pro-vpn
+brew cask install microsoft-office
+brew cask install skype
+brew cask install menubar-stats
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
