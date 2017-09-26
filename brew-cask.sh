@@ -32,7 +32,7 @@ echo "Cask stuff that needs user interaction:\n"
 brew cask install mactex
 brew cask install java
 brew cask install vmware-fusion
-# brew cask install xquartz
+brew cask install xquartz
 brew cask install tuxera-ntfs
 ## That has to be installed manually!!!
 ## brew cask install osxfuse
