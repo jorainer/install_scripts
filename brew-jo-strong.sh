@@ -48,6 +48,7 @@ brew install fping
 brew install qpdf
 brew install texinfo
 echo 'export PATH="/usr/local/opt/texinfo/bin:$PATH"' >> ~/.bash_profile
+brew install gnutls
 brew install texi2html
 brew install carthage
 echo "\n\nDone\n\n"
