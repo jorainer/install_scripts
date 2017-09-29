@@ -6,7 +6,7 @@ echo "Installing cask:\n"
 brew cask install firefox
 brew cask install lisanet-gimp
 brew cask install libreoffice
-# brew cask install papers
+brew cask install papers
 brew cask install skim
 # brew cask install geektool
 brew cask install vlc
@@ -43,6 +43,7 @@ brew cask install microsoft-office
 brew cask install skype
 brew cask install menubar-stats
 brew cask install adobe-photoshop-lightroom
+brew cask install owncloud
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"

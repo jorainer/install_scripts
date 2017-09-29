@@ -69,9 +69,10 @@ echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 echo "Installing Perl\n"
 curl -L http://install.perlbrew.pl | bash
-echo "source ~/perl5/perlbrew/etc/bashrc" >> ~/.profile
-source ~/.profile
-perlbrew install perl-5.18.2
+echo "source ~/perl5/perlbrew/etc/bashrc" >> ~/.bash_profile
+source ~/.bash_profile
+perlbrew install-patchperl
+perlbrew --notest install perl-5.18.2
 perlbrew switch perl-5.18.2
 ## perlbrew install stable
 perlbrew install-cpanm
