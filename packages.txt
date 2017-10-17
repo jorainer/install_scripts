@@ -116,6 +116,7 @@ matrixStats
 ggforce
 ggtree
 sinaplot
+UpSetR
 #################
 ## Package development
 roxygen2
