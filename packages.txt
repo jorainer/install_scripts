@@ -129,6 +129,8 @@ testthat
 RUnit
 profvis
 pryr
+tibble
+dbplyr
 #################
 ## Metabolomics and proteomics
 xcms
@@ -204,3 +206,7 @@ chipseq
 TxDb.Mmusculus.UCSC.mm9.knownGene
 rgl
 AnnotationHubData
+## For PeakABro
+ChemmineR
+rlist
+rinchi
