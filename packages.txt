@@ -117,6 +117,7 @@ ggforce
 ggtree
 sinaplot
 UpSetR
+beeswarm
 #################
 ## Package development
 roxygen2
