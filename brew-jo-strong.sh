@@ -9,6 +9,7 @@ read -p "Press [Enter] to start installation..."
 echo "Setting up repositories:\n"
 ## brew tap nwoolls/xgminer
 brew tap homebrew/science
+## brew tap d12frosted/emacs-plus
 
 ## system tools
 echo "________________________________________________________________________________"
@@ -30,6 +31,10 @@ brew install mc
 brew install htop fping
 brew install sshfs
 brew install unrar
+## brew install emacs-plus
+brew install imagemagick@6
+brew install --with-cocoa --with-imagemagick@6 emacs
+echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
 brew install gtk+3 gtkmm3 pango pangomm
@@ -55,7 +60,8 @@ echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
 echo "Installing databases:\n"
-brew install mysql
+brew install mysql@5.6
+echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.bash_profile
 brew install sqlite
 ## start mysql: mysql.server restart
 ## mysql_secure_installation
