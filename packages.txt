@@ -9,15 +9,15 @@
 ## makecdfenv
 vsn
 ## geneplotter
-genefilter
+## genefilter
 limma
 statmod
-multtest
+## multtest
 ## DEGraph
 ################
 ## annotation
 ## biomaRt
-annotate
+## annotate
 GO.db
 org.Hs.eg.db
 reactome.db
@@ -26,7 +26,7 @@ mirbase.db
 ensembldb
 EnsDb.Hsapiens.v75
 AnnotationHub
-hpar
+## hpar
 OrganismDbi
 ## KEGGREST
 AnnotationFilter
@@ -61,14 +61,14 @@ Rsubread
 ## DESeq
 DESeq2
 edgeR
-gmapR
-Sushi
+## gmapR
+## Sushi
 ggbio
 Gviz
 ################
 ## Machine learning and classification
 MLInterfaces
-qvalue
+## qvalue
 MCRestimate
 supclust
 cluster
@@ -93,7 +93,7 @@ robustbase
 ################
 ## unsorted
 VennDiagram
-ascii
+## ascii
 pander
 RMySQL
 gplots
@@ -101,7 +101,7 @@ gplots
 EBImage
 Rgraphviz
 Hmisc
-idiogram
+## idiogram
 BiocStyle
 snow
 igraph
@@ -170,44 +170,44 @@ rcdk
 ontoCAT
 enviPat
 ## For xcms dependent packages
-mtbls2
-PtH2O2lipids
-plsgenomics
-agricolae
-svDialogs
-biocViews
-pracma
-metaMSdata
-msPurityData
-doSNOW
-fastcluster
-sapa
-ropls
-plasFIA
-Risa
-RMassBankData
-Heatplus
-gcspikelite
+## mtbls2
+## PtH2O2lipids
+## plsgenomics
+## agricolae
+## svDialogs
+## biocViews
+## pracma
+## metaMSdata
+## msPurityData
+## doSNOW
+## fastcluster
+## sapa
+## ropls
+## plasFIA
+## Risa
+## RMassBankData
+## Heatplus
+## gcspikelite
 ## For ensembldb depdendent packages
-regioneR
-seqinr
-idr
-BSgenome.Ecoli.NCBI.20080805
-motifStack
-trackViewer
-org.Ce.eg.db
-EnsDb.Hsapiens.v79
-BSgenome.Drerio.UCSC.danRer7
-BSgenome.Celegans.UCSC.ce10
-ensemblVEP
-speedglm
-RCircos
-Homo.sapiens
-chipseq
-TxDb.Mmusculus.UCSC.mm9.knownGene
-rgl
+## regioneR
+## seqinr
+## idr
+## BSgenome.Ecoli.NCBI.20080805
+## motifStack
+## trackViewer
+## org.Ce.eg.db
+## EnsDb.Hsapiens.v79
+## BSgenome.Drerio.UCSC.danRer7
+## BSgenome.Celegans.UCSC.ce10
+## ensemblVEP
+## speedglm
+## RCircos
+## Homo.sapiens
+## chipseq
+## TxDb.Mmusculus.UCSC.mm9.knownGene
+## rgl
 AnnotationHubData
 ## For PeakABro
-ChemmineR
-rlist
-rinchi
+## ChemmineR
+## rlist
+## rinchi
