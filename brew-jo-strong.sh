@@ -56,11 +56,13 @@ echo 'export PATH="/usr/local/opt/texinfo/bin:$PATH"' >> ~/.bash_profile
 brew install gnutls
 brew install texi2html
 brew install carthage
+brew install awscli
 echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
 echo "Installing databases:\n"
 brew install mysql@5.6
+## brew link --force mysql@5.6
 echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.bash_profile
 brew install sqlite
 ## start mysql: mysql.server restart
@@ -78,8 +80,10 @@ curl -L http://install.perlbrew.pl | bash
 echo "source ~/perl5/perlbrew/etc/bashrc" >> ~/.bash_profile
 source ~/.bash_profile
 perlbrew install-patchperl
-perlbrew --notest install perl-5.18.2
-perlbrew switch perl-5.18.2
+# perlbrew --notest install perl-5.18.2
+# perlbrew switch perl-5.18.2
+perlbrew --notest install perl-5.18.0
+perlbrew switch perl-5.18.0
 ## perlbrew install stable
 perlbrew install-cpanm
 cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)

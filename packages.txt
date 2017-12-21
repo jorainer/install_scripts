@@ -169,6 +169,7 @@ rjson
 rcdk
 ontoCAT
 enviPat
+rgl
 ## For xcms dependent packages
 ## mtbls2
 ## PtH2O2lipids
