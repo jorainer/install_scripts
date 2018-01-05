@@ -110,7 +110,7 @@ apt-get -y install fonts-oxygen fonts-noto-mono fonts-jura
 ## installing all xfonts - otherwise we get an error in rmarkdown complaining
 ## that some fonts are missing - at some point we might try to identify which
 ## fonts could be specifically installed instead of installing all of em.
-apt-get -y install xfonts*
+## apt-get -y install xfonts*
 
 echo "Installing multimedia packages"
 apt-get -y install gimp
@@ -130,7 +130,7 @@ apt-get -y install ffmpeg ffmpegthumbnailer ffmpegthumbs
 ##apt-get -y install tumbler tumbler-plugins-extra not found
 
 echo "Installing themes and tweaks"
-##apt-add-repository ppa:versable/elementary-update
+apt-add-repository ppa:versable/elementary-update
 ##add-apt-repository ppa:mpstark/elementary-tweaks-daily
 ## For Loki
 add-apt-repository ppa:philip.scott/elementary-tweaks
@@ -147,6 +147,16 @@ add-apt-repository ppa:yunnxx/elementary
 apt-get update
 ##apt-get -y install elementary-transparent-theme
 ##apt-get -y install super-wingpanel
+
+echo "Installing themes and other addons"
+apt-get -y install elementary-wingautohide
+apt-get -y install elementary-set-wall
+apt-get -y install elementary-lokiflatblackpurple-theme elementary-eosmetalic-theme elementary-eosmilky-theme elementary-yosemite-theme eplaceseos eplacesblack eplacesred eplacesblue eplaceswhite
+
+echo "Installing firefox nightly"
+add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+apt-get update
+apt-get -y install firefox-trunk
 
 # apt-get -y install libconfig-simple-perl
 # apt-get -y install libarray-compare-perl
