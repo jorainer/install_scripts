@@ -170,8 +170,17 @@ apt-get -y install firefox-trunk
 # apt-get -y install libgetopt-simple-perl libio-stringy-perl
 # apt-get -y install liblist-moreutils-perl libexporter-tiny-perl
 
-# echo "installing filebot"
-# sudo apt-get purge openjdk*
-# sudo apt-get install oracle-java8-installer gdebi
-# wget https://sourceforge.net/projects/filebot/files/filebot/FileBot_4.7.9/filebot_4.7.9_amd64.deb
-# sudo gdebi filebot_4.7.9_amd64.deb
+
+echo "installing filebot"
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get purge openjdk*
+apt-get install oracle-java8-installer gdebi
+wget https://sourceforge.net/projects/filebot/files/filebot/FileBot_4.7.9/filebot_4.7.9_amd64.deb
+gdebi filebot_4.7.9_amd64.deb
+
+echo "installing plex"
+apt-add-repository ppa:plexapp/plexht
+apt-get update
+apt-get -y install plexhometheater
+
