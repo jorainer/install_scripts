@@ -1,5 +1,7 @@
+#!/bin/bash
+
 echo "installing perlbrew"
-\wget -O - https://install.perlbrew.pl | bash
+wget -O - https://install.perlbrew.pl | bash
 echo "## Added by mint-install-perl.sh" >> ~/.profile
 echo "PATH=\"~/perl5/perlbrew/bin:$PATH\"" >> ~/.profile
 echo "export PATH" >> ~/.profile
