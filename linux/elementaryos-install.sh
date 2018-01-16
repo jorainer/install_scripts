@@ -4,7 +4,7 @@ echo "Installing additional repos"
 apt install software-properties-common
 ##add-apt-repository ppa:ravefinity-project/ppa
 ##add-apt-repository ppa:nathan-renniewaldock/flux
-##add-apt-repository ppa:stebbins/handbrake-releases
+add-apt-repository ppa:stebbins/handbrake-releases
 ##add-apt-repository ppa:ozmartian/apps
 ##add-apt-repository ppa:tiheum/equinox
 ##sudo add-apt-repository ppa:webupd8team/java
