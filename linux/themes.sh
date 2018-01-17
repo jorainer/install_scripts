@@ -22,3 +22,6 @@ add-apt-repository ppa:nilarimogard/webupd8
 apt-get update
 apt-get -y install oomox
 
+## Fixing workspaces
+su jo gsettings set org.pantheon.desktop.gala.behavior dynamic-workspaces false
+su jo gsettings set org.gnome.desktop.wm.preferences num-workspaces 6

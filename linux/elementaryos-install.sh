@@ -183,4 +183,3 @@ echo "installing plex"
 apt-add-repository ppa:plexapp/plexht
 apt-get update
 apt-get -y install plexhometheater
-
