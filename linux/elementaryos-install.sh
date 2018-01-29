@@ -79,7 +79,8 @@ apt-get -y install g++ gcj-jdk gobjc
 apt-get -y install emacs
 apt-get -y install openssl openvpn libssl-dev
 apt-get -y install fftw-dev libfftw3-bin libfftw3-dev
-apt-get -y install mysql-client mysql-server libmysqld-dev libmysqlclient-dev mysql-common
+## Need mysql 5.6!
+#apt-get -y install mysql-client mysql-server libmysqld-dev libmysqlclient-dev mysql-common
 apt-get -y install libudunits2-0 libudunits2-dev
 apt-get -y install openjdk-8-jdk
 apt-get -y install libgsl-dev libgsl2
@@ -183,3 +184,9 @@ echo "installing plex"
 apt-add-repository ppa:plexapp/plexht
 apt-get update
 apt-get -y install plexhometheater
+
+echo "installing MySQL 5.6"
+apt-add repository ppa:ondrej/mysql-5.6
+apt-get update
+apt-get -y install mysql-server-5.6 mysql-client-5.6 mysql-source-5.6
+
