@@ -21,10 +21,8 @@ statmod
 GO.db
 org.Hs.eg.db
 reactome.db
-BSgenome.Hsapiens.UCSC.hg19
 mirbase.db
 ensembldb
-EnsDb.Hsapiens.v75
 AnnotationHub
 ## hpar
 OrganismDbi
@@ -165,6 +163,7 @@ imputeLCMD
 norm
 BSgenome.Hsapiens.NCBI.GRCh38
 TxDb.Hsapiens.UCSC.hg38.knownGene
+EnsDb.Hsapiens.v86
 rjson
 rcdk
 ontoCAT
