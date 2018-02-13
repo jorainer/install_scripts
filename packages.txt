@@ -116,6 +116,7 @@ ggtree
 sinaplot
 UpSetR
 beeswarm
+hexSticker
 #################
 ## Package development
 roxygen2
