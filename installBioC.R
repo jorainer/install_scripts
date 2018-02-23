@@ -32,7 +32,7 @@ install_github("jotsetung/mirhostgenes")
 install_github("jotsetung/MirhostDb.Hsapiens.v75.v20")
 install_github("jotsetung/mirtarbase")
 install_github("jotsetung/SeqUtils")
-install_github("jotsetung/xcmsExtensions")
+##install_github("jotsetung/xcmsExtensions")
 install_github("jotsetung/atc")
 
 cat("\nglibiseller\n")

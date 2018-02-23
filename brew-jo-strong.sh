@@ -22,7 +22,7 @@ echo "Installing system tools:\n"
 brew install autoconf automake
 brew install readline glib
 ## brew install gcc
-brew install curl wget git git-extras git-lfs svn cvs hub
+brew install curl wget git git-extras git-lfs svn hub
 brew install libxml2 libxml++
 brew install terminal-notifier
 brew install ctags gettext udunits cmake
@@ -33,7 +33,9 @@ brew install sshfs
 brew install unrar
 ## brew install emacs-plus
 brew install imagemagick@6
-brew install --with-cocoa --with-imagemagick@6 emacs
+##brew install emacs --HEAD --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg
+brew install emacs --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg
+brew linkapps emacs
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
@@ -41,7 +43,7 @@ brew install gtk+3 gtkmm3 pango pangomm
 brew install libpng png++ libtiff giflib
 brew install libsvg libsvg-cairo
 brew install swig jpeg
-brew install imagemagick
+## brew install imagemagick
 ## other stuff
 brew install aspell --with-lang-de --with-lang-en
 brew install valgrind expat
