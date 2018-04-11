@@ -40,7 +40,7 @@ pacman -S --noconfirm gsl
 pacman -S --noconfirm python-pip python-setuptools python-setuptools-git
 
 echo "Installing productivity tools"
-pacman -S --noconfirm texlive-bin texlive-core texlive-fontsextra texlive-science
+pacman -S --noconfirm texlive-bin texlive-core texlive-fontsextra texlive-science texlive-latexextra
 pacman -S --noconfirm biber
 pacman -S --noconfirm texinfo texi2html 
 pacman -S --noconfirm pandoc pandoc-citeproc pandoc-crossref
