@@ -20,7 +20,8 @@ pacman -S --noconfirm xdotool xsel keepass
 pacman -S --noconfirm terminator
 
 echo "Installing development tools"
-pacman -S --noconfirm gcc gcc-gfortran gcc-objc
+pacman -S --noconfirm gcc gcc-fortran gcc-objc
+pacman -S --noconfirm arpack lapack lapacke
 pacman -S --noconfirm graphviz
 pacman -S --noconfirm perl python
 pacman -S --noconfirm libxml2
