@@ -1,5 +1,90 @@
 * Installing ArchLabs
 
+** Installation
+
+To update/sync the repos: =pacman -Sy=.
+Generally, use =pacman -Ss <pkgname>= to search for a package, it is also possible
+to search using =pkgfile <file within package>=.
+
++ Setup the system using: =sudo ./archlinux-install.sh=.
++ To install additional stuff from AUR use =./archlinux-install-aur.sh=. This
+  needs user interaction and *should not* be run as su.
++ Install perl: =./mint-install-perl.sh=. To make the new perl default we could
+  either use =perlbrew list= and =perlbrew switch= to switch, or manually add the
+  perl to the =PATH=.
++ Install R: =./install-R-release.sh=.
++ Install all gits: =./install-gits.sh=.
+
++ Set up all paths and environment variables in =~/.zshrc=:
+  #+BEGIN_EXAMPLE
+    ## PERL5LIB
+    ## PATH
+    ## Alias
+    alias mc="mc --nosibshell"
+  #+END_EXAMPLE
+
+*** Emacs
+
+
+
+*** MySQL setup
+
+1) Install databases: =sudo mysql_install_db --user=mysql --basedir=/usr
+   --datadir=/var/lib/mysql=.
+2) Start database: =sudo /usr/bin/mysqld_safe &=.
+3) Set root password etc =/usr/bin/mysql_secure_installation=.
+4) Add user: =create user 'jo'@'localhost' identified by '<pass>';= and grant
+   privileges: =grant all privileges on *.* to 'jo'@'localhost';=.
+
+
+** Search/install additional stuff
+
+https://aur.archlinux.org/packages
+
 ** Customization
 
+*** General stuff
+
+
+
+*** Useful shortcuts:
+
++ Disable =C-space=: edit =~/.config/openbox/rc.xml, search for /C-space/ and
+  comment it out.
++ Add shortcut for desktop switching:
+  #+BEGIN_EXAMPLE
+    <keybind key="W-Left">
+      <action name="GoToDesktop">
+	<to>left</to>
+	<wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="GoToDesktop">
+	<to>right</to>
+	<wrap>no</wrap>
+      </action>
+    </keybind>
+  #+END_EXAMPLE
+
++ =W-1=: go to desktop 1 (same for 2...).
++ =W-f=: open file manager.
++ =W-t=: open terminal.
++ =W-W=: open program list.
++ =A-r=: resize window using arrow keys and hit enter when done.
++ =A-space=: show menu.
+
+*** Retina display/HIDPI
+
 To set HIDPI etc:
+https://www.reddit.com/r/linux/comments/6lkmoa/archlabs_50_looks_pretty_special_with_openbox_and/
+https://github.com/Dobbie03/dots
+
+** Useful commands
+
+- =pacman -Ss <pkgname>=: search for a package.
+- =pkgfile <file in package>=: search for a file within a package.
+- =pacman -S <pkgname>=: install package.
+- =pacman -Sy=: sync package databases.
+- =checkupdates=: check updates.
+- =pacman -Su=: update.
