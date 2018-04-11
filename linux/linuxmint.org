@@ -16,7 +16,7 @@ desktop distribution.
 + Rename the file (i.e. remove the dmg): =mv linuxmint.img.dmg linuxmint.img=.
 + List all disks to identify the USB: =diskutil list=.
 + Unmount the disk e.g. =diskutil unmountDisk /dev/disk5=.
-+ Copy the img onto the USB disk: sudo dd if=linuxmint.img of=/dev/thedisk
++ Copy the img onto the USB disk: sudo dd if=linuxmint.dmg of=/dev/thedisk
   bs=1m.
 
 

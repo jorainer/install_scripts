@@ -1,5 +1,8 @@
 (package-initialize)
 
+(menu-bar-mode -1)
+(tool-bar-mide -1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; Setting the font
@@ -7,9 +10,9 @@
 ;; These fonts have to be installed manually! (M-x describe-font)
 
 ;; inconsolata.
-;; (set-default-font "Inconsolata")
-;; (add-to-list 'default-frame-alist '(font . "Inconsolata-13"))
-;; (set-face-attribute 'default t :font "Inconsolata-13")
+(set-default-font "Inconsolata")
+(add-to-list 'default-frame-alist '(font . "Inconsolata-13"))
+(set-face-attribute 'default t :font "Inconsolata-13")
 ;; (set-default-font "-*-Inconsolata-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1")
 ;; (set-face-attribute 'default nil :font "-*-Inconsolata-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1")
 ;(set-face-attribute 'default nil :font "-*-Inconsolata-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
