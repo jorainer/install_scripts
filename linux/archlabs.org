@@ -1,0 +1,5 @@
+* Installing ArchLabs
+
+** Customization
+
+To set HIDPI etc:
