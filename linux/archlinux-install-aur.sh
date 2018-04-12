@@ -21,3 +21,10 @@ git clone https://aur.archlinux.org/filebot47.git
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/filebot47.tar.gz
 cd filebot47
 makepkg -sic
+
+echo "udunits"
+cd ~/builds
+git clone https://aur.archlinux.org/udunits.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/udunits.tar.gz
+cd udunits
+makepkg -sic
