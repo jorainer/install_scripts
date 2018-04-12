@@ -20,11 +20,13 @@ to search using =pkgfile <file within package>=.
     ## PERL5LIB
     ## PATH
     ## Alias
-    alias mc="mc --nosibshell"
+    alias mc="mc --nosubshell"
   #+END_EXAMPLE
 
 *** Emacs
 
+Install settings using /https://github.com/jotsetung/memacs/. After that, copy the
+/linux.emacs/ file to the home dir and all should be fine.
 
 
 *** MySQL setup
