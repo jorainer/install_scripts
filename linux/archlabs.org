@@ -77,13 +77,13 @@ To increase the size of the =/tmp= directory: edit =/etc/fstab=:
   comment it out.
 + Add shortcut for desktop switching:
   #+BEGIN_EXAMPLE
-    <keybind key="W-Left">
+    <keybind key="W-A-Left">
       <action name="GoToDesktop">
 	<to>left</to>
 	<wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="W-A-Right">
       <action name="GoToDesktop">
 	<to>right</to>
 	<wrap>no</wrap>
@@ -95,6 +95,9 @@ To increase the size of the =/tmp= directory: edit =/etc/fstab=:
 + =W-f=: open file manager.
 + =W-t=: open terminal.
 + =W-W=: open program list.
++ =W-space=: open menu.
++ =W+Left=: left maximize.
++ =W+Right=: right maximize.
 + =A-r=: resize window using arrow keys and hit enter when done.
 + =A-space=: show menu.
 
