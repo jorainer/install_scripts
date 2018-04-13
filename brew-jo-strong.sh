@@ -11,6 +11,29 @@ echo "Setting up repositories:\n"
 brew tap homebrew/science
 ## brew tap d12frosted/emacs-plus
 
+echo "________________________________________________________________________________"
+echo "Installing and configuring zsh:\n"
+brew install zsh zsh-completions
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+ln -s "$HOME/.zprezto/runcoms/zlogin" "$HOME/.zlogin" 
+ln -s "$HOME/.zprezto/runcoms/zlogout" "$HOME/.zlogout"
+ln -s "$HOME/.zprezto/runcoms/zpreztorc" "$HOME/.zpreztorc"
+ln -s "$HOME/.zprezto/runcoms/zprofile" "$HOME/.zprofile"
+ln -s "$HOME/.zprezto/runcoms/zshenv" "$HOME/.zshenv"
+ln -s "$HOME/.zprezto/runcoms/zshrc" "$HOME/.zshrc"
+## General stuff to the zsh:
+echo "export CLICOLOR=1" >> "$HOME/.zshrc"
+echo "export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx" >> "$HOME/.zshrc"
+echo "export LC_CTYPE=en_US.UTF-8" >> "$HOME/.zshrc"
+echo "export LC_ALL=en_US.UTF-8" >> "$HOME/.zshrc"
+echo "export tz=CET" >> "$HOME/.zshrc"
+echo "export TZ=CET" >> "$HOME/.zshrc"
+echo "alias R='R --no-save'" >> "$HOME/.zshrc"
+
+
+# git clone https://github.com/seebi/dircolors-solarized "${ZDOTDIR:-$HOME}/.zprezto/contrib/dircolors-solarized/"
+# echo "eval \`dircolors ~/.zprezto/contrib/dircolors-solarized/dircolors.256dark\`" >> "$HOME/.zshrc"
+
 ## system tools
 echo "________________________________________________________________________________"
 echo "Installing system tools:\n"
@@ -37,6 +60,7 @@ brew install imagemagick@6
 brew install emacs --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg
 brew linkapps emacs
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
 brew install gtk+3 gtkmm3 pango pangomm
@@ -55,6 +79,7 @@ brew install fping
 brew install qpdf
 brew install texinfo
 echo 'export PATH="/usr/local/opt/texinfo/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/texinfo/bin:$PATH"' >> ~/.zshrc
 brew install gnutls
 brew install texi2html
 brew install carthage
@@ -66,6 +91,7 @@ echo "Installing databases:\n"
 brew install mysql@5.6
 ## brew link --force mysql@5.6
 echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.zshrc
 brew install sqlite
 ## start mysql: mysql.server restart
 ## mysql_secure_installation
@@ -80,6 +106,7 @@ echo "__________________________________________________________________________
 echo "Installing Perl\n"
 curl -L http://install.perlbrew.pl | bash
 echo "source ~/perl5/perlbrew/etc/bashrc" >> ~/.bash_profile
+echo "source ~/perl5/perlbrew/etc/bashrc" >> ~/.zshrc
 source ~/.bash_profile
 perlbrew install-patchperl
 # perlbrew --notest install perl-5.18.2
@@ -157,9 +184,10 @@ brew install enblend-enfuse
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 echo "\nCongratulations!\n"
-echo "At last you should install MacTex from http://www.tug.org/mactex\n"
 
-
+echo "\n\n -- you might also want to change the default shell to zsh:\n"
+echo " 1) Add /usr/local/bin/zsh to /etc/shells"
+echo " 2) change the shell with chsh -s /usr/local/bin/zsh"
 
 brew linkapps
 

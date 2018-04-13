@@ -58,3 +58,7 @@ mkdir -p ~/Projects/git/EuracBiomedicalResearch/
 cd ~/Projects/git/EuracBiomedicalResearch/
 if [ ! -d FamAgg ]; then git clone https://github.com/EuracBiomedicalResearch/FamAgg; fi
 if [ ! -d chrisUtils ]; then git clone https://github.com/EuracBiomedicalResearch/chrisUtils; fi
+
+echo "various stuff"
+cd ~/Projects/git/
+git clone https://github.com/powerline/fonts
