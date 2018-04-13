@@ -9,6 +9,7 @@ to search using =pkgfile <file within package>=.
 + Setup the system using: =sudo ./archlinux-install.sh=.
 + To install additional stuff from AUR use =./archlinux-install-aur.sh=. This
   needs user interaction and *should not* be run as su.
++ Set up the zsh: =./zsh-config.sh=.
 + Install perl: =./arch-install-perl.sh=. After installation finished exit the
   shell so the installation completes (somehow gets stuck). To make the new perl
   default use =perlbrew list= and =perlbrew switch= to switch.
