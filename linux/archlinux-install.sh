@@ -18,6 +18,7 @@ pacman -S --noconfirm gkrellm
 pacman -S --noconfirm owncloud-client
 pacman -S --noconfirm xdotool xsel keepass
 pacman -S --noconfirm terminator
+pacman -S --noconfirm redshift
 
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc

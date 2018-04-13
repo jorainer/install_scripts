@@ -104,7 +104,12 @@ To set HIDPI etc:
 https://www.reddit.com/r/linux/comments/6lkmoa/archlabs_50_looks_pretty_special_with_openbox_and/
 https://github.com/Dobbie03/dots
 
-1) =.Xresources=: edit that with settings from 
+1) =.Xresources=: edit that with settings from Dobbie03. Use DPI of 160.
+2) =./config/polybar/master.conf=: set =height= to 50 and increase the font sizes
+   (e.g. 20).
+3) Go to settings, appearance and edit /Custom DPI setting/.
+4) Increase font size in =.config/jgmenu/jgmenurc=.
+5) Edit =geometry= in =.config/termite/config= (e.g. to 1400x600).
 
 ** Useful commands
 
