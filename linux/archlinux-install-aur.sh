@@ -29,3 +29,9 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/udunits.tar.gz
 cd udunits
 makepkg -sic
 
+echo "mediathek"
+cd ~/builds
+git clone https://aur.archlinux.org/mediathek.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mediathek.tar.gz
+cd mediathek
+makepkg -sic
