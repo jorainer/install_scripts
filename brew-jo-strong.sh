@@ -22,6 +22,7 @@ ln -s "$HOME/.zprezto/runcoms/zprofile" "$HOME/.zprofile"
 ln -s "$HOME/.zprezto/runcoms/zshenv" "$HOME/.zshenv"
 ln -s "$HOME/.zprezto/runcoms/zshrc" "$HOME/.zshrc"
 ## General stuff to the zsh:
+echo "export PATH=$HOME/bin:$PATH" >> "$HOME/.zshrc"
 echo "export CLICOLOR=1" >> "$HOME/.zshrc"
 echo "export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx" >> "$HOME/.zshrc"
 echo "export LC_CTYPE=en_US.UTF-8" >> "$HOME/.zshrc"

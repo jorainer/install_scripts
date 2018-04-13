@@ -42,13 +42,33 @@ https://aur.archlinux.org/packages
 
 ** Customization
 
+*** Zsh
+
+Presto modules, edit =.zpreztorc=:
+#+BEGIN_EXAMPLE
+  # Set the Prezto modules to load (browse modules).
+  # The order matters.
+  zstyle ':prezto:load' pmodule \
+    'environment' \
+    'terminal' \
+    'editor' \
+    'history' \
+    'directory' \
+    'spectrum' \
+    'utility' \
+    'completion' \
+    'git' \
+    'syntax-highlighting' \
+    'prompt'
+#+END_EXAMPLE
+
+
 *** General stuff
 
 To increase the size of the =/tmp= directory: edit =/etc/fstab=:
 #+BEGIN_EXAMPLE
   tmpfs	/tmp	tmpfs	rw,nodev,nosuid,size=4G	0 0
 #+END_EXAMPLE
-
 
 *** Useful shortcuts:
 
@@ -82,6 +102,8 @@ To increase the size of the =/tmp= directory: edit =/etc/fstab=:
 To set HIDPI etc:
 https://www.reddit.com/r/linux/comments/6lkmoa/archlabs_50_looks_pretty_special_with_openbox_and/
 https://github.com/Dobbie03/dots
+
+1) =.Xresources=: edit that with settings from 
 
 ** Useful commands
 
