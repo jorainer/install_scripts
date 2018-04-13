@@ -12,6 +12,8 @@ git clone https://github.com/Ensembl/ensembl-compara.git
 git clone https://github.com/Ensembl/ensembl-io.git
 echo "PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:$PERL5LIB" >> ~/.bash_profile
 echo "export PERL5LIB" >> ~/.bash_profile
+echo "PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:$PERL5LIB" >> ~/.zshrc
+echo "export PERL5LIB" >> ~/.zshrc
 
 echo "Emacs for OS X"
 mkdir -p ~/Projects/git/
