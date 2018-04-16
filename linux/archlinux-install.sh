@@ -19,6 +19,7 @@ pacman -S --noconfirm owncloud-client
 pacman -S --noconfirm xdotool xsel keepass
 pacman -S --noconfirm terminator
 pacman -S --noconfirm redshift
+pacman -S --noconfirm fping
 
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc
