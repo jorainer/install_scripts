@@ -54,4 +54,4 @@ pacman -S --noconfirm vlc mpv
 pacman -S --noconfirm ffmpeg ffmpegthumbnailer
 pacman -S --noconfirm ario xmms2
 pacman -S --noconfirm handbrake
-
+pacman -S --noconfirm transmission-gtk
