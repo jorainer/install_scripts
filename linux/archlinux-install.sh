@@ -37,7 +37,7 @@ pacman -S --noconfirm pkg-config cmake automake autoconf
 pacman -S --noconfirm emacs
 pacman -S --noconfirm openvpn openssl
 pacman -S --noconfirm fftw units
-pacman -S --noconfirm jdk10-openjdk java-openjfx
+pacman -S --noconfirm jdk10-openjdk jdk8-openjdk java-openjfx
 pacman -S --noconfirm gsl
 pacman -S --noconfirm python-pip python-setuptools python-setuptools-git
 
@@ -56,3 +56,6 @@ pacman -S --noconfirm ffmpeg ffmpegthumbnailer
 pacman -S --noconfirm ario xmms2
 pacman -S --noconfirm handbrake
 pacman -S --noconfirm transmission-gtk
+
+echo "Switching to JDK8"
+archlinux-java java-8-openjdk
