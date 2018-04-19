@@ -64,3 +64,4 @@ if [ ! -d chrisUtils ]; then git clone https://github.com/EuracBiomedicalResearc
 echo "various stuff"
 cd ~/Projects/git/
 git clone https://github.com/powerline/fonts
+git clone https://github.com/DrDonk/unlocker

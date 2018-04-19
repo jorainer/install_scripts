@@ -36,6 +36,10 @@ Install settings using /https://github.com/jotsetung/memacs/. After that, copy t
 4) Add user: =create user 'jo'@'localhost' identified by '<pass>';= and grant
    privileges: =grant all privileges on *.* to 'jo'@'localhost';=.
 
+
+*** VMware
+
+
 ** Search/install additional stuff
 
 https://aur.archlinux.org/packages
