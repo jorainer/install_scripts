@@ -35,3 +35,17 @@ git clone https://aur.archlinux.org/mediathek.git
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mediathek.tar.gz
 cd mediathek
 makepkg -sic
+
+echo "requirements for vmware"
+cd ~/builds
+git clone https://aur.archlinux.org/ncurses5-compat-libs
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/ncurses5-compat-libs.tar.gz
+cd ncurses5-compat-libs
+makepkg -sic
+
+echo "vmware"
+cd ~/builds
+git clone https://aur.archlinux.org/vmware-workstation.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/vmware-workstation.tar.gz
+cd vmware-workstation
+makepkg -sic
