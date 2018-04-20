@@ -51,6 +51,17 @@ To enable the vmware services (at boot) we have to do:
 
 To just start them use =start= instead of =enable=.
 
+To create a new macOS virtual machine:
+- create the virtual machine in macOS (or in linux, if the installer app is
+  converted to an iso).
+- copy it over to linux.
+- edit the =vmx= file by adding =smc.version = "0"=.
+- Increase the disk size inside macOS using: =sudo diskutil resizeVolume / R=.
+- Install VMWare tools in the virtual machine: attach the iso image that can be
+  found at =/usr/lib/vmware/isoimages= to the virtual machine (=darwin.iso= for
+  macOS). These tools are updated with the =lnx-update-tools.sh= script of the
+  =unlocker= repo. Eventually the tools have to be installed twice.
+
 ** Search/install additional stuff
 
 https://aur.archlinux.org/packages
