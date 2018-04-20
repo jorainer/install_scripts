@@ -41,6 +41,7 @@ pacman -S --noconfirm jdk10-openjdk jdk8-openjdk java-openjfx
 pacman -S --noconfirm gsl
 pacman -S --noconfirm python-pip python-setuptools python-setuptools-git
 pacman -S --noconfirm python2-six
+pacman -S --noconfirm linux-headers
 
 echo "Installing productivity tools"
 pacman -S --noconfirm texlive-bin texlive-core texlive-fontsextra texlive-science texlive-latexextra

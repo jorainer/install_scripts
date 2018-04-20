@@ -39,6 +39,17 @@ Install settings using /https://github.com/jotsetung/memacs/. After that, copy t
 
 *** VMware
 
+We will need the =unlocker= tool from DrDonk (cloned from github). Run
+=lnx-install.sh= with =sudo= to patch vmware.
+
+To enable the vmware services (at boot) we have to do:
+
+#+BEGIN_EXAMPLE
+  sudo systemctl enable vmware-networks.service
+  sudo systemctl enable vmware-usbarbitrator.service
+#+END_EXAMPLE
+
+To just start them use =start= instead of =enable=.
 
 ** Search/install additional stuff
 
