@@ -56,3 +56,10 @@ git clone https://aur.archlinux.org/mailspring.git
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mailspring.tar.gz
 cd mailspring
 makepkg -sic
+
+echo "ecryptfs"
+cd ~/builds
+git clone https://aur.archlinux.org/ecryptfs-simple.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/ecryptfs-simple.tar.gz
+cd ecryptfs-simple
+makepkg -sic

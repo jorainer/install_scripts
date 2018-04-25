@@ -66,7 +66,7 @@ To create a new macOS virtual machine:
 
 https://aur.archlinux.org/packages
 
-** Customization
+** Customization and setup
 
 *** Zsh
 
@@ -87,7 +87,6 @@ Presto modules, edit =.zpreztorc=:
     'syntax-highlighting' \
     'prompt'
 #+END_EXAMPLE
-
 
 *** General stuff
 
@@ -138,6 +137,19 @@ https://github.com/Dobbie03/dots
 3) Go to settings, appearance and edit /Custom DPI setting/.
 4) Increase font size in =.config/jgmenu/jgmenurc=.
 5) Edit =geometry= in =.config/termite/config= (e.g. to 1400x600).
+
+*** Encrypted folders
+
+Folders can be encrypted using =ecryptfs=. To set-up a folder for encryption use
+for example:
+
+#+BEGIN_EXAMPLE
+  sudo mount -t ecryptfs /home/jo/crypt/EURACrypt2018 /home/jo/crypt/EURACrypt2018
+#+END_EXAMPLE
+
+Files can then be copied into the folder and once it is unmounted everything
+(except filenames) is encrypted. Note that info on encryption is stored in
+root's home!
 
 ** Useful commands
 
