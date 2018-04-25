@@ -63,3 +63,10 @@ git clone https://aur.archlinux.org/ecryptfs-simple.git
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/ecryptfs-simple.tar.gz
 cd ecryptfs-simple
 makepkg -sic
+
+echo "skypeforlinux"
+cd ~/builds
+git clone https://aur.archlinux.org/skypeforlinux-stable-bin.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/skypeforlinux-stable-bin.tar.gz
+cd skypeforlinux-stable-bin
+makepkg -sic
