@@ -58,7 +58,7 @@ pacman -S --noconfirm ffmpeg ffmpegthumbnailer
 pacman -S --noconfirm ario xmms2
 pacman -S --noconfirm handbrake
 pacman -S --noconfirm transmission-gtk
-pacman -S --noconfirm digikam
+pacman -S --noconfirm digikam hugin kipi-plugins
 
 echo "Switching to JDK8"
 archlinux-java java-8-openjdk
