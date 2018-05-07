@@ -70,3 +70,10 @@ git clone https://aur.archlinux.org/skypeforlinux-stable-bin.git
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/skypeforlinux-stable-bin.tar.gz
 cd skypeforlinux-stable-bin
 makepkg -sic
+
+echo "dropbox"
+cd ~/builds
+git clone https://aur.archlinux.org/dropbox.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/dropbox.tar.gz
+cd dropbox
+makepkg -sic
