@@ -1,99 +1,141 @@
-## modified script form Daniel,
-## changes:
-## installs it into the user's home/R directory...
-## no framework
-## with-cairo
-## enable R-shlib
-## usage: e.g. install-R-release.sh 3.0.1
-# this script should be executed using sudo
+#!/bin/bash
+
+# Modified script from Daniel, and from Jo, and _X.
+# Changes:
+#   - Installs it into the user's home/R directory...
+#     no framework, with-cairo, enable R-shlib
+#   - Don't download if tarball is already in cwd.
+#   - Check for existing Makevars file and warn if present.
+#   - Usage file.
+#   - Options -h and --help.
+#   - Paths are white space-safe.
+#   - Use of variables instead of direct command line argument nr.
+# usage: e.g. install-R-release.sh 3.0.1
+
+# Execute it with sudo when installing to the system directories.
 # e.g.: sudo ./install-R-release.sh 2.13.0
-# REQUIRES: gfortran: https://gcc.gnu.org/wiki/GFortranBinaries#MacOS
+
+# Example:
+# $ install-R-release.sh $HOME/progs/R/2017-12-21 devel
+
+# _X setup. Compilers as recommended from the R-project website:
+# https://cran.r-project.org/bin/macosx/tools/
+# Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
+FORTRAN=/usr/local/gfortran/bin/gfortran
+CLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang
+CXXLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang++
+CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include"
+LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib"
 
 
-string=$1
+# Break on error.
+set -e
 
-## if a second argument is specified, this is used as prefix...
-if [ -n "$2" ]; then
-    PREFIX="$2"
-else
-    PREFIX="/Users/jo/R/$1"
+function usage ()
+{
+   bn=$(basename $0)
+   cat <<EOF
+Usage: $bn version prefix
+Install from source a certain version of R.
+Options:
+  version   R version to install. Any official R version such as R-3.4.2.
+            Instead of a version string, any of the following possible
+            keywords can be supplied:
+              latest, latest official R version;
+              devel, nightly R source tarball.
+  prefix    [optional] Directory prefix for overall installation. This
+            directory will be either created or deleted upon confirmation.
+            It needs to be an absolute path.
+EOF
+}
+
+# Check number of parameters.
+if [ $# != 1 -a $# != 2 ]; then
+    usage
+    exit 1
 fi
 
-echo "Fetching R version $1 and installing it to $PREFIX ."
-
-# check imput
-arr=(${string//./ })
-
-mainV=${arr[0]}
-## PREFIX="/Users/jo/R/$1"
-
-if [ $1 = "latest" ]; then
-    echo "Downloading devel version R-$1.tar.gz from http://cran.r-project.org/src/base-prerelease/R-$1.tar.gz"
-    curl -O http://cran.r-project.org/src/base-prerelease/R-$1.tar.gz
-elif [ $1 = "devel" ]; then
-    echo "Downloading devel version R-$1.tar.gz from ftp://ftp.stat.math.ethz.ch/Software/R/"
-    curl -O https://stat.ethz.ch/R/daily/R-$1.tar.gz
-else
-    # download R
-    echo "Downloading R-$1.tar.gz from http://cran.r-project.org/src/base/R-$mainV/R-$1.tar.gz"
-    curl -O http://cran.r-project.org/src/base/R-$mainV/R-$1.tar.gz
+# See if we are asking for help.
+if [ $1 = "-h" -o $1 = "--help" ]; then
+   usage
+   exit 0
 fi
 
-# unpacking R source
-echo "Unpacking R-$1.tar.gz"
-tar fxz R-$1.tar.gz
+# What version do we want to download?
+versionR=$1
+
+# If a second argument is specified, this is used as prefix, otherwise
+# we install to $HOME/R
+[ -n "$2" ] && PREFIX="$2" || PREFIX="$HOME/R/$versionR"
+
+if ! grep -E '^[[:space:]]*\/' <<<"$PREFIX" >/dev/null ; then
+    echo "prefix=\"$PREFIX\" needs to be an absolute path." >&2
+    exit 1
+fi
+
+# Possible extension: loop over all possible files, which can be found in the
+# source code of /path/to/R/lib/R/bin/config.
+makevarsfile="$HOME/.R/Makevars"
+if [ -f "$makevarsfile" ] ; then
+    echo "Detected file \"$makevarsfile\". This can potentially override settings that"
+    echo "have been defined in this script, e.g. CC, CXX, FC, etc. It contains the"
+    echo "following lines:"
+    cat $makevarsfile
+    read -p "Do you want to continue? [y/N] " cont
+    [ x$cont != x"y" ] && exit 0
+fi
+
+echo "Retrieving R version \"$versionR\" and installing it to \"$PREFIX\"."
+
+# download R
+rtarball="R-$versionR.tar.gz"
+if [ $versionR = "latest" ]; then
+    echo "Downloading devel version $rtarball from http://cran.r-project.org/src/base-prerelease/"
+    test -f $rtarball || curl -O http://cran.r-project.org/src/base-prerelease/$rtarball
+elif [ $versionR = "devel" ]; then
+    echo "Downloading devel version $rtarball from ftp://ftp.stat.math.ethz.ch/Software/R/"
+    test -f $rtarball || curl -O https://stat.ethz.ch/R/daily/$rtarball
+else
+    arr=(${versionR//./ })
+    mainV=${arr[0]}
+    echo "Downloading $rtarball from http://cran.r-project.org/src/base/R-$mainV/"
+    test -f $rtarball || curl -O http://cran.r-project.org/src/base/R-$mainV/$rtarball
+fi
+
+# unpack R source
+echo "Unpacking $rtarball..."
+if ! tar fxz $rtarball ; then
+    echo "Problems unpacking the tarball. Correct version?" >&2
+    exit 1
+fi
 
 # changing to the unpacked sources
-if [ $1 = "latest" ]; then
+if [ $versionR = "latest" ]; then
     cd R-rc
-elif [ $1 = "beta" ]; then
+elif [ $versionR = "beta" ]; then
     cd R-beta
 else
-    cd R-$1
+    cd R-$versionR
 fi
 
 # Configure installation to 64 bit using x11
-arch=x86_64
-## using now on Mac clang and clang++ instead of gcc and g++
 ./configure SHELL='/bin/bash' \
-	    --prefix=$PREFIX \
-	    r_arch=x86_64 \
-	    --x-includes=/usr/X11/include/ \
-	    --x-libraries=/usr/X11/lib/ \
-	    --enable-R-shlib \
-	    --with-blas='-framework Accelerate' \
-	    --with-lapack \
-	    CC="clang" \
-	    CXX="clang++" \
-	    OBJC="clang" \
-	    F77="/usr/local/gfortran/bin/gfortran -arch x86_64" \
-	    FC="/usr/local/gfortran/bin/gfortran -arch x86_64" \
-	    CPPFLAGS="-D__ACCELERATE__" \
-	    --enable-R-framework=no \
-	    --enable-memory-profiling \
-	    --disable-openmp
-
-#	    --with-blas='-framework Accelerate' \
-#	    --with-lapack \
-#	    --with-valgrind-instrumentation=2 \
-#	    --x-includes=/usr/X11/include/ \
-#	    --x-libraries=/usr/X11/lib/ \
-#	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
-#	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
-#	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
-#	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
-
-#	    --with-blas='-framework Accelerate' \
-#	    --with-lapack \
-#	    CPPFLAGS="-D__ACCELERATE__ -I/usr/local/opt/sqlite/include" \
-#	    LDFLAGS="-L/usr/local/opt/sqlite/lib" \
-#	    --enable-memory-profiling \
-
-
-## old options
-##	    --enable-R-shlib \
-##	    --enable-BLAS-shlib \
-##	    --with-system-zlib \
+    --prefix="$PREFIX" \
+    --x-includes=/usr/X11/include/ \
+    --x-libraries=/usr/X11/lib/ \
+    --enable-R-shlib \
+    --with-blas='-framework Accelerate' \
+    --with-lapack \
+    CC="$CLANG" \
+    CXX="$CXXLANG" \
+    OBJC="$CLANG" \
+    F77="$FORTRAN" \
+    FC="$FORTRAN" \
+    CPPFLAGS=$CPPFLAGS \
+    LDFLAGS=$LDFLAGS \
+    --enable-R-framework=no \
+    --enable-memory-profiling \
+    --disable-openmp
 
 ##
 read -p "Press [Enter] key to start compilation..."
@@ -102,39 +144,25 @@ echo "building R"
 make -j4
 
 read -p "Press [Enter] key to check build and install..."
-make check
+make -j2 check
 
-## make sure we delete any existing dir.
-if [ -d $PREFIX ]; then
-    read -p "Another R-version exists already in $PREFIX. Press [Enter] to delete the old version and proceed with installation..."
-    rm -Rf $PREFIX
+# Make sure we delete any existing dir.
+if [ -d "$PREFIX" ]; then
+    echo "Another R-version exists already in \"$PREFIX\"."
+    read -p "Press [Enter] to delete the old version and proceed with installation..."
+    rm -Rf "$PREFIX"
 fi
 
 make install
 
-## deleting the install
+# Deleting the build directory.
 cd ..
-if [ -d R-$1 ]; then
-    rm -R R-$1
+if [ -d R-$versionR ]; then
+    rm -R R-$versionR
 fi
-## in case we downloaded the latest.
+# In case we downloaded the latest.
 if [ -d R-patched ]; then
     rm -R R-patched
 fi
 
-## that below would be with an openBLAS instead of the vecLib.
-# ## what remains: install openBLAS
-# OPENBLAS_PREFIX=/Users/jo/OpenBLAS
-# read -p "Press [Enter] key to fetch and install openBLAS..."
-# cd /tmp
-# git clone https://github.com/xianyi/OpenBLAS.git
-# cd OpenBLAS
-# make
-# make PREFIX=$OPENBLAS_PREFIX install
-# ## symlink the newly installed openBLAS to R's blas.
-# mv $PREFIX/lib/R/lib/x86_64/libRblas.dylib $PREFIX/lib/R/lib/x86_64/libRblas.dylib.orig
-# ln -s $OPENBLAS_PREFIX/lib/libopenblas.dylib $PREFIX/lib/R/lib/x86_64/libRblas.dylib
-# cd ..
-# rm -Rf OpenBLAS
-
-echo "Installation  completed"
+echo "Installation completed."
