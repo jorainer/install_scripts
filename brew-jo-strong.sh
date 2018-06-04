@@ -68,6 +68,7 @@ brew install gtk+3 gtkmm3 pango pangomm
 brew install libpng png++ libtiff giflib
 brew install libsvg libsvg-cairo
 brew install swig jpeg
+brew install ffmpeg --with-fdk-aac
 ## brew install imagemagick
 ## other stuff
 brew install aspell --with-lang-de --with-lang-en
