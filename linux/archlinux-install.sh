@@ -20,6 +20,7 @@ pacman -S --noconfirm xdotool xsel keepass
 pacman -S --noconfirm terminator
 pacman -S --noconfirm redshift
 pacman -S --noconfirm fping
+pacman -S --noconfirm ncdu
 
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc
