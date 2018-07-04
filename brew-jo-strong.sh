@@ -43,6 +43,7 @@ echo "Installing system tools:\n"
 ## https://cran.r-project.org/bin/macosx/tools/
 ## or directly from https://gcc.gnu.org/wiki/GFortranBinaries#MacOS
 ## compilers and dev tools
+brew install llvm
 brew install autoconf automake
 brew install readline glib
 ## brew install gcc

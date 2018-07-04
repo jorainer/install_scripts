@@ -26,6 +26,9 @@ CLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang
 CXXLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang++
 CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include"
 LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib"
+## For R-3.3.1:
+##CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include -I/usr/local/opt/zlib/include"
+##LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib -L/usr/local/opt/zlib/lib"
 
 
 # Break on error.
@@ -131,8 +134,8 @@ fi
     OBJC="$CLANG" \
     F77="$FORTRAN" \
     FC="$FORTRAN" \
-    CPPFLAGS=$CPPFLAGS \
-    LDFLAGS=$LDFLAGS \
+    CPPFLAGS="$CPPFLAGS" \
+    LDFLAGS="$LDFLAGS" \
     --enable-R-framework=no \
     --enable-memory-profiling \
     --disable-openmp
