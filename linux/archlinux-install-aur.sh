@@ -77,3 +77,10 @@ git clone https://aur.archlinux.org/dropbox.git
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/dropbox.tar.gz
 cd dropbox
 makepkg -sic
+
+echo "noson"
+cd ~/builds
+git clone https://aur.archlinux.org/noson-app
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/noson-app.tar.gz
+cd noson-app
+makepkg -sic

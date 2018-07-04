@@ -159,3 +159,6 @@ root's home!
 - =pacman -Sy=: sync package databases.
 - =checkupdates=: check updates.
 - =pacman -Su=: update.
+** Downgrading packages
+
+Downgrade packages with =pacman -U /var/cache/pacman/pkg/<pkg name>=.
