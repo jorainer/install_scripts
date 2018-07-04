@@ -209,6 +209,8 @@ rgl
 ## rgl
 AnnotationHubData
 ## For PeakABro
-## ChemmineR
+ChemmineR
 ## rlist
 ## rinchi
+jsonlite
+
