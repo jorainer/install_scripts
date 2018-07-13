@@ -53,6 +53,7 @@ brew install terminal-notifier
 brew install ctags gettext udunits cmake
 ## system tools
 brew install mc
+brew install tree
 brew install htop fping
 brew install sshfs
 brew install unrar

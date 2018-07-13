@@ -22,10 +22,10 @@
 # https://cran.r-project.org/bin/macosx/tools/
 # Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
 FORTRAN=/usr/local/gfortran/bin/gfortran
-CLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang
-CXXLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang++
-CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include"
-LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib"
+CLANG=/usr/local/Cellar/llvm/6.0.1/bin/clang
+CXXLANG=/usr/local/Cellar/llvm/6.0.1/bin/clang++
+CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.1/include"
+LDFLAGS="-L/usr/local/Cellar/llvm/6.0.1/lib"
 ## For R-3.3.1:
 ##CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include -I/usr/local/opt/zlib/include"
 ##LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib -L/usr/local/opt/zlib/lib"

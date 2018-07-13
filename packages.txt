@@ -21,7 +21,7 @@ statmod
 GO.db
 org.Hs.eg.db
 reactome.db
-mirbase.db
+##mirbase.db
 ensembldb
 AnnotationHub
 ## hpar
@@ -86,7 +86,7 @@ SQN
 sandwich
 robust
 multcomp
-scatterplot3d
+##scatterplot3d
 robustbase
 ################
 ## unsorted
@@ -96,12 +96,12 @@ pander
 RMySQL
 gplots
 ## GEOquery
-EBImage
+##EBImage
 Rgraphviz
 Hmisc
 ## idiogram
 BiocStyle
-snow
+##snow
 igraph
 pheatmap
 WriteXLS
@@ -111,8 +111,8 @@ yaml
 shiny
 shinyjs
 matrixStats
-ggforce
-ggtree
+##ggforce
+##ggtree
 sinaplot
 UpSetR
 beeswarm
