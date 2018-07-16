@@ -47,7 +47,7 @@ brew install llvm
 brew install autoconf automake
 brew install readline glib
 ## brew install gcc
-brew install curl wget git git-extras git-lfs svn hub
+brew install curl wget git git-extras git-lfs svn hub libgit2
 brew install libxml2 libxml++
 brew install terminal-notifier
 brew install ctags gettext udunits cmake

@@ -30,7 +30,7 @@ pacman -S --noconfirm perl python
 pacman -S --noconfirm libxml2
 pacman -S --noconfirm sqlite
 pacman -S --noconfirm readline
-pacman -S --noconfirm git gist
+pacman -S --noconfirm git gist libgit2
 pacman -S --noconfirm netcdf netcdf-cxx
 pacman -S --noconfirm imagemagick6
 pacman -S --noconfirm perlbrew
