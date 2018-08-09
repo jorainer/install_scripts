@@ -159,6 +159,33 @@ root's home!
 - =pacman -Sy=: sync package databases.
 - =checkupdates=: check updates.
 - =pacman -Su=: update.
+- =pacman --ignore ignoredpkg,ignoredpkg2=: ignore updates for certain packages.
+- =pacman -Rs removepkg=: remove package and all dependencies (not required by others).
+
+
 ** Downgrading packages
 
 Downgrade packages with =pacman -U /var/cache/pacman/pkg/<pkg name>=.
+
+** =plexmediaplayer= problem with QT > 5.10.0
+
+There seems to be an issue with =plexmediaplayer= and qt > 5.10.0, i.e. plex is
+stuck during startup and creates a huge log file crying that the opengl
+implementation is not supported. The solution seems to be to specifically
+downgrade qt to an older version and re-build the plex binary.
+
+#+BEGIN_EXAMPLE
+  sudo pacman -U /var/cache/pacman/pkg/qt5-base-5.10.1-8-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-declarative-5.10.1-4-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-location-5.10.1-2-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-multimedia-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-quickcontrols-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-script-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-sensors-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-speech-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-svg-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-webchannel-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-webengine-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-x11extras-5.10.1-1-x86_64.pkg.tar.xz
+  sudo pacman -U /var/cache/pacman/pkg/qt5-xmlpatterns-5.10.1-1-x86_64.pkg.tar.xz
+#+END_EXAMPLE
