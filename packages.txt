@@ -93,7 +93,7 @@ robustbase
 VennDiagram
 ## ascii
 pander
-RMySQL
+RMariaDb
 gplots
 ## GEOquery
 ##EBImage
