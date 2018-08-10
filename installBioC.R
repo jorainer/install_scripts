@@ -5,12 +5,16 @@
 ## Eventually change cran mirror:
 ##options(repos = c(CRAN = "file:///Volumes/jodata/mirror/CRAN/"))
 
-library(BiocInstaller)
+if (!require("BiocManager", character.only = TRUE))
+    install.packages("BiocManager")
+library(BiocManager)
+
+## library(BiocInstaller)
 ##useDevel()
 cat("Installing core packages\n\n")
 
 suppressMessages(
-    biocLite(ask = FALSE)
+    BiocManager::install(ask = FALSE)
 )
 ## what if library(BiocInstaller) and useDevel()
 
@@ -18,7 +22,7 @@ cat("\n\nNow installing additional packages...\n")
 packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[,1]
 
 suppressMessages(
-    biocLite(packs, ask = FALSE)
+    BiocManager::install(packs, ask = FALSE)
 )
 
 cat("\n\nInstalling stuff from github:\n")
