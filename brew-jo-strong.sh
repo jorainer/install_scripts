@@ -92,10 +92,10 @@ echo "\n\nDone\n\n"
 echo "________________________________________________________________________________"
 
 echo "Installing databases:\n"
-brew install mysql@5.6
-## brew link --force mysql@5.6
-echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.zshrc
+## brew install mysql@5.6
+brew install mariadb@10.0
+echo 'export PATH="/usr/local/opt/mariadb@10.0/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/mariadb@10.0/bin:$PATH"' >> ~/.zshrc
 brew install sqlite
 ## start mysql: mysql.server restart
 ## mysql_secure_installation
