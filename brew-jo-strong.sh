@@ -30,7 +30,7 @@ echo "export LC_ALL=en_US.UTF-8" >> "$HOME/.zshrc"
 echo "export tz=CET" >> "$HOME/.zshrc"
 echo "export TZ=CET" >> "$HOME/.zshrc"
 echo "alias R='R --no-save'" >> "$HOME/.zshrc"
-
+echo "export PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:" >> "$HOME/.zshrc"
 
 # git clone https://github.com/seebi/dircolors-solarized "${ZDOTDIR:-$HOME}/.zprezto/contrib/dircolors-solarized/"
 # echo "eval \`dircolors ~/.zprezto/contrib/dircolors-solarized/dircolors.256dark\`" >> "$HOME/.zshrc"
