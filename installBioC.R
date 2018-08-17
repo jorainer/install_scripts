@@ -9,12 +9,23 @@ if (!require("BiocManager", character.only = TRUE))
     install.packages("BiocManager")
 library(BiocManager)
 
+if (any(ls() == "use_devel")) {
+    if (use_devel)
+        vrsn <- "devel"
+    else vrsn <- BiocManager::version()
+} else {
+    vrsn <- BiocManager::version()
+}
+
+cat(paste("\n\nGoing to install Bioconductor", as.character(vrsn), "\n\n"))
+
+
 ## library(BiocInstaller)
 ##useDevel()
 cat("Installing core packages\n\n")
 
 suppressMessages(
-    BiocManager::install(ask = FALSE)
+    BiocManager::install(ask = FALSE, version = vrsn)
 )
 ## what if library(BiocInstaller) and useDevel()
 
@@ -22,7 +33,7 @@ cat("\n\nNow installing additional packages...\n")
 packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[,1]
 
 suppressMessages(
-    BiocManager::install(packs, ask = FALSE)
+    BiocManager::install(packs, ask = FALSE, version = vrsn)
 )
 
 cat("\n\nInstalling stuff from github:\n")
