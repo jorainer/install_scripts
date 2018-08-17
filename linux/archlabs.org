@@ -1,5 +1,5 @@
 * Installing ArchLabs
-
+  
 ** Installation
 
 To update/sync the repos: =pacman -Sy=.
