@@ -35,6 +35,7 @@ brew cask install java
 brew cask install vmware-fusion
 brew cask install xquartz
 brew cask install tuxera-ntfs
+brew cask install paragon-extfs
 ## That has to be installed manually!!!
 ## brew cask install osxfuse
 # brew cask install bartender
@@ -43,7 +44,7 @@ brew cask install hma-pro-vpn
 brew cask install microsoft-office
 brew cask install skype
 brew cask install menubar-stats
-brew cask install adobe-photoshop-lightroom
+## brew cask install adobe-photoshop-lightroom
 brew cask install owncloud
 # brew cask install hugin
 echo "\n\nDone\n\n"

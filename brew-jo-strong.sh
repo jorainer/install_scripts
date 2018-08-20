@@ -140,7 +140,7 @@ cpanm Compress::Bzip2
 cpanm Exception::Class
 cpanm Getopt::Simple
 cpanm IO::Stringy
-cpanm BioPerl
+## cpanm BioPerl
 cpanm Sort::Naturally
 cpanm --force Tk
 cpanm List::MoreUtils
