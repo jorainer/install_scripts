@@ -1,0 +1,99 @@
+* Installation of owncloud on raspberry
+
+Point is that debian does no longer support/distribute owncloud.
+
+#+BEGIN_EXAMPLE
+  sudo su
+  echo 'deb http://download.owncloud.org/download/repositories/stable/Debian_8.0/ /' > /etc/apt/sources.list.d/owncloud.list
+  cd /tmp
+  wget -nv https://download.owncloud.org/download/repositories/stable/Debian_8.0/Release.key -O Release.key
+  sudo apt-key add - < Release.key
+#+END_EXAMPLE
+
+Install mariadb
+
+#+BEGIN_EXAMPLE
+  sudo apt-get install mariadb-client mariadb-server
+  ## enable at startup
+  sudo update-rc.d mysql defaults
+  sudo mysql_install_db
+  sudo service mysql start
+  sudo mysql_secure_installation
+#+END_EXAMPLE
+
+Now connect to the database and add users.
+
+#+BEGIN_EXAMPLE
+  create user 'jo'@'localhost' identified by '<pass>';
+  grant all privileges on *.* to 'jo'@'localhost';
+#+END_EXAMPLE
+
+Install owncloud
+
+This is following
+https://doc.owncloud.org/server/10.0/admin_manual/installation/source_installation.html
+and https://www.howtoforge.com/tutorial/owncloud-install-debian-8-jessie/
+
+#+BEGIN_EXAMPLE
+  sudo apt-get install apt-transport-https lsb-release ca-certificates
+  sudo apt-get install owncloud owncloud-apps
+#+END_EXAMPLE
+
+Create an =owncloud= user and =owncloud= database.
+
+Configure apache:
+
+Copy the following to =/etc/apache2/conf-available/owncloud.conf= and make a
+symlink to =conf-enabled= - or edit the already existing one there.
+
+#+BEGIN_EXAMPLE
+  Alias /owncloud "/var/www/owncloud/"
+
+  <Directory /var/www/owncloud/>
+    Options +FollowSymlinks
+    AllowOverride All
+
+   <IfModule mod_dav.c>
+    Dav off
+   </IfModule>
+
+   SetEnv HOME /var/www/owncloud
+   SetEnv HTTP_HOME /var/www/owncloud
+
+  </Directory>
+#+END_EXAMPLE
+
+Enable additions modules:
+
+#+BEGIN_EXAMPLE
+  sudo a2enmod rewrite
+  sudo a2enmod headers
+  sudo a2enmod env
+  sudo a2enmod dir
+  sudo a2enmod mime
+  sudo a2enmod ssl
+  sudo a2ensite default-ssl
+  sudo service apache2 restart
+#+END_EXAMPLE
+
+Configure owncloud via web.
+
+
+* Installation of nextcloud
+
+Check also http://ifahrentholz.de/2016/install-nextcloud-on-raspberry/
+
+#+BEGIN_EXAMPLE
+  sudo echo 'deb http://apt.jurisic.org/debian/ jessie main contrib non-free' >> /etc/apt/sources.list.d/nextcloud.list
+  wget -q http://apt.jurisic.org/Release.key -O- | apt-key add -
+  
+#+END_EXAMPLE
+
+Install required stuff.
+
+#+BEGIN_EXAMPLE
+  sudo apt-get update
+  sudo apt-get install nextcloud
+#+END_EXAMPLE
+
+
