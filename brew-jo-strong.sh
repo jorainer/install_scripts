@@ -8,8 +8,15 @@ read -p "Press [Enter] to start installation..."
 
 echo "Setting up repositories:\n"
 ## brew tap nwoolls/xgminer
-brew tap homebrew/science
+## brew tap homebrew/science
 ## brew tap d12frosted/emacs-plus
+
+## Repository for emacs-plus
+brew tap d12frosted/emacs-plus
+## brew install emacs-plus --without-spacemacs-icon
+
+## Repository for emacs-mac aka emacsformacosx 
+brew tap railwaycat/emacsmacport
 
 echo "________________________________________________________________________________"
 echo "Installing and configuring zsh:\n"
@@ -60,8 +67,7 @@ brew install unrar
 ## brew install emacs-plus
 brew install imagemagick@6
 ##brew install emacs --HEAD --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg
-brew install emacs --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg
-brew linkapps emacs
+brew install emacs --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg --srgb
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
 ## graphics tools
@@ -193,14 +199,11 @@ echo "\n\n -- you might also want to change the default shell to zsh:\n"
 echo " 1) Add /usr/local/bin/zsh to /etc/shells"
 echo " 2) change the shell with chsh -s /usr/local/bin/zsh"
 
-brew linkapps
-
-
 echo "Addendum: cloning OSX Terminal color schemes"
 mkdir -p "$HOME/Projects/git/"
 cd "$HOME/Projects/git/"
 git clone https://github.com/lysyi3m/osx-terminal-themes
 
-echo "You might select on of the terminal osx themes, e.g. Neutron"
+echo "You might want select one of the terminal osx themes, e.g. Neutron"
 
 
