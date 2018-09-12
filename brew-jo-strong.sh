@@ -67,7 +67,9 @@ brew install unrar
 ## brew install emacs-plus
 brew install imagemagick@6
 ##brew install emacs --HEAD --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg
-brew install emacs --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg --srgb
+# brew install emacs --with-cocoa --with-imagemagick@6 --with-gnutls --with-rsvg --srgb
+brew install emacs-plus --without-spacemacs-icon
+brew link emacs-plus
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
 ## graphics tools
