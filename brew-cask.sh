@@ -23,6 +23,7 @@ brew cask install lytro-desktop
 brew cask install transmission
 brew cask install filebot
 brew cask install alfred
+brew cask install bettertouchtool
 # brew cask install kindle
 ## brew cask install macpass
 echo "\n\nDone\n\n"
