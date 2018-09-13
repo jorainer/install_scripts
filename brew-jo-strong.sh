@@ -2,7 +2,7 @@
 echo "That's a nice script that installs Homebrew on Mac with all required packages needed for heavy bioinformatic work\n\n"
 echo "Installing brew:\n"
 
-echo 'We are assuming that brew has been installed using ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" followed by "brew doctor".\n All issues raised by "brew doctor" should be fixed prior to further installations!\n\n'
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 read -p "Press [Enter] to start installation..."
 
