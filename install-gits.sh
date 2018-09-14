@@ -10,15 +10,14 @@ git clone https://github.com/Ensembl/ensembl-variation.git
 git clone https://github.com/Ensembl/ensembl-funcgen.git
 git clone https://github.com/Ensembl/ensembl-compara.git
 git clone https://github.com/Ensembl/ensembl-io.git
-echo "PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:$PERL5LIB" >> ~/.bash_profile
-echo "export PERL5LIB" >> ~/.bash_profile
-echo "PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:$PERL5LIB" >> ~/.zshrc
-echo "export PERL5LIB" >> ~/.zshrc
+expvar="export PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:$PERL5LIB"
+echo $expvar >> ~/.bash_profile
+echo $expvar >> ~/.zshrc
 
-echo "Emacs for OS X"
-mkdir -p ~/Projects/git/
-cd ~/Projects/git
-git clone https://github.com/jimeh/build-emacs-for-osx
+# echo "Emacs for OS X"
+# mkdir -p ~/Projects/git/
+# cd ~/Projects/git
+# git clone https://github.com/jimeh/build-emacs-for-osx
 
 echo "jotsetung stuff"
 mkdir -p ~/Projects/git/jotsetung/
