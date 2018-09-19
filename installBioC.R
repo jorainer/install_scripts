@@ -20,17 +20,9 @@ if (any(ls() == "use_devel")) {
 cat(paste("\n\nGoing to install Bioconductor", as.character(vrsn), "\n\n"))
 
 
-## library(BiocInstaller)
-##useDevel()
-cat("Installing core packages\n\n")
 
-suppressMessages(
-    BiocManager::install(ask = FALSE, version = vrsn)
-)
-## what if library(BiocInstaller) and useDevel()
-
-cat("\n\nNow installing additional packages...\n")
-packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[,1]
+cat("\n\nInstalling packages...\n")
+packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[, 1]
 
 suppressMessages(
     BiocManager::install(packs, ask = FALSE, version = vrsn)
@@ -39,14 +31,14 @@ suppressMessages(
 cat("\n\nInstalling stuff from github:\n")
 library(devtools)
 cat("\njotsetung\n")
-install_github("jotsetung/unsoRted")
+## install_github("jotsetung/unsoRted")
 ##install_github("jotsetung/mirtarbase-db")
 ##install_github("jotsetung/generalgcrma")
 ##install_github("jotsetung/GenomePlotR")
-install_github("jotsetung/mirhostgenes")
-install_github("jotsetung/MirhostDb.Hsapiens.v75.v20")
-install_github("jotsetung/mirtarbase")
-install_github("jotsetung/SeqUtils")
+## install_github("jotsetung/mirhostgenes")
+## install_github("jotsetung/MirhostDb.Hsapiens.v75.v20")
+## install_github("jotsetung/mirtarbase")
+## install_github("jotsetung/SeqUtils")
 ##install_github("jotsetung/xcmsExtensions")
 install_github("jotsetung/atc")
 
