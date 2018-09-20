@@ -117,6 +117,7 @@ sinaplot
 UpSetR
 beeswarm
 hexSticker
+BatchJobs
 #################
 ## Package development
 roxygen2
