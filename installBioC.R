@@ -19,6 +19,7 @@ if (any(ls() == "use_devel")) {
 
 cat(paste("\n\nGoing to install Bioconductor", as.character(vrsn), "\n\n"))
 
+BiocManager::install(version = vrsn)
 
 
 cat("\n\nInstalling packages...\n")
