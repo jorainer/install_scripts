@@ -1,5 +1,8 @@
 * Installation of owncloud on raspberry
 
+Some links:
+
+
 Point is that debian does no longer support/distribute owncloud.
 
 #+BEGIN_EXAMPLE
@@ -33,13 +36,72 @@ Install owncloud
 This is following
 https://doc.owncloud.org/server/10.0/admin_manual/installation/source_installation.html
 and https://www.howtoforge.com/tutorial/owncloud-install-debian-8-jessie/
+and https://raspberry.tips/raspberrypi-tutorials/owncloud-10-server-auf-dem-raspberry-pi
+to install the newest version.
 
 #+BEGIN_EXAMPLE
   sudo apt-get install apt-transport-https lsb-release ca-certificates
   sudo apt-get install owncloud owncloud-apps
 #+END_EXAMPLE
 
-Create an =owncloud= user and =owncloud= database.
+Install the latest owncloud release:
+
+#+BEGIN_EXAMPLE
+  cd ~
+  wget https://download.owncloud.org/community/owncloud-10.0.2.tar.bz2
+  tar xjf owncloud-*
+#+END_EXAMPLE
+
+backup /etc/owncloud first, copy the folder over to */usr/share/owncloud*.
+
+stop apache2:
+
+#+BEGIN_EXAMPLE
+  sudo service apache2 stop
+#+END_EXAMPLE
+
+Fix rights:
+
+#+BEGIN_EXAMPLE
+  sudo find /usr/share/owncloud/ -type f -print0 | sudo xargs -0 chmod 0640
+  sudo find /usr/share/owncloud/ -type d -print0 | sudo xargs -0 chmod 0750
+  sudo chown -R root:www-data /usr/share/owncloud/
+  sudo chown -R www-data:www-data /usr/share/owncloud/apps/
+  sudo chown -R www-data:www-data /usr/share/owncloud/config/
+  sudo chown -R www-data:www-data /usr/share/owncloud/themes/
+  sudo chown root:www-data /usr/share/owncloud/.htaccess
+  sudo chmod 0644 /usr/share/owncloud/.htaccess
+#+END_EXAMPLE
+
+start apache again
+
+#+BEGIN_EXAMPLE
+  sudo service apache2 start
+#+END_EXAMPLE
+
+Create an =owncloud= user and =owncloud= database:
+
+#+BEGIN_EXAMPLE
+  mysql -h localhost -u root -p
+#+END_EXAMPLE
+
+Then create the owncloud db and user
+
+#+BEGIN_EXAMPLE
+  create database owncloud;
+  create user 'owni'@'localhost' identified by 'yo_mama';
+  grant all privileges on owncloud.* to 'owni'@'localhost';
+#+END_EXAMPLE
+
+Check config.php:
+
+#+BEGIN_EXAMPLE
+  'trusted_domains' =>.
+  array (
+    0 => '192.168.13.14',
+    1 => 'johome.asuscomm.com',
+  ),  
+#+END_EXAMPLE
 
 Configure apache:
 
