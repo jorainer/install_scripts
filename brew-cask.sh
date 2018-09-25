@@ -25,7 +25,7 @@ brew cask install filebot
 brew cask install alfred
 brew cask install bettertouchtool
 # brew cask install kindle
-## brew cask install macpass
+brew cask install macpass
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
@@ -37,6 +37,7 @@ brew cask install vmware-fusion
 brew cask install xquartz
 brew cask install tuxera-ntfs
 brew cask install paragon-extfs
+brew cask install gfortran
 ## That has to be installed manually!!!
 ## brew cask install osxfuse
 # brew cask install bartender
