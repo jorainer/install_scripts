@@ -11,7 +11,7 @@ brew cask install skim
 # brew cask install geektool
 brew cask install vlc
 # brew cask install mplayerx
-# brew cask install plex-home-theater
+brew cask install plex-media-player
 brew cask install phoenix-slides
 # brew cask install gopro-studio
 brew cask install avidemux
@@ -31,7 +31,7 @@ echo "\-----------------------------------------------\n"
 
 echo "________________________________________________________________________________"
 echo "Cask stuff that needs user interaction:\n"
-brew cask install mactex
+brew cask install mactex-no-gui
 brew cask install java
 brew cask install vmware-fusion
 brew cask install xquartz

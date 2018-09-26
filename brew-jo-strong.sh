@@ -1,5 +1,11 @@
 #!/bin/sh
 echo "That's a nice script that installs Homebrew on Mac with all required packages needed for heavy bioinformatic work\n\n"
+
+echo "Ensure we have command line tools installed"
+sudo xcode-select --install
+sudo xcodebuild -license
+
+
 echo "Installing brew:\n"
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -7,9 +13,6 @@ echo "Installing brew:\n"
 read -p "Press [Enter] to start installation..."
 
 echo "Setting up repositories:\n"
-## brew tap nwoolls/xgminer
-## brew tap homebrew/science
-## brew tap d12frosted/emacs-plus
 
 ## Repository for emacs-plus
 brew tap d12frosted/emacs-plus
@@ -37,7 +40,7 @@ echo "export LC_ALL=en_US.UTF-8" >> "$HOME/.zshrc"
 echo "export tz=CET" >> "$HOME/.zshrc"
 echo "export TZ=CET" >> "$HOME/.zshrc"
 echo "alias R='R --no-save'" >> "$HOME/.zshrc"
-echo "export PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/:" >> "$HOME/.zshrc"
+echo 'export PERL5LIB="$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ensembl/modules/:~/ensembl/API/ensembl-compara/modules/:~/ensembl/API/ensembl-funcgen/modules/:~/ensembl/API/ensembl-io/modules/:~/ensembl/API/ensembl-variation/modules/"' >> "$HOME/.zshrc"
 
 # git clone https://github.com/seebi/dircolors-solarized "${ZDOTDIR:-$HOME}/.zprezto/contrib/dircolors-solarized/"
 # echo "eval \`dircolors ~/.zprezto/contrib/dircolors-solarized/dircolors.256dark\`" >> "$HOME/.zshrc"
@@ -59,7 +62,7 @@ brew install libxml2 libxml++
 brew install terminal-notifier
 brew install ctags gettext udunits cmake
 ## system tools
-brew install mc
+brew install mc ranger
 brew install tree
 brew install htop fping
 brew install sshfs
@@ -190,7 +193,6 @@ echo "Installing bioinfo stuff:\n"
 brew install bamtools bamutil hdf5 exonerate arpack
 brew install netcdf sratoolkit samtools
 brew install bedtools
-brew install enblend-enfuse
 ## brew install blast
 ## brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
 ## not working: viennarna

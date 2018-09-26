@@ -22,10 +22,16 @@
 # https://cran.r-project.org/bin/macosx/tools/
 # Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
 FORTRAN=/usr/local/gfortran/bin/gfortran
-CLANG=/usr/local/Cellar/llvm/7.0.0/bin/clang
-CXXLANG=/usr/local/Cellar/llvm/7.0.0/bin/clang++
-CPPFLAGS="-I/usr/local/Cellar/llvm/7.0.0/include"
-LDFLAGS="-L/usr/local/Cellar/llvm/7.0.0/lib"
+CLANG="clang-6.0 -stdlib=libc++"
+CXXLANG="clang++-6.0 -stdlib=libc++"
+CPPFLAGS="$CXXFLAGS -nostdinc++ -I/usr/local/opt/llvm-6.0/lib/llvm-6.0/include/c++/v1"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm-6.0/lib/llvm-6.0/lib"
+## Use GCC
+##FORTRAN=/usr/local/opt/gcc@7/bin/gfortran-7
+##CLANG=/usr/local/opt/gcc@7/bin/gcc-7
+##CXXLANG=/usr/local/opt/gcc@7/bin/g++-7
+##CPPFLAGS="-I/usr/local/opt/gcc@7/include -I/usr/local/include"
+##LDFLAGS="-L/usr/local/opt/gcc@7/lib -L /usr/local/lib"
 ## For R-3.3.1:
 ##CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include -I/usr/local/opt/zlib/include"
 ##LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib -L/usr/local/opt/zlib/lib"
@@ -136,9 +142,11 @@ fi
     FC="$FORTRAN" \
     CPPFLAGS="$CPPFLAGS" \
     LDFLAGS="$LDFLAGS" \
+    r_arch="x86_64" \
     --enable-R-framework=no \
     --enable-memory-profiling \
     --disable-openmp
+
 
 ##
 read -p "Press [Enter] key to start compilation..."
