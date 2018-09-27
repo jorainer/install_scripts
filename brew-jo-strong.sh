@@ -1,9 +1,9 @@
 #!/bin/sh
 echo "That's a nice script that installs Homebrew on Mac with all required packages needed for heavy bioinformatic work\n\n"
 
-echo "Ensure we have command line tools installed"
+echo "Ensure we have command line tools installed\n - Note that only command line tools are required."
 sudo xcode-select --install
-sudo xcodebuild -license
+# sudo xcodebuild -license
 
 
 echo "Installing brew:\n"
