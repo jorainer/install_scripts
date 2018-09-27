@@ -137,6 +137,7 @@ dbplyr
 xcms
 MassSpecWavelet
 metabolomics
+NormalizeMets
 CAMERA
 Rdisop
 ProtGenerics
