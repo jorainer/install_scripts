@@ -76,6 +76,7 @@ brew install imagemagick@6
 brew install emacs-mac
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
+brew install editorconfig
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
 brew install gtk+3 gtkmm3 pango pangomm
