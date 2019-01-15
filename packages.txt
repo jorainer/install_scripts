@@ -31,9 +31,9 @@ AnnotationFilter
 ## AHEnsDbs
 ################
 ## Variants etc
-VariantAnnotation
-VariantTools
-VariantFiltering
+## VariantAnnotation
+## VariantTools
+## VariantFiltering
 ################
 ## category and GO analysis
 GOstats
@@ -118,6 +118,7 @@ UpSetR
 beeswarm
 hexSticker
 BatchJobs
+rhdf5
 #################
 ## Package development
 roxygen2
