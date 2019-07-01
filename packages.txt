@@ -104,7 +104,8 @@ BiocStyle
 ##snow
 igraph
 pheatmap
-WriteXLS
+writexl
+readxl
 survey
 DT
 yaml

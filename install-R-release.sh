@@ -28,15 +28,20 @@
 # https://cran.r-project.org/bin/macosx/tools/
 # Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
 FORTRAN=/usr/local/gfortran/bin/gfortran
-# CLANG="/usr/local/opt/llvm/bin/clang"
-# CXXLANG="/usr/local/opt/llvm/bin/clang++"
-# CPPFLAGS="$CXXFLAGS -I/usr/local/opt/llvm/include -I/usr/local/include"
-# LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm/lib -L/usr/local/lib"
+CLANG="/usr/local/opt/llvm/bin/clang"
+CXXLANG="/usr/local/opt/llvm/bin/clang++"
+CPPFLAGS="$CXXFLAGS -I/usr/local/opt/llvm/include -I/usr/local/include"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm/lib -L/usr/local/lib"
+## Clang 7.0 from R
+# CLANG="/usr/local/clang7/bin/clang"
+# CXXLANG="/usr/local/clang7/bin/clang++"
+# CPPFLAGS="$CPPFLAGS -I/usr/local/local/clang7/include"
+# LDFLAGS="-L/usr/local/clang7/lib"
 ## Clang 6
-CLANG="/usr/local/opt/llvm@6/bin/clang"
-CXXLANG="/usr/local/opt/llvm@6/bin/clang++"
-CPPFLAGS="$CPPFLAGS -I/usr/local/opt/llvm@6/include"
-LDFLAGS="-L/usr/local/opt/llvm@6/lib"
+# CLANG="/usr/local/opt/llvm@6/bin/clang"
+# CXXLANG="/usr/local/opt/llvm@6/bin/clang++"
+# CPPFLAGS="$CPPFLAGS -I/usr/local/opt/llvm@6/include"
+# LDFLAGS="-L/usr/local/opt/llvm@6/lib"
 ## Use GCC
 ##FORTRAN=/usr/local/opt/gcc@7/bin/gfortran-7
 ##CLANG=/usr/local/opt/gcc@7/bin/gcc-7
