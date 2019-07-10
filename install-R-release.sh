@@ -28,10 +28,10 @@
 # https://cran.r-project.org/bin/macosx/tools/
 # Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
 FORTRAN=/usr/local/gfortran/bin/gfortran
-CLANG="/usr/local/opt/llvm/bin/clang"
-CXXLANG="/usr/local/opt/llvm/bin/clang++"
-CPPFLAGS="$CXXFLAGS -I/usr/local/opt/llvm/include -I/usr/local/include"
-LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm/lib -L/usr/local/lib"
+CLANG="/usr/local/opt/llvm@7/bin/clang"
+CXXLANG="/usr/local/opt/llvm@7/bin/clang++"
+CPPFLAGS="$CXXFLAGS -I/usr/local/opt/llvm@7/include -I/usr/local/include"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm@7/lib -L/usr/local/lib"
 ## Clang 7.0 from R
 # CLANG="/usr/local/clang7/bin/clang"
 # CXXLANG="/usr/local/clang7/bin/clang++"

@@ -56,6 +56,7 @@ echo "Installing system tools:\n"
 brew install llvm
 brew install autoconf automake
 brew install readline glib
+brew cask install gfortran
 ## brew install gcc
 brew install curl wget git git-extras git-lfs svn hub libgit2
 brew install libxml2 libxml++
