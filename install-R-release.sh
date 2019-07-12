@@ -27,27 +27,15 @@
 # _X setup. Compilers as recommended from the R-project website:
 # https://cran.r-project.org/bin/macosx/tools/
 # Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
-FORTRAN=/usr/local/gfortran/bin/gfortran
+FORTRAN="/usr/local/gfortran/bin/gfortran"
 CLANG="/usr/local/opt/llvm@7/bin/clang"
 CXXLANG="/usr/local/opt/llvm@7/bin/clang++"
-CPPFLAGS="$CXXFLAGS -I/usr/local/opt/llvm@7/include -I/usr/local/include"
-LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm@7/lib -L/usr/local/lib"
-## Clang 7.0 from R
-# CLANG="/usr/local/clang7/bin/clang"
-# CXXLANG="/usr/local/clang7/bin/clang++"
-# CPPFLAGS="$CPPFLAGS -I/usr/local/local/clang7/include"
-# LDFLAGS="-L/usr/local/clang7/lib"
-## Clang 6
-# CLANG="/usr/local/opt/llvm@6/bin/clang"
-# CXXLANG="/usr/local/opt/llvm@6/bin/clang++"
-# CPPFLAGS="$CPPFLAGS -I/usr/local/opt/llvm@6/include"
-# LDFLAGS="-L/usr/local/opt/llvm@6/lib"
-## Use GCC
-##FORTRAN=/usr/local/opt/gcc@7/bin/gfortran-7
-##CLANG=/usr/local/opt/gcc@7/bin/gcc-7
-##CXXLANG=/usr/local/opt/gcc@7/bin/g++-7
-##CPPFLAGS="-I/usr/local/opt/gcc@7/include -I/usr/local/include"
-##LDFLAGS="-L/usr/local/opt/gcc@7/lib -L /usr/local/lib"
+FCFLAGS="-Wall -g -O2"
+CFLAGS="-Wall -march=broadwell -mtune=native -g -O2"
+CXXFLAGS="$CFLAGS"
+OBJCFLAGS="$CFLAGS"
+CPPFLAGS="-I/usr/local/opt/llvm@7/include -I/usr/include -I/usr/local/include"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm@7/lib -Wl,-rpath,/usr/local/opt/llvm@7/lib -L/usr/local/lib -L/usr/lib"
 ## For R-3.3.1:
 ##CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include -I/usr/local/opt/zlib/include"
 ##LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib -L/usr/local/opt/zlib/lib"
@@ -149,20 +137,27 @@ fi
     --x-includes=/usr/X11/include/ \
     --x-libraries=/usr/X11/lib/ \
     --enable-R-shlib \
-    --with-blas='-framework Accelerate' \
-    --with-lapack \
     CC="$CLANG" \
+    CPP="$CLANG -E" \
     CXX="$CXXLANG" \
     OBJC="$CLANG" \
-    F77="$FORTRAN" \
     FC="$FORTRAN" \
+    F77="$FORTRAN" \
+    CFLAGS="$CFLAGS" \
+    FCFLAGS="$FCFLAGS" \
+    F77FLAGS="$FCFLAGS" \
     CPPFLAGS="$CPPFLAGS" \
+    CXXFLAGS="$CXXFLAGS" \
+    OBJCFLAGS="$OBJCFLAGS" \
     LDFLAGS="$LDFLAGS" \
     --enable-R-framework=no \
-    --enable-memory-profiling \
-    --disable-openmp
+    --enable-memory-profiling
+
+    # --disable-openmp
 
     # r_arch="x86_64" \
+    # --with-blas='-framework Accelerate' \
+    # --with-lapack \
 
 ##
 read -p "Press [Enter] key to start compilation..."
