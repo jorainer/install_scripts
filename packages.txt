@@ -18,10 +18,10 @@ statmod
 ## annotation
 ## biomaRt
 ## annotate
-GO.db
-org.Hs.eg.db
-reactome.db
-##mirbase.db
+## GO.db
+## org.Hs.eg.db
+## reactome.db
+## mirbase.db
 ensembldb
 AnnotationHub
 ## hpar
@@ -51,17 +51,17 @@ pathview
 ## flowUtils
 ################
 ## HTS, RNAseq
-ShortRead
+## ShortRead
 ## chipseq
 ## ChIPpeakAnno
 ## HilbertVis
-Rsubread
+## Rsubread
 ## DESeq
-DESeq2
-edgeR
+## DESeq2
+## edgeR
 ## gmapR
 ## Sushi
-ggbio
+## ggbio
 Gviz
 ################
 ## Machine learning and classification
@@ -86,22 +86,22 @@ SQN
 sandwich
 robust
 multcomp
-##scatterplot3d
+## scatterplot3d
 robustbase
 ################
 ## unsorted
-VennDiagram
+## VennDiagram
 ## ascii
 pander
 RMariaDB
 gplots
 ## GEOquery
-##EBImage
+## EBImage
 Rgraphviz
 Hmisc
 ## idiogram
 BiocStyle
-##snow
+## snow
 igraph
 pheatmap
 writexl
@@ -112,8 +112,8 @@ yaml
 shiny
 shinyjs
 matrixStats
-##ggforce
-##ggtree
+## ggforce
+## ggtree
 sinaplot
 UpSetR
 beeswarm
@@ -129,7 +129,7 @@ knitr
 rmarkdown
 microbenchmark
 testthat
-RUnit
+## RUnit
 profvis
 pryr
 tibble
@@ -138,13 +138,13 @@ dbplyr
 ## Metabolomics and proteomics
 xcms
 MassSpecWavelet
-metabolomics
+## metabolomics
 NormalizeMets
 CAMERA
 Rdisop
 ProtGenerics
 MSnbase
-Pbase
+## Pbase
 MetNorm
 ruv
 ################
@@ -154,21 +154,21 @@ kinship2
 FamAgg
 ################
 ## Stuff needed to compile packages on the system:
-TxDb.Hsapiens.UCSC.hg19.knownGene
-TxDb.Dmelanogaster.UCSC.dm3.ensGene
-BSgenome.Celegans.UCSC.ce2
+## TxDb.Hsapiens.UCSC.hg19.knownGene
+## TxDb.Dmelanogaster.UCSC.dm3.ensGene
+## BSgenome.Celegans.UCSC.ce2
 faahKO
 msdata
 RANN
 ncdf4
 rpx
 rols
-pRoloc
-pRolocdata
+## pRoloc
+## pRolocdata
 imputeLCMD
 norm
-BSgenome.Hsapiens.NCBI.GRCh38
-TxDb.Hsapiens.UCSC.hg38.knownGene
+## BSgenome.Hsapiens.NCBI.GRCh38
+## TxDb.Hsapiens.UCSC.hg38.knownGene
 EnsDb.Hsapiens.v86
 rjson
 rcdk

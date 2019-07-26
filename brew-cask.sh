@@ -18,10 +18,10 @@ brew cask install avidemux
 brew cask install handbrake
 brew cask install astropad
 brew cask install mediathekview
-brew cask install lytro-desktop
+# brew cask install lytro-desktop
 # brew cask install machacha
 brew cask install transmission
-brew cask install filebot
+# brew cask install filebot
 brew cask install alfred
 brew cask install bettertouchtool
 # brew cask install kindle
@@ -37,7 +37,7 @@ brew cask install vmware-fusion
 brew cask install xquartz
 brew cask install tuxera-ntfs
 brew cask install paragon-extfs
-brew cask install gfortran
+# brew cask install gfortran
 ## That has to be installed manually!!!
 ## brew cask install osxfuse
 # brew cask install bartender
@@ -48,6 +48,8 @@ brew cask install skype
 brew cask install menubar-stats
 ## brew cask install adobe-photoshop-lightroom
 brew cask install owncloud
+brew cask install docker
+brew cask install docker-toolbox
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
