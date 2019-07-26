@@ -1,0 +1,8 @@
+#!/bin/zsh
+DIR=`pwd`
+docker run \
+       -v /Users/jo/R/docker/R-3.6.0-BioC3.10-devel:/usr/local/lib/R/host-site-library \
+       -v /Users/jo:/Users/jo \
+       -w $DIR \
+       -it --user bioc bioconductor/bioconductor_full:devel R
+
