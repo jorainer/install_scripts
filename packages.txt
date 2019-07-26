@@ -90,7 +90,7 @@ multcomp
 robustbase
 ################
 ## unsorted
-## VennDiagram
+VennDiagram
 ## ascii
 pander
 RMariaDB
