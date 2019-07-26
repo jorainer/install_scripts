@@ -88,7 +88,7 @@ brew install ffmpeg --with-fdk-aac
 ## brew install imagemagick
 ## other stuff
 brew install aspell --with-lang-de --with-lang-en
-brew install valgrind expat
+## brew install valgrind expat
 brew install librsvg
 brew install pandoc pandoc-citeproc
 brew install cask
