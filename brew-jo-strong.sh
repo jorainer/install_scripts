@@ -5,7 +5,6 @@ echo "Ensure we have command line tools installed\n - Note that only command lin
 sudo xcode-select --install
 # sudo xcodebuild -license
 
-
 echo "Installing brew:\n"
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

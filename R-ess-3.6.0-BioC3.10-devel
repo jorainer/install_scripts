@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Run R in docker using R libraries defined in R_LIBS and mapping the home
+# directory.
+DIR=`pwd`
+R_LIBS="/Users/jo/R/docker/R-3.6.0-BioC3.10-devel"
+docker run \
+       --cpuset-cpus 0-2 \
+       -v $R_LIBS:/usr/local/lib/R/host-site-library \
+       -v /Users/jo:/Users/jo \
+       -v /var/folders:/var/folders \
+       -w $DIR \
+       -it --user bioc bioconductor/bioconductor_full:devel \
+       /bin/sh -c "stty -echo && /usr/local/bin/R --quiet $*"
+
+

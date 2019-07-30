@@ -8,8 +8,8 @@ docker run \
        --cpuset-cpus 0-2 \
        -v $R_LIBS:/usr/local/lib/R/host-site-library \
        -v /Users/jo:/Users/jo \
+       -v /private:/private \
        -w $DIR \
        -it --user bioc bioconductor/bioconductor_full:devel \
-       /bin/sh -c "stty -echo && /usr/local/bin/R --quiet $*"
-
+       /usr/local/bin/R $*
 
