@@ -9,5 +9,7 @@ docker run \
        -v $R_LIBS:/usr/local/lib/R/host-site-library \
        -v /Users/jo:/Users/jo \
        -w $DIR \
-       -it --user bioc bioconductor/bioconductor_full:devel R "$@"
+       -it --user bioc bioconductor/bioconductor_full:devel \
+       /bin/sh -c "stty -echo && /usr/local/bin/R --quiet $*"
+
 
