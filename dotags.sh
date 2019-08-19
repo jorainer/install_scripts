@@ -3,7 +3,7 @@
 
 BASEPATH="/Users/jo/Projects/git"
 rm "$BASEPATH/TAGS"
-DIRS=( "lgatto/MSnbase" "jotsetung/atc" "jotsetung/chrisUtils" "jotsetung/ensembldb" "jotsetung/mirtarbase" "jotsetung/mirhostgenes" "sneumann/xcms" "Bioconductor/AnnotationFilter" "jotsetung/FamAgg" "jotsetung/mzR" "RforMassSpectrometry/Spectra")
+DIRS=( "lgatto/MSnbase" "jorainer/atc" "EuracBiomedicalResearch/chrisUtils" "jorainer/ensembldb" "sneumann/xcms" "Bioconductor/AnnotationFilter" "EuracBiomedicalResearch/FamAgg" "EuracBiomedicalResearch/CompoundDb" "jorainer/mzR" "RforMassSpectrometry/Spectra" "RforMassSpectrometry/MsCoreUtils" "RforMassSpectrometry/Chromatograms")
 for i in "${DIRS[@]}"
 do
     R CMD rtags -V --no-Rd --no-c -o "$BASEPATH/TAGS" --append "$BASEPATH/$i"
