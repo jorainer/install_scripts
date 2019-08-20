@@ -134,6 +134,7 @@ profvis
 pryr
 tibble
 dbplyr
+tinytex
 #################
 ## Metabolomics and proteomics
 xcms
