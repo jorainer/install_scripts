@@ -8,6 +8,7 @@ brew cask install lisanet-gimp
 brew cask install libreoffice
 brew cask install papers
 brew cask install skim
+brew cask install zotero
 # brew cask install geektool
 brew cask install vlc
 # brew cask install mplayerx
@@ -50,6 +51,7 @@ brew cask install menubar-stats
 brew cask install owncloud
 brew cask install docker
 brew cask install docker-toolbox
+brew cask install bettertouchtool
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
