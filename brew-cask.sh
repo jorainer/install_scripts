@@ -52,6 +52,8 @@ brew cask install owncloud
 brew cask install docker
 brew cask install docker-toolbox
 brew cask install bettertouchtool
+brew cask install plexamp
+brew cask install slack
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
