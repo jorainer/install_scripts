@@ -31,7 +31,7 @@ suppressMessages(
 
 cat("\n\nInstalling stuff from github:\n")
 library(devtools)
-cat("\njotsetung\n")
+cat("\njorainer\n")
 ## install_github("jotsetung/unsoRted")
 ##install_github("jotsetung/mirtarbase-db")
 ##install_github("jotsetung/generalgcrma")
@@ -41,13 +41,26 @@ cat("\njotsetung\n")
 ## install_github("jotsetung/mirtarbase")
 ## install_github("jotsetung/SeqUtils")
 ##install_github("jotsetung/xcmsExtensions")
-install_github("jotsetung/atc")
+install_github("jorainer/atc")
 
-cat("\nglibiseller\n")
-install_github("glibiseller/IPO")
+## cat("\nglibiseller\n")
+## install_github("glibiseller/IPO")
 
 cat("\njimhester\n")
 install_github("jimhester/covr")
+
+cat("\nstanstrup\n")
+install_github("stanstrup/commonMZ")
+
+cat("\nRforMassSpectrometry\n")
+BiocManager::install("RforMassSpectrometry/MsCoreUtils")
+BiocManager::install("RforMassSpectrometry/Spectra")
+BiocManager::install("RforMassSpectrometry/Chromatograms")
+
+cat("\nEuracBiomedicalResearch\n")
+BiocManager::install("EuracBiomedicalResearch/CompMetaboTools")
+BiocManager::install("EuracBiomedicalResearch/chrisUtils")
+BiocManager::install("EuracBiomedicalResearch/CompoundDb")
 
 cat("\n\n---- finished ---\n\n")
 
