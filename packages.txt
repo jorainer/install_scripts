@@ -148,6 +148,7 @@ MSnbase
 ## Pbase
 MetNorm
 ruv
+RMassBank
 ################
 ## genetics, kinship etc
 gap
