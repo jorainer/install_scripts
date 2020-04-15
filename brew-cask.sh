@@ -24,7 +24,7 @@ brew cask install mediathekview
 brew cask install transmission
 # brew cask install filebot
 brew cask install alfred
-brew cask install bettertouchtool
+# brew cask install bettertouchtool
 # brew cask install kindle
 brew cask install macpass
 echo "\n\nDone\n\n"
@@ -32,7 +32,7 @@ echo "\-----------------------------------------------\n"
 
 echo "________________________________________________________________________________"
 echo "Cask stuff that needs user interaction:\n"
-brew cask install mactex-no-gui
+# brew cask install mactex-no-gui
 brew cask install java
 brew cask install vmware-fusion
 brew cask install xquartz
@@ -51,7 +51,7 @@ brew cask install menubar-stats
 brew cask install owncloud
 brew cask install docker
 brew cask install docker-toolbox
-brew cask install bettertouchtool
+# brew cask install bettertouchtool
 brew cask install plexamp
 brew cask install slack
 # brew cask install hugin
