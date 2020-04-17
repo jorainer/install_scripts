@@ -124,6 +124,7 @@ rhdf5
 ## Package development
 roxygen2
 devtools
+usethis
 BiocCheck
 knitr
 rmarkdown
