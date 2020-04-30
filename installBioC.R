@@ -14,14 +14,14 @@ cat(paste("\n\nGoing to install Bioconductor", as.character(vrsn), "\n\n"))
 
 BiocManager::install(version = vrsn)
 
-pack_files <- dir(".", "^packages-")
+pack_files <- dir(".", pattern = "^packages-")
 cat("\n\nInstalling packages from", length(pack_files), "categories\n")
 packs <- character()
 
-for (i in pack_files) {
-    category <- sub("^packages-", "", pack_files)
+for (fl in pack_files) {
+    category <- sub("^packages-", "", fl)
     category <- sub(".txt", "", category, fixed = TRUE)
-    cur_packs <- read.table(pack_files[i], sep = "\t")[, 1]
+    cur_packs <- read.table(fl, sep = "\t", as.is = TRUE)[, 1]
     cat(category, ":", length(cur_packs), "packages\n")
     packs <- c(packs, cur_packs)
     BiocManager::install(cur_packs, ask = FALSE, version = vrsn)
