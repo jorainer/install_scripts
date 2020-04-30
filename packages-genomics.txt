@@ -1,0 +1,11 @@
+ensembldb
+AnnotationHub
+OrganismDbi
+AnnotationFilter
+GOstats
+Category
+pathview
+Gviz
+DESeq2
+EnsDb.Hsapiens.v86
+AnnotationHubData

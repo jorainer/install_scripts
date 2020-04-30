@@ -1,0 +1,16 @@
+roxygen2
+devtools
+usethis
+BiocCheck
+knitr
+rmarkdown
+microbenchmark
+testthat
+profvis
+pryr
+tinytex
+rjson
+rcdk
+hexSticker
+rhdf5
+jsonlite
