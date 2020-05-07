@@ -28,14 +28,14 @@
 # https://cran.r-project.org/bin/macosx/tools/
 # Change as you like. Shoud also work with clang4.2 and gfortran-fsf-6
 FORTRAN="/usr/local/gfortran/bin/gfortran"
-CLANG="/usr/local/clang7/bin/clang"
-CXXLANG="/usr/local/clang7/bin/clang++"
+CLANG="/usr/local/opt/llvm@7/bin/clang"
+CXXLANG="/usr/local/opt/llvm@7/bin/clang++"
 FCFLAGS="-Wall -g -O2"
 CFLAGS="-Wall -mtune=native -g -O2"
 CXXFLAGS="$CFLAGS"
 OBJCFLAGS="$CFLAGS"
-CPPFLAGS="-I/usr/local/clang7/include -I/usr/local/include -I/usr/include"
-LDFLAGS="$LDFLAGS -L/usr/local/clang7/lib -L/usr/local/lib -L/usr/lib"
+CPPFLAGS="-I/usr/local/opt/llvm@7/include -I/usr/local/include -I/usr/include"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm@7/lib -L/usr/local/lib -L/usr/lib"
 ##LDFLAGS="$LDFLAGS -L/usr/local/llvm@7/lib -Wl,-rpath,/usr/local/llvm@7/lib -L/usr/local/lib -L/usr/lib"
 ## For R-3.3.1:
 ##CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include -I/usr/local/opt/zlib/include"

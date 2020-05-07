@@ -1,0 +1,14 @@
+xcms
+MassSpecWavelet
+NormalizeMets
+CAMERA
+Rdisop
+ProtGenerics
+MSnbase
+MetNorm
+ruv
+RMassBank
+ChemmineR
+faahKO
+msdata
+ncdf4

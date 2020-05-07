@@ -1,10 +1,3 @@
-## installing Bioconductor packages...
-##source( "http://www.bioconductor.org/biocLite.R" )
-##source( "/Volumes/jodata/mirror/biocLite.R" )
-
-## Eventually change cran mirror:
-##options(repos = c(CRAN = "file:///Volumes/jodata/mirror/CRAN/"))
-
 if (!require("BiocManager", character.only = TRUE))
     install.packages("BiocManager")
 library(BiocManager)
@@ -21,36 +14,38 @@ cat(paste("\n\nGoing to install Bioconductor", as.character(vrsn), "\n\n"))
 
 BiocManager::install(version = vrsn)
 
+pack_files <- dir(".", pattern = "^packages-")
+cat("\n\nInstalling packages from", length(pack_files), "categories\n")
+packs <- character()
 
-cat("\n\nInstalling packages...\n")
-packs <- read.table( "./packages.txt", sep="\t", as.is=TRUE )[, 1]
-
-suppressMessages(
-    BiocManager::install(packs, ask = FALSE, version = vrsn)
-)
+for (fl in pack_files) {
+    category <- sub("^packages-", "", fl)
+    category <- sub(".txt", "", category, fixed = TRUE)
+    cur_packs <- read.table(fl, sep = "\t", as.is = TRUE)[, 1]
+    cat(category, ":", length(cur_packs), "packages\n")
+    packs <- c(packs, cur_packs)
+    BiocManager::install(cur_packs, ask = FALSE, version = vrsn)
+}
 
 cat("\n\nInstalling stuff from github:\n")
 library(devtools)
-cat("\njotsetung\n")
-## install_github("jotsetung/unsoRted")
-##install_github("jotsetung/mirtarbase-db")
-##install_github("jotsetung/generalgcrma")
-##install_github("jotsetung/GenomePlotR")
-## install_github("jotsetung/mirhostgenes")
-## install_github("jotsetung/MirhostDb.Hsapiens.v75.v20")
-## install_github("jotsetung/mirtarbase")
-## install_github("jotsetung/SeqUtils")
-##install_github("jotsetung/xcmsExtensions")
-install_github("jotsetung/atc")
+cat("\njorainer\n")
+install_github("jorainer/atc")
 
-cat("\nglibiseller\n")
-install_github("glibiseller/IPO")
+cat("\nstanstrup\n")
+install_github("stanstrup/commonMZ")
 
-cat("\njimhester\n")
-install_github("jimhester/covr")
+cat("\nRforMassSpectrometry\n")
+BiocManager::install("RforMassSpectrometry/MsCoreUtils")
+BiocManager::install("RforMassSpectrometry/Spectra")
+BiocManager::install("RforMassSpectrometry/Chromatograms")
+BiocManager::install("RforMassSpectrometry/MsBackendHmdb")
+
+cat("\nEuracBiomedicalResearch\n")
+BiocManager::install("EuracBiomedicalResearch/CompMetaboTools")
+BiocManager::install("EuracBiomedicalResearch/CompoundDb")
 
 cat("\n\n---- finished ---\n\n")
-
 
 ## Now we're going to check which packages should be still installed.
 instPacks <- installed.packages()

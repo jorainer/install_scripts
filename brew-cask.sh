@@ -4,10 +4,11 @@ echo "__________________________________________________________________________
 echo "Installing cask:\n"
 ## brew install caskroom/cask/brew-cask
 brew cask install firefox
-brew cask install lisanet-gimp
+brew cask install gimp
 brew cask install libreoffice
-brew cask install papers
+# brew cask install papers
 brew cask install skim
+brew cask install zotero
 # brew cask install geektool
 brew cask install vlc
 # brew cask install mplayerx
@@ -23,7 +24,7 @@ brew cask install mediathekview
 brew cask install transmission
 # brew cask install filebot
 brew cask install alfred
-brew cask install bettertouchtool
+# brew cask install bettertouchtool
 # brew cask install kindle
 brew cask install macpass
 echo "\n\nDone\n\n"
@@ -31,7 +32,7 @@ echo "\-----------------------------------------------\n"
 
 echo "________________________________________________________________________________"
 echo "Cask stuff that needs user interaction:\n"
-brew cask install mactex-no-gui
+# brew cask install mactex-no-gui
 brew cask install java
 brew cask install vmware-fusion
 brew cask install xquartz
@@ -50,6 +51,9 @@ brew cask install menubar-stats
 brew cask install owncloud
 brew cask install docker
 brew cask install docker-toolbox
+# brew cask install bettertouchtool
+brew cask install plexamp
+brew cask install slack
 # brew cask install hugin
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"

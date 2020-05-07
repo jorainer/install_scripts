@@ -1,8 +1,0 @@
-#!/bin/sh
-
-echo "Installing Bioconductor docker images"
-
-docker pull bioconductor/bioconductor_full:RELEASE_3_9
-docker pull bioconductor/bioconductor_full:devel
-
-echo "Done"

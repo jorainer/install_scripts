@@ -2,15 +2,37 @@
 
 # Run R in docker using R libraries defined in R_LIBS and mapping the home
 # directory.
-DIR=`pwd`
 R_LIBS="/Users/jo/R/docker/R-3.6.0-BioC3.10-devel"
+DIR=`pwd`
+HOSTNAME=`hostname`
+/usr/X11/bin/xhost + $HOSTNAME
+
+# mapping X11 to Xquartz:
+# https://gist.github.com/cschiewek/246a244ba23da8b9f0e7b11a68bf3285
+# https://blogs.oracle.com/oraclewebcentersuite/running-gui-applications-on-native-docker-containers-for-mac?source=post_page---------------------------
+# /opt/X11/bin/xhost + $HOSTNAME
+# /opt/X11/bin/xhost + "127.0.0.1"
+# /opt/X11/bin/Xquartz &
+# open -a XQuartz &
+
 docker run \
-       --cpuset-cpus 0-2 \
+       --cpuset-cpus 0-3 \
        -v $R_LIBS:/usr/local/lib/R/host-site-library \
        -v /Users/jo:/Users/jo \
+       -v /private:/private \
+       -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
        -v /var/folders:/var/folders \
+       -v /Users/jo/.Rprofile:/home/bioc/.Rprofile \
+       -v /Volumes:/Volumes \
+       -e R_DEFAULT_DEVICE=pdf \
        -w $DIR \
+       -e MYSQL_HOST="host.docker.internal" \
+       -e MYSQL_USER=$MYSQL_USER \
+       -e MYSQL_PASS=$MYSQL_PASS \
+       -e GITHUB_PAT=$GITHUB_PAT \
+       -e DISPLAY=$HOSTNAME:0 \
        -it --user bioc bioconductor/bioconductor_full:devel \
        /bin/sh -c "stty -echo && /usr/local/bin/R --quiet $*"
 
+       # -e DISPLAY=$HOSTNAME:0 \
 
