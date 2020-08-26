@@ -73,7 +73,8 @@ brew install imagemagick@6
 # brew install emacs --with-cocoa --with-imagemagick@6
 # brew install emacs-plus --without-spacemacs-icon
 # brew link emacs-plus
-brew install emacs-mac
+brew install emacs-plus --with-ctags --with-modern-sexy-v2-icon
+brew install emacs-mac --with-rsvg --with-ctags --with-emacs-sexy-icon --with-imagemagick
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
 brew install editorconfig
