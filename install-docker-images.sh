@@ -2,7 +2,7 @@
 
 echo "Installing Bioconductor docker images"
 
-docker pull bioconductor/bioconductor_docker:RELEASE_3_10
+docker pull bioconductor/bioconductor_docker:RELEASE_3_11
 docker pull bioconductor/bioconductor_docker:devel
 
 echo "Installing other images"
