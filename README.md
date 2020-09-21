@@ -15,5 +15,6 @@ Install the Latex environment with the `tinytex` R package, i.e. in a
 - Function keys for Terminal: System preferences -> Keyboard -> Shortcuts: 
   select `fn` keys on the left, add with `+` Terminal app.
 - Make `emacs` the default editor: in *.zprofile* change `export EDITOR='nano'`
-  to `export EDITOR='/usr/local/bin/emacsclient -n`  
-  
+  to `export EDITOR='/usr/local/bin/emacsclient -nw`.
+- Make `emacs` the default git editor:
+  `git config --global core.editor "emacsclient -nw"`.
