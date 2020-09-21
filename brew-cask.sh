@@ -13,6 +13,7 @@ brew cask install zotero
 brew cask install vlc
 # brew cask install mplayerx
 brew cask install plex-media-player
+brew cask install plexamp
 brew cask install phoenix-slides
 # brew cask install gopro-studio
 brew cask install avidemux
@@ -33,16 +34,16 @@ echo "\-----------------------------------------------\n"
 echo "________________________________________________________________________________"
 echo "Cask stuff that needs user interaction:\n"
 # brew cask install mactex-no-gui
-brew cask install java
+brew install java
 brew cask install vmware-fusion
 brew cask install xquartz
-brew cask install tuxera-ntfs
+## brew cask install tuxera-ntfs
 brew cask install paragon-extfs
 # brew cask install gfortran
 ## That has to be installed manually!!!
 ## brew cask install osxfuse
 # brew cask install bartender
-brew cask install flux
+## brew cask install flux
 brew cask install hma-pro-vpn
 brew cask install microsoft-office
 brew cask install skype
@@ -52,8 +53,9 @@ brew cask install owncloud
 brew cask install docker
 brew cask install docker-toolbox
 # brew cask install bettertouchtool
-brew cask install plexamp
 brew cask install slack
-# brew cask install hugin
+brew cask install hugin
+brew cask install r
+brew cask install rstudio
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"

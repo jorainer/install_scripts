@@ -18,3 +18,6 @@ Install the Latex environment with the `tinytex` R package, i.e. in a
   to `export EDITOR='/usr/local/bin/emacsclient -nw`.
 - Make `emacs` the default git editor:
   `git config --global core.editor "emacsclient -nw"`.
+- Choose a terminal color theme: open one of the themes in
+  *Projects/git/osx-terminal-themes*. Good choices are *SpaceGrey* or *Tomorrow*
+  themes.
