@@ -9,3 +9,11 @@ applications.
 Install the Latex environment with the `tinytex` R package, i.e. in a 
 (non-docker) R version install the `tinytex` with 
 `install.packages("tinytex")` and then LaTeX with `tinyte::install_tinytex()`.
+
+## Manual settings
+
+- Function keys for Terminal: System preferences -> Keyboard -> Shortcuts: 
+  select `fn` keys on the left, add with `+` Terminal app.
+- Make `emacs` the default editor: in *.zprofile* change `export EDITOR='nano'`
+  to `export EDITOR='/usr/local/bin/emacsclient -n`  
+  
