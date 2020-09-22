@@ -29,6 +29,7 @@ brew cask install alfred
 # brew cask install kindle
 brew cask install macpass
 brew cask install ubersicht
+brew cask install xscreensaver
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
