@@ -28,6 +28,7 @@ brew cask install alfred
 # brew cask install bettertouchtool
 # brew cask install kindle
 brew cask install macpass
+brew cask install ubersicht
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
