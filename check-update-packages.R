@@ -2,8 +2,8 @@
 #' fails installs it with `BiocManager::install`.
 check_update_packages <- function(skip = "pathview") {
     pkgs <- installed.packages()
-    pkgs <- pkgs[!pkgs %in% skip]
     pkgs <- pkgs[grep("host-site-library", pkgs[, "LibPath"]), "Package"]
+    pkgs <- pkgs[!pkgs %in% skip]
     for (i in seq_along(pkgs)) {
         message("=> ", pkgs[i])
         suppressPackageStartupMessages(
