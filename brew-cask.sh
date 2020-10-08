@@ -30,6 +30,7 @@ brew cask install alfred
 brew cask install macpass
 brew cask install ubersicht
 brew cask install xscreensaver
+brew cask install macs-fan-control
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
 
