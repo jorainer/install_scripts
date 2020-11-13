@@ -5,7 +5,7 @@ echo "Installing cask:\n"
 ## brew install caskroom/cask/brew-cask
 brew cask install firefox
 brew cask install gimp
-brew cask install libreoffice
+# brew cask install libreoffice
 # brew cask install papers
 brew cask install skim
 brew cask install zotero
