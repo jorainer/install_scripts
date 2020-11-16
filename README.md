@@ -21,3 +21,19 @@ Install the Latex environment with the `tinytex` R package, i.e. in a
 - Choose a terminal color theme: open one of the themes in
   *Projects/git/osx-terminal-themes*. Good choices are *SpaceGrey* or *Tomorrow*
   themes.
+- Create a shortcut to open (new) terminal windows: follow the instruction
+  [here](https://claudiodangelis.com/osx/2012/09/27/osx-launch-terminal-from-shortcut.html)
+  and add the AppleScript below:
+  
+  ```
+  on run {input, parameters}
+	
+	tell application "Terminal"
+		do script " "
+		activate
+	end tell
+	
+	return input
+  end run
+  ```
+  
