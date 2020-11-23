@@ -107,7 +107,7 @@ echo "__________________________________________________________________________
 
 echo "Installing databases:\n"
 ## brew install mysql@5.6
-brew install mariadb@10.0
+brew install mariadb
 echo 'export PATH="/usr/local/opt/mariadb@10.0/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/mariadb@10.0/bin:$PATH"' >> ~/.zshrc
 brew install sqlite
