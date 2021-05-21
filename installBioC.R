@@ -32,19 +32,21 @@ library(devtools)
 cat("\njorainer\n")
 install_github("jorainer/atc")
 
-cat("\nstanstrup\n")
-install_github("stanstrup/commonMZ")
-
 cat("\nRforMassSpectrometry\n")
 BiocManager::install("RforMassSpectrometry/MsCoreUtils")
 BiocManager::install("RforMassSpectrometry/Spectra")
 BiocManager::install("RforMassSpectrometry/Chromatograms")
 BiocManager::install("RforMassSpectrometry/MsBackendHmdb")
+BiocManager::install("RforMassSpectrometry/MsBackendMassbank")
+BiocManager::install("RforMassSpectrometry/MetaboCoreUtils")
+BiocManager::install("RforMassSpectrometry/MetaboAnnotation")
 
 cat("\nEuracBiomedicalResearch\n")
 BiocManager::install("EuracBiomedicalResearch/CompMetaboTools")
 BiocManager::install("EuracBiomedicalResearch/CompoundDb")
 
+cat("\n other \n")
+BiocManager::install("ugcd/solarius/")
 cat("\n\n---- finished ---\n\n")
 
 ## Now we're going to check which packages should be still installed.
