@@ -72,9 +72,10 @@ brew install imagemagick@6
 # brew install emacs --with-cocoa --with-imagemagick@6
 # brew install emacs-plus --without-spacemacs-icon
 # brew link emacs-plus
-brew install emacs-plus --with-ctags --with-modern-sexy-v2-icon
+export LIBXML2_CFLAGS="-I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2"
+brew install  --build-from-source emacs-plus --with-modern-orange-icon
 brew services start d12frosted/emacs-plus/emacs-plus@27
-## brew install emacs-mac --with-rsvg --with-ctags --with-emacs-sexy-icon --with-imagemagick
+brew install  --build-from-source emacs-mac --with-rsvg --with-emacs-sexy-icon --with-imagemagick
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
 brew install editorconfig
