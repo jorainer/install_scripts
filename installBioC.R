@@ -46,7 +46,7 @@ BiocManager::install("EuracBiomedicalResearch/CompMetaboTools")
 BiocManager::install("EuracBiomedicalResearch/CompoundDb")
 
 cat("\n other \n")
-BiocManager::install("ugcd/solarius/")
+BiocManager::install("ugcd/solarius")
 cat("\n\n---- finished ---\n\n")
 
 ## Now we're going to check which packages should be still installed.
