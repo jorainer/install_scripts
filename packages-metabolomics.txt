@@ -1,6 +1,5 @@
 xcms
 MassSpecWavelet
-NormalizeMets
 CAMERA
 Rdisop
 ProtGenerics
