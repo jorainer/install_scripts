@@ -29,38 +29,24 @@ for (fl in pack_files) {
 
 cat("\n\nInstalling stuff from github:\n")
 library(devtools)
-cat("\njorainer\n")
-install_github("jorainer/atc")
-
-cat("\nRforMassSpectrometry\n")
-BiocManager::install("RforMassSpectrometry/MsCoreUtils")
-BiocManager::install("RforMassSpectrometry/Spectra")
-BiocManager::install("RforMassSpectrometry/Chromatograms")
-BiocManager::install("RforMassSpectrometry/MsBackendHmdb")
-BiocManager::install("RforMassSpectrometry/MsBackendMassbank")
-BiocManager::install("RforMassSpectrometry/MsBackendMgf")
-BiocManager::install("RforMassSpectrometry/MetaboCoreUtils")
-BiocManager::install("RforMassSpectrometry/MetaboAnnotation")
-
-cat("\nEuracBiomedicalResearch\n")
-BiocManager::install("EuracBiomedicalResearch/CompMetaboTools")
-BiocManager::install("EuracBiomedicalResearch/CompoundDb")
-
-cat("\n other \n")
-BiocManager::install("ugcd/solarius")
+gh_repos <- read.table("github-packages.txt", sep = "\t")[, 1]
+for (gh_repo in gh_repos)
+    BiocManager::install(gh_repo, ask = FALSE)
+packs <- unique(
+    c(packs, vapply(strsplit(gh_repos, "/"), function(z) z[2],  character(1))))
 cat("\n\n---- finished ---\n\n")
 
 ## Now we're going to check which packages should be still installed.
 instPacks <- installed.packages()
 notInst <- packs[!(packs %in% instPacks[, "Package"])]
 
-if(length(notInst) > 0){
-    cat(paste0("\n----------------------------------------\n\n", length(notInst),
+if (length(notInst) > 0) {
+    cat(paste0("\n\n\n", length(notInst),
                " package(s) was/were not installed:\n"))
     cat(paste("-", notInst, "\n"))
     cat("\nYou might have to install them manually.")
-}else{
-    cat(paste0("\n----------------------------------------\n\n",
+} else {
+    cat(paste0("\n\n\n",
                "Congratulations! All packages installed successfully!\n"))
 }
 

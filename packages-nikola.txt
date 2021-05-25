@@ -1,0 +1,10 @@
+DT
+ggfortify
+ggplot2
+ggpubr
+reshape2
+plotly
+rgl
+rrcov
+WGCNA
+flashClust

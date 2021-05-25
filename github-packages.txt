@@ -1,0 +1,12 @@
+jorainer/atc
+RforMassSpectrometry/MsCoreUtils
+RforMassSpectrometry/Spectra
+RforMassSpectrometry/Chromatograms
+RforMassSpectrometry/MsBackendHmdb
+RforMassSpectrometry/MsBackendMassbank
+RforMassSpectrometry/MsBackendMgf
+RforMassSpectrometry/MetaboCoreUtils
+RforMassSpectrometry/MetaboAnnotation
+EuracBiomedicalResearch/CompMetaboTools
+EuracBiomedicalResearch/CompoundDb
+ugcd/solarius
