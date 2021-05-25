@@ -12,3 +12,8 @@ ChemmineR
 faahKO
 msdata
 ncdf4
+Spectra
+MsBackendMassbank
+MsBackendMgf
+MsCoreUtils
+MetaboCoreUtils

@@ -38,6 +38,7 @@ BiocManager::install("RforMassSpectrometry/Spectra")
 BiocManager::install("RforMassSpectrometry/Chromatograms")
 BiocManager::install("RforMassSpectrometry/MsBackendHmdb")
 BiocManager::install("RforMassSpectrometry/MsBackendMassbank")
+BiocManager::install("RforMassSpectrometry/MsBackendMgf")
 BiocManager::install("RforMassSpectrometry/MetaboCoreUtils")
 BiocManager::install("RforMassSpectrometry/MetaboAnnotation")
 
