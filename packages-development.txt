@@ -14,3 +14,4 @@ rcdk
 hexSticker
 rhdf5
 jsonlite
+vdiffr

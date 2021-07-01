@@ -7,6 +7,7 @@ RforMassSpectrometry/MsBackendMassbank
 RforMassSpectrometry/MsBackendMgf
 RforMassSpectrometry/MetaboCoreUtils
 RforMassSpectrometry/MetaboAnnotation
+RforMassSpectrometry/MsExperiment
 EuracBiomedicalResearch/CompMetaboTools
 EuracBiomedicalResearch/CompoundDb
 ugcd/solarius
