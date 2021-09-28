@@ -58,7 +58,7 @@ brew cask install docker-toolbox
 # brew cask install bettertouchtool
 brew cask install slack
 brew cask install hugin
-brew cask install r
+brew install --cask r
 brew cask install rstudio
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
