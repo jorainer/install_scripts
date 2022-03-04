@@ -122,6 +122,6 @@ brew install docker
 brew install docker-toolbox
 brew install slack
 brew install hugin
-brew cask install rstudio
+brew install rstudio
 echo "\n\nDone\n\n"
 echo "\-----------------------------------------------\n"
