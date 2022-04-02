@@ -68,6 +68,18 @@ https://aur.archlinux.org/packages
 
 ** Customization and setup
 
+*** Themes
+
+Get Openbox themes from here: https://github.com/addy-dclxvi/openbox-theme-collections
+
+Copy the content to the ~/.themes folder (without the .git folder).
+Then use Obconf or LX Appearance to apply theme.
+
+Get GTK-themes from here: https://github.com/addy-dclxvi/gtk-theme-collections
+
+Copy them to the ~/.themes folder and use Xfce4 Settings Apperance
+or LC Appearence to set.
+
 *** Zsh
 
 Presto modules, edit =.zpreztorc=:
