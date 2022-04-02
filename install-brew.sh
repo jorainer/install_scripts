@@ -20,10 +20,10 @@ echo "Installing system tools:\n"
 ## compilers and dev tools
 brew install autoconf automake
 brew install readline glib
-brew install gcc
+## brew install gcc
 brew install curl wget git git-extras git-lfs svn hub libgit2
 brew install libxml2 libxml++
-brew install terminal-notifier
+## brew install terminal-notifier
 brew install ctags gettext udunits cmake
 ## system tools
 brew install mc ranger
@@ -79,11 +79,11 @@ echo "\n\nDone\n\n"
 ## packages for bioconductor/bioinfo stuff
 echo "__________________________________________________________________________"
 echo "Installing bioinfo stuff:\n"
-brew install bamtools bamutil hdf5 exonerate arpack
-brew install netcdf sratoolkit samtools
-brew install bedtools
+brew install netcdf hdf5
+## brew install sratoolkit samtools bamtools bamutil exonerate arpack
+## brew install bedtools
 ## brew install blast
-brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
+## brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
 echo "\n\nDone\n\n"
 
 echo "__________________________________________________________________________"
