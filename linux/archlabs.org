@@ -61,6 +61,18 @@ To create a new macOS virtual machine:
   found at =/usr/lib/vmware/isoimages= to the virtual machine (=darwin.iso= for
   macOS). These tools are updated with the =lnx-update-tools.sh= script of the
   =unlocker= repo. Eventually the tools have to be installed twice.
+- Seems it is required to start =vmplayer= with sudo.
+
+*** Qemu
+
+To install macOS on linux: https://github.com/sickcodes/Docker-OSX . Best
+to install with the selected docker, then copy the created image to another
+folder and run it with the naked docker image. Ideally, create also the
+keys and IDs once and pass them as environment variables.
+
+Other settings (tune OSX): https://github.com/sickcodes/osx-optimizer
+Maybe some other infos: https://github.com/kholia/OSX-KVM
+
 
 ** Search/install additional stuff
 
