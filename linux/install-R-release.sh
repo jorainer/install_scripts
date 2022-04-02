@@ -26,7 +26,13 @@
 # CXXLANG=/usr/local/Cellar/llvm/6.0.0/bin/clang++
 # CPPFLAGS="-I/usr/local/Cellar/llvm/6.0.0/include"
 # LDFLAGS="-L/usr/local/Cellar/llvm/6.0.0/lib"
-
+PKG_CONFIG="/usr/local/bin/pkg-config"
+CC="/usr/local/opt/gcc/bin/gcc-11"
+LDFLAGS="-L/usr/local/lib"
+CPP="/usr/local/opt/gcc/bin/gcc-11"
+FC="/usr/local/opt/gcc/bin/gfortran"
+CXX="/usr/local/opt/gcc/bin/g++-11"
+OBJC="/usr/local/opt/gcc/bin/gcc-11"
 
 # Break on error.
 set -e
@@ -122,7 +128,10 @@ fi
 ./configure SHELL='/bin/bash' \
     --prefix="$PREFIX" \
     --enable-R-shlib \
-    --enable-memory-profiling
+    --enable-memory-profiling \
+    --x-libraries="/opt/X11/lib" \
+    --x-includes="/opt/X11/include" \
+    --with-aqua=no
 
 ##
 read -p "Press [Enter] key to start compilation..."
