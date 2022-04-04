@@ -39,8 +39,10 @@ Install settings using /https://github.com/jotsetung/memacs/. After that, copy t
 
 *** VMware
 
-We will need the =unlocker= tool from DrDonk (cloned from github). Run
-=lnx-install.sh= with =sudo= to patch vmware.
+We will need the =unlocker= tool from DrDonk (cloned from github):
+=https://github.com/DrDonk/unlocker=. Best is to download a release directly
+from github instead of cloning. If a version was already installed uninstall
+that first! Follow the instructions in the github repo!
 
 To enable the vmware services (at boot) we have to do:
 
