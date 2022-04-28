@@ -21,8 +21,9 @@ cpanm Carp::Assert
 cpanm Carp::Clan
 cpanm DBI
 cpanm DBI::DBD
-cpanm --force Class::DBI::mysql
-cpanm --force DBD::mysql
+cpanm --force --notest Class::DBI::mysql
+cpanm DBD::mysql --configure-args="--libs='-L/usr/local/opt/openssl/lib -lssl -lcrypto -L/usr/local/lib -lmysqlclient'" --force --notest
+## cpanm --force --notest DBD::mysql
 cpanm --notest Cairo
 cpanm --notest Gtk2
 cpanm Class::Base
@@ -39,3 +40,8 @@ cpanm List::MoreUtils
 cpanm Exporter::Tiny
 
 echo "\n\nDone\n\n"
+
+## Fix for installing DBD::mysql
+# PATH="$(brew --prefix mysql-client)/bin:$PATH"
+# export LIBRARY_PATH=$(brew --prefix openssl)/lib:$LIBRARY_PATH
+# cpanm DBD::mysql

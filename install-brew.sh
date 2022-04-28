@@ -33,9 +33,9 @@ brew install htop fping
 brew install unrar
 brew install imagemagick@6
 export LIBXML2_CFLAGS="-I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2"
-brew install  --build-from-source emacs-plus --with-modern-orange-icon
-brew services start d12frosted/emacs-plus/emacs-plus@27
-brew install  --build-from-source emacs-mac --with-rsvg --with-emacs-sexy-icon --with-imagemagick
+brew install --build-from-source emacs-plus@28 --with-modern-orange-icon
+brew services start d12frosted/emacs-plus/emacs-plus@28
+brew install --build-from-source emacs-mac --with-rsvg --with-emacs-sexy-icon --with-imagemagick
 brew install editorconfig
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
