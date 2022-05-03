@@ -20,10 +20,10 @@ echo "Installing system tools:\n"
 ## compilers and dev tools
 brew install autoconf automake
 brew install readline glib
-brew install gcc
+## brew install gcc
 brew install curl wget git git-extras git-lfs svn hub libgit2
 brew install libxml2 libxml++
-brew install terminal-notifier
+## brew install terminal-notifier
 brew install ctags gettext udunits cmake
 ## system tools
 brew install mc ranger
@@ -33,9 +33,9 @@ brew install htop fping
 brew install unrar
 brew install imagemagick@6
 export LIBXML2_CFLAGS="-I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2"
-brew install  --build-from-source emacs-plus --with-modern-orange-icon
-brew services start d12frosted/emacs-plus/emacs-plus@27
-brew install  --build-from-source emacs-mac --with-rsvg --with-emacs-sexy-icon --with-imagemagick
+brew install --build-from-source emacs-plus@28 --with-modern-orange-icon
+brew services start d12frosted/emacs-plus/emacs-plus@28
+brew install --build-from-source emacs-mac --with-rsvg --with-emacs-sexy-icon --with-imagemagick
 brew install editorconfig
 ## graphics tools
 brew install cairo cairomm gtk+ gtkmm graphviz
@@ -79,11 +79,11 @@ echo "\n\nDone\n\n"
 ## packages for bioconductor/bioinfo stuff
 echo "__________________________________________________________________________"
 echo "Installing bioinfo stuff:\n"
-brew install bamtools bamutil hdf5 exonerate arpack
-brew install netcdf sratoolkit samtools
-brew install bedtools
+brew install netcdf hdf5
+## brew install sratoolkit samtools bamtools bamutil exonerate arpack
+## brew install bedtools
 ## brew install blast
-brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
+## brew install openblas  ## that's the question. vecLib from Apple provideslo as good if not faster BLAS and LAPACK
 echo "\n\nDone\n\n"
 
 echo "__________________________________________________________________________"
