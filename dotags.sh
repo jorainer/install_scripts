@@ -1,7 +1,7 @@
 #!/bin/bash
 # options: --no-Rd, --no-c, --no-R
 
-BASEPATH="/Users/jo/Projects/git"
+BASEPATH="/home/jo/Projects/git"
 rm "$BASEPATH/TAGS"
 DIRS=( "lgatto/MSnbase"
        "jorainer/atc"

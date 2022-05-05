@@ -15,6 +15,13 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plex-media-player.tar
 cd plex-media-player
 makepkg -sic
 
+echo "gkrellm-themes"
+cd ~/builds
+git clone https://aur.archlinux.org/gkrellm-themes.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/gkrellm-themes.tar.gz
+cd gkrellm-themes
+makepkg -sic
+
 echo "plexamp"
 cd ~/builds
 git clone https://aur.archlinux.org/plexamp-appimage.git
