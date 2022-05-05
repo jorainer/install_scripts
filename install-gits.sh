@@ -14,58 +14,61 @@ expvar="export PERL5LIB=$PERL5LIB:~/ensembl/API/bioperl-live/:~/ensembl/API/ense
 echo $expvar >> ~/.bash_profile
 echo $expvar >> ~/.zshrc
 
-# echo "Emacs for OS X"
-# mkdir -p ~/Projects/git/
-# cd ~/Projects/git
-# git clone https://github.com/jimeh/build-emacs-for-osx
-
-echo "jotsetung stuff"
+echo "jorainer stuff"
 mkdir -p ~/Projects/git/jorainer/
 cd ~/Projects/git/jorainer/
-if [ ! -d AHEnsDbs ]; then git clone https://github.com/jorainer/AHEnsDbs; fi
-if [ ! -d BioC2016-ensembldb ]; then git clone https://github.com/jorainer/BioC2016-ensembldb; fi
-if [ ! -d EuroBioC2016-ensembldb ]; then git clone https://github.com/jorainer/EuroBioC2016-ensembldb; fi
-if [ ! -d atc ]; then git clone https://github.com/jorainer/atc; fi
-if [ ! -d ensembldb ]; then git clone https://github.com/jorainer/ensembldb; fi
-if [ ! -d flatui-emacs ]; then git clone https://github.com/jorainer/flatui-emacs; fi
-if [ ! -d gruvbox-emacs ]; then git clone https://github.com/jorainer/gruvbox-emacs; fi
-if [ ! -d memacs ]; then git clone https://github.com/jorainer/memacs; fi
-if [ ! -d mirhostgenes ]; then git clone https://github.com/jorainer/mirhostgenes; fi
-if [ ! -d mirtarbase ]; then git clone https://github.com/jorainer/mirtarbase; fi
-if [ ! -d mzR ]; then git clone https://github.com/jorainer/mzR; fi
+if [ ! -d AHEnsDbs ]; then git clone git@github.com:jorainer/AHEnsDbs; fi
+if [ ! -d atc ]; then git clone git@github.com:jorainer/atc; fi
+if [ ! -d ensembldb ]; then git clone git@github.com:jorainer/ensembldb; fi
+if [ ! -d flatui-emacs ]; then git clone git@github.com:jorainer/flatui-emacs; fi
+if [ ! -d gruvbox-emacs ]; then git clone git@github.com:jorainer/gruvbox-emacs; fi
+if [ ! -d memacs ]; then git clone git@github.com:jorainer/memacs; fi
 
 mkdir -p ~/Projects/git/sneumann/
 cd ~/Projects/git/sneumann/
 echo "sneumann stuff"
-if [ ! -d xcms ]; then git clone https://github.com/sneumann/xcms; fi
-if [ ! -d mzR ]; then git clone https://github.com/sneumann/mzR; fi
+if [ ! -d xcms ]; then git clone git@github.com:sneumann/xcms; fi
+if [ ! -d mzR ]; then git clone git@github.com:sneumann/mzR; fi
 
 echo "lgatto etc stuff"
 mkdir -p ~/Projects/git/lgatto/
 cd ~/Projects/git/lgatto/
-if [ ! -d MSnbase ]; then git clone https://github.com/lgatto/MSnbase; fi
+if [ ! -d MSnbase ]; then git clone git@github.com:lgatto/MSnbase; fi
 
 echo "RforMassSpectrometry"
 mkdir -p ~/Projects/git/RforMassSpectrometry
 cd ~/Projects/git/RforMassSpectrometry
-if [ ! -d MsCoreUtils ]; then git clone https://github.com/lgatto/MsCoreUtils; f
-if [ ! -d Spectra ]; then git clone https://github.com/lgatto/Spectra; fi
-if [ ! -d Chromatograms ]; then git clone https://github.com/lgatto/Chromatograms; fi
-if [ ! -d stickers ]; then git clone https://github.com/lgatto/stickers; fi
-if [ ! -d MsBackendHmdb ]; then git clone https://github.com/lgatto/MsBackendHmdb; fi
+if [ ! -d MsCoreUtils ]; then git clone git@github.com:RforMassSpectrometry/MsCoreUtils; f
+if [ ! -d Spectra ]; then git clone git@github.com:RforMassSpectrometry/Spectra; fi
+if [ ! -d Chromatograms ]; then git clone git@github.com:RforMassSpectrometry/Chromatograms; fi
+if [ ! -d stickers ]; then git clone git@github.com:RforMassSpectrometry/stickers; fi
+if [ ! -d MsBackendHmdb ]; then git clone git@github.com:RforMassSpectrometry/MsBackendHmdb; fi
+if [ ! -d SpectriPy ]; then git clone git@github.com:RforMassSpectrometry/SpectriPy; fi
+if [ ! -d MsBackendMsp ]; then git clone git@github.com:RforMassSpectrometry/MsBackendMsp; fi
+if [ ! -d MsBackendMgf ]; then git clone git@github.com:RforMassSpectrometry/MsBackendMgf; fi
+if [ ! -d MsBackendMassbank ]; then git clone git@github.com:RforMassSpectrometry/MsBackendMassbank; fi
+if [ ! -d MsqlBackend ]; then git clone git@github.com:RforMassSpectrometry/MsqlBackend; fi
+if [ ! -d CompoundDb ]; then git clone git@github.com:RforMassSpectrometry/CompoundDb; fi
+if [ ! -d MetaboCoreUtils ]; then git clone git@github.com:RforMassSpectrometry/MetaboCoreUtils; fi
+if [ ! -d MetaboAnnotation ]; then git clone git@github.com:RforMassSpectrometry/MetaboAnnotation; fi
+if [ ! -d SpectraQL ]; then git clone git@github.com:RforMassSpectrometry/SpectraQL; fi
+if [ ! -d SpectraVis ]; then git clone git@github.com:RforMassSpectrometry/SpectraVis; fi
+if [ ! -d QFeatures ]; then git clone git@github.com:RforMassSpectrometry/QFeatures; fi
+if [ ! -d SpectraVis ]; then git clone git@github.com:RforMassSpectrometry/SpectraVis; fi
+if [ ! -d MsExperiment ]; then git clone git@github.com:RforMassSpectrometry/MsExperiment; fi
+if [ ! -d MsFeatures ]; then git clone git@github.com:RforMassSpectrometry/MsFeatures; fi
 
 echo "Bioconductor stuff"
 mkdir -p ~/Projects/git/Bioconductor/
 cd ~/Projects/git/Bioconductor/
-if [ ! -d BiocStickers ]; then git clone https://github.com/Bioconductor/BiocStickers; fi
-if [ ! -d AnnotationFilter ]; then git clone https://github.com/Bioconductor/AnnotationFilter; fi
+if [ ! -d BiocStickers ]; then git clone git@github.com:Bioconductor/BiocStickers; fi
+if [ ! -d AnnotationFilter ]; then git clone git@github.com:Bioconductor/AnnotationFilter; fi
 
 echo "EuracBiomedicalResearch stuff"
 mkdir -p ~/Projects/git/EuracBiomedicalResearch/
 cd ~/Projects/git/EuracBiomedicalResearch/
-if [ ! -d FamAgg ]; then git clone https://github.com/EuracBiomedicalResearch/FamAgg; fi
-if [ ! -d chrisUtils ]; then git clone https://github.com/EuracBiomedicalResearch/chrisUtils; fi
-if [ ! -d CompoundDb ]; then git clone https://github.com/EuracBiomedicalResearch/CompoundDb; fi
+if [ ! -d FamAgg ]; then git clone git@github.com:EuracBiomedicalResearch/FamAgg; fi
+if [ ! -d chrisUtils ]; then git clone git@github.com:EuracBiomedicalResearch/chrisUtils; fi
 
 echo "various stuff"
 cd ~/Projects/git/
