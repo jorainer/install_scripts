@@ -38,7 +38,7 @@ if [ ! -d MSnbase ]; then git clone git@github.com:lgatto/MSnbase; fi
 echo "RforMassSpectrometry"
 mkdir -p ~/Projects/git/RforMassSpectrometry
 cd ~/Projects/git/RforMassSpectrometry
-if [ ! -d MsCoreUtils ]; then git clone git@github.com:RforMassSpectrometry/MsCoreUtils; f
+if [ ! -d MsCoreUtils ]; then git clone git@github.com:RforMassSpectrometry/MsCoreUtils; fi
 if [ ! -d Spectra ]; then git clone git@github.com:RforMassSpectrometry/Spectra; fi
 if [ ! -d Chromatograms ]; then git clone git@github.com:RforMassSpectrometry/Chromatograms; fi
 if [ ! -d stickers ]; then git clone git@github.com:RforMassSpectrometry/stickers; fi

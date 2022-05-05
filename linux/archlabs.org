@@ -22,7 +22,7 @@ to search using =pkgfile <file within package>=.
 
 *** Emacs
 
-Install settings using /https://github.com/jotsetung/memacs/. After that, copy the
+Install settings using /https://github.com/jorainer/memacs/. After that, copy the
 /linux.emacs/ file to the home dir and all should be fine.
 
 
