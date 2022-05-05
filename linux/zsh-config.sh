@@ -1,5 +1,5 @@
 echo "Configuring zsh etc."
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${Zdotdir:-$HOME}/.zprezto"
 cat "$HOME/.zshrc" >> "$HOME/.zprezto/runcoms/zshrc"
 rm "$HOME/.zshrc"
 ln -s "$HOME/.zprezto/runcoms/zlogin" "$HOME/.zlogin" 

@@ -13,7 +13,6 @@ to search using =pkgfile <file within package>=.
 + Install perl: =./arch-install-perl.sh=. After installation finished exit the
   shell so the installation completes (somehow gets stuck). To make the new perl
   default use =perlbrew list= and =perlbrew switch= to switch.
-+ Install R: =./install-R-release.sh=.
 + Install all gits: =./install-gits.sh=.
 + Set up all paths and environment variables in =~/.zshrc=:
   #+BEGIN_EXAMPLE
@@ -154,15 +153,22 @@ To increase the size of the =/tmp= directory: edit =/etc/fstab=:
 *** Retina display/HIDPI
 
 To set HIDPI etc:
-https://www.reddit.com/r/linux/comments/6lkmoa/archlabs_50_looks_pretty_special_with_openbox_and/
-https://github.com/Dobbie03/dots
+https://wiki.archlinux.org/title/HiDPI
 
-1) =.Xresources=: edit that with settings from Dobbie03. Use DPI of 160.
-2) =./config/polybar/master.conf=: set =height= to 50 and increase the font sizes
-   (e.g. 20).
-3) Go to settings, appearance and edit /Custom DPI setting/.
-4) Increase font size in =.config/jgmenu/jgmenurc=.
-5) Edit =geometry= in =.config/termite/config= (e.g. to 1400x600).
+1) =.Xresources=:
+
+#+BEGIN_EXAMPLE
+Xft.dpi: 160
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+#+END_EXAMPLE
+   
+2) Go to Xfce4 settings manager, Appearance, Fonts and edit /Custom DPI setting/ (160).
+3) Increase font size in =.config/jgmenu/jgmenurc=.
 
 *** Encrypted folders
 

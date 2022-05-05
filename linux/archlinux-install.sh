@@ -21,6 +21,10 @@ pacman -S --noconfirm terminator
 pacman -S --noconfirm redshift
 pacman -S --noconfirm fping
 pacman -S --noconfirm ncdu
+pacman -S --noconfirm dkms
+pacman -S --noconfirm libxcrypt-compat
+pacman -S --noconfirm docker
+pacman -S --noconfirm docker-compose
 
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc
@@ -43,6 +47,9 @@ pacman -S --noconfirm gsl
 pacman -S --noconfirm python-pip python-setuptools python-setuptools-git
 pacman -S --noconfirm python2-six
 pacman -S --noconfirm linux-headers
+pacman -S --noconfirm mariadb
+pacman -S --noconfirm mariadb-libs
+pacman -S --noconfirm mariadb-clients
 
 echo "Installing productivity tools"
 pacman -S --noconfirm texlive-bin texlive-core texlive-fontsextra texlive-science texlive-latexextra
