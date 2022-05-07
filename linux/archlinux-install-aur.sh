@@ -71,12 +71,34 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/vmware-workstation.ta
 cd vmware-workstation
 makepkg -sic
 
-# echo "mailspring"
-# cd ~/builds
-# git clone https://aur.archlinux.org/mailspring.git
-# curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mailspring.tar.gz
-# cd mailspring
-# makepkg -sic
+echo "mailspring"
+cd ~/builds
+git clone https://aur.archlinux.org/mailspring.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mailspring.tar.gz
+cd mailspring
+makepkg -sic
+
+echo "teams"
+cd ~/builds
+git clone https://aur.archlinux.org/teams.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/teams.tar.gz
+cd teams
+makepkg -sic
+
+echo "slack-desktop"
+cd ~/builds
+git clone https://aur.archlinux.org/slack-desktop.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/slack-desktop.tar.gz
+cd slack-desktop
+makepkg -sic
+
+echo "zoom"
+cd ~/builds
+git clone https://aur.archlinux.org/zoom.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/zoom.tar.gz
+cd zoom
+makepkg -sic
+
 
 # echo "ecryptfs"
 # cd ~/builds
