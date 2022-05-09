@@ -64,19 +64,19 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/vmware-keymaps.tar.gz
 cd vmware-keymaps
 makepkg -sic
 
-echo "vmware"
-cd ~/builds
-git clone https://aur.archlinux.org/vmware-workstation.git
-curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/vmware-workstation.tar.gz
-cd vmware-workstation
-makepkg -sic
+# echo "vmware"
+# cd ~/builds
+# git clone https://aur.archlinux.org/vmware-workstation.git
+# curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/vmware-workstation.tar.gz
+# cd vmware-workstation
+# makepkg -sic
 
-echo "mailspring"
-cd ~/builds
-git clone https://aur.archlinux.org/mailspring.git
-curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mailspring.tar.gz
-cd mailspring
-makepkg -sic
+# echo "mailspring"
+# cd ~/builds
+# git clone https://aur.archlinux.org/mailspring.git
+# curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mailspring.tar.gz
+# cd mailspring
+# makepkg -sic
 
 echo "teams"
 cd ~/builds

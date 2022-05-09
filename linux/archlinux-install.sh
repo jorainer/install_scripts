@@ -58,6 +58,7 @@ pacman -S --noconfirm texinfo texi2html
 pacman -S --noconfirm pandoc pandoc-citeproc pandoc-crossref
 pacman -S --noconfirm libreoffice-still
 pacman -S --noconfirm ttf-inconsolata
+pacman -S --noconfirm thunderbird
 
 echo "Installing multimedia packages"
 pacman -S --noconfirm gimp darktable

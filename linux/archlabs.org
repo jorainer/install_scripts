@@ -74,6 +74,13 @@ keys and IDs once and pass them as environment variables.
 Other settings (tune OSX): https://github.com/sickcodes/osx-optimizer
 Maybe some other infos: https://github.com/kholia/OSX-KVM
 
+This seems to be important to allow use of iCloud etc. Check the serial number
+in OSX with =ioreg -l | grep IOPlatformSerialNumber=.
+
+To enable retina/HiDPI in macOS: =sudo defaults write
+/Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool
+true=.
+
 
 ** Search/install additional stuff
 
