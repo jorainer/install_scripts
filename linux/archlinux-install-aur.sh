@@ -85,6 +85,13 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/teams.tar.gz
 cd teams
 makepkg -sic
 
+echo "crossover"
+cd ~/builds
+git clone https://aur.archlinux.org/crossover.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/crossover.tar.gz
+cd crossover
+makepkg -sic
+
 echo "slack-desktop"
 cd ~/builds
 git clone https://aur.archlinux.org/slack-desktop.git
