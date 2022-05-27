@@ -106,6 +106,12 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/zoom.tar.gz
 cd zoom
 makepkg -sic
 
+echo "zotero"
+cd ~/builds
+git clone https://aur.archlinux.org/zotero-bin.git
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/zotero-bin.tar.gz
+cd zotero-bin
+makepkg -sic
 
 # echo "ecryptfs"
 # cd ~/builds
