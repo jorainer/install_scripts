@@ -201,10 +201,18 @@ root's home!
 - =pacman --ignore ignoredpkg,ignoredpkg2=: ignore updates for certain packages.
 - =pacman -Rs removepkg=: remove package and all dependencies (not required by others).
 
-
 ** Downgrading packages
 
 Downgrade packages with =pacman -U /var/cache/pacman/pkg/<pkg name>=.
+
+** Downgrading kernel
+
+go to /var/cache/pacman/pkg and downgrade the linux using
+
+```
+pacman -U file://linux-4.15.8-1-x86_64.pkg.tar.xz
+file://linux-headers-4.15.8-1-x86_64.pkg.tar.xz file://virtualbox-host-modules-arch-5.2.8-4-x86_64.pkg.tar.xz
+```
 
 ** =plexmediaplayer= problem with QT > 5.10.0
 
