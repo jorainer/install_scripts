@@ -140,3 +140,10 @@ git clone https://aur.archlinux.org/noson-app
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/noson-app.tar.gz
 cd noson-app
 makepkg -sic
+
+echo "mons"
+cd ~/builds
+git clone https://aur.archlinux.org/mons
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mons.tar.gz
+cd mons
+makepkg -sic
