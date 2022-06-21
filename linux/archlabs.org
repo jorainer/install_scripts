@@ -81,7 +81,6 @@ To enable retina/HiDPI in macOS: =sudo defaults write
 /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool
 true=.
 
-
 ** Search/install additional stuff
 
 https://aur.archlinux.org/packages
@@ -189,6 +188,25 @@ for example:
 Files can then be copied into the folder and once it is unmounted everything
 (except filenames) is encrypted. Note that info on encryption is stored in
 root's home!
+
+*** External displays
+
+**** Multi-monitor setup
+
+Simply use =arandr= to define the setup.
+
+**** Screen mirroring with different resolution
+
+
+Info: eDPI (internal screen) resolution 2256x1504
+
+A: using =mons=. Set primary screen to external, then enable mirroring. To /restore/
+the original config: need to log out and log in again.
+
+B: =xrandr --output HDMI2 --auto --scale-from 2256x1504 --output eDP1=
+https://superuser.com/questions/1243205/how-to-mirror-a-display-with-different-resolutions
+
+https://unix.stackexchange.com/questions/101490/mirror-dual-monitors-with-different-resolutions
 
 ** Useful commands
 
