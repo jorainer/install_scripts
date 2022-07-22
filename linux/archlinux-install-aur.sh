@@ -127,12 +127,12 @@ makepkg -sic
 # cd skypeforlinux-stable-bin
 # makepkg -sic
 
-# echo "dropbox"
-# cd ~/builds
-# git clone https://aur.archlinux.org/dropbox.git
+echo "dropbox"
+cd ~/builds
+git clone https://aur.archlinux.org/dropbox.git
 # curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/dropbox.tar.gz
-# cd dropbox
-# makepkg -sic
+cd dropbox
+makepkg -sic
 
 echo "noson"
 cd ~/builds
@@ -147,3 +147,10 @@ git clone https://aur.archlinux.org/mons
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mons.tar.gz
 cd mons
 makepkg -sic
+
+echo "icloud-notes-linux-client"
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -sic
+sudo systemctl enable --now snapd.socket
+sudo snap install icloud-notes-linux-client
