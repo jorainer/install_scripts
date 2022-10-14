@@ -205,7 +205,6 @@ audio: Failed to create voice `adc'
 ```
 
 
-
 ** Search/install additional stuff
 
 https://aur.archlinux.org/packages
@@ -332,6 +331,16 @@ B: =xrandr --output HDMI2 --auto --scale-from 2256x1504 --output eDP1=
 https://superuser.com/questions/1243205/how-to-mirror-a-display-with-different-resolutions
 
 https://unix.stackexchange.com/questions/101490/mirror-dual-monitors-with-different-resolutions
+
+*** hibernation
+
+https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Hibernation
+
+eventually also:
+https://gist.github.com/klingtnet/c972b8182e4e2818d6d551b0cbeac44b , but that's
+less detailed.
+
+to hibernate: systemctl hibernate
 
 ** Useful commands
 
