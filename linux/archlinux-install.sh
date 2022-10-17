@@ -26,6 +26,9 @@ pacman -S --noconfirm libxcrypt-compat
 pacman -S --noconfirm docker
 pacman -S --noconfirm docker-compose
 
+echo "openbox"
+pacman -S --noconfirm openbox obconf archlabs-obkey archlabs-skel-openbox
+
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc
 pacman -S --noconfirm arpack lapack lapacke

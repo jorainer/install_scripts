@@ -1,5 +1,5 @@
 * Installing ArchLabs
-  
+
 ** Installation
 
 To update/sync the repos: =pacman -Sy=.
@@ -210,6 +210,8 @@ audio: Failed to create voice `adc'
 https://aur.archlinux.org/packages
 
 ** Customization and setup
+
+Most of the customization are for the openbox window manager.
 
 *** Themes
 
