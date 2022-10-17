@@ -1,16 +1,22 @@
 # Setup and installation
 
+## Linux installation and setup
+
+Installation of linux ([archlabs](https://archlabslinux.com/), an arch based
+linux) is described in the [archlabs.org](linux/archlabs.org) in the *linux*
+subfolder. The document describes also some configurations etc of the installed
+linux and provides maybe helpful links.
+
+## macOS installation and setup
+
 Use [homebrew](https://brew.sh) to install all command line tools and 
 applications.
 
-- `./brew-jo-strong.sh`: install all command line utilities using homebrew.
-- `./brew-cask.sh`: install apps using *brew cask*.
+- `./install.sh`: calls all individual *install* scripts to install all required
+  software.
 
-Install the Latex environment with the `tinytex` R package, i.e. in a 
-(non-docker) R version install the `tinytex` with 
-`install.packages("tinytex")` and then LaTeX with `tinyte::install_tinytex()`.
 
-## Manual settings
+### Manual settings
 
 - Function keys for Terminal: System preferences -> Keyboard -> Shortcuts: 
   select `fn` keys on the left, add with `+` Terminal app.
