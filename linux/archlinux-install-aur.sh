@@ -160,3 +160,13 @@ cd snapd
 makepkg -sic
 sudo systemctl enable --now snapd.socket
 sudo snap install icloud-notes-linux-client
+
+echo "httpfs2-2gbplus"
+git clone https://aur.archlinux.org/httpfs2-2gbplus.git
+cd httpfs2-2gbplus
+makepkg -sic
+
+echo "Microsoft fonts"
+git clone https://aur.archlinux.org/ttf-ms-win10-auto.git
+cd ttf-ms-win10-auto
+makepkg -sic
