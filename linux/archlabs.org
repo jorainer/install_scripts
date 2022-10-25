@@ -205,6 +205,10 @@ audio: Failed to create voice `adc'
 ```
 
 
+*** PREFERRED virtualization: KVM/virt-manager
+
+https://www.howtoforge.com/how-to-install-kvm-qemu-on-manjaro-archlinux/
+
 ** Search/install additional stuff
 
 https://aur.archlinux.org/packages
@@ -363,10 +367,24 @@ Downgrade packages with =pacman -U /var/cache/pacman/pkg/<pkg name>=.
 
 go to /var/cache/pacman/pkg and downgrade the linux using
 
-```
+#+BEGIN_EXAMPLE
 pacman -U file://linux-4.15.8-1-x86_64.pkg.tar.xz
 file://linux-headers-4.15.8-1-x86_64.pkg.tar.xz file://virtualbox-host-modules-arch-5.2.8-4-x86_64.pkg.tar.xz
-```
+#+END_EXAMPLE
+
+** Unsorted issues
+
+*** PGP signature update
+
+Sometimes package fail to install because of outdated PGP signature. Solution:
+
+#+BEGIN_EXAMPLE
+sudo pacman-key --init && sudo pacman-key --populate
+sudo pacman-key --refresh-keys
+sudo pacman -Sy archlinux-keyring
+sudo pacman -Sy archlabs-keyring
+#+END_EXAMPLE
+
 
 ** =plexmediaplayer= problem with QT > 5.10.0
 
