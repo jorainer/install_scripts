@@ -25,7 +25,6 @@ to search using =pkgfile <file within package>=.
 Install settings using /https://github.com/jorainer/memacs/. After that, copy the
 /linux.emacs/ file to the home dir and all should be fine.
 
-
 *** MySQL setup
 
 1) Install databases: =sudo mysql_install_db --user=mysql --basedir=/usr
@@ -35,8 +34,7 @@ Install settings using /https://github.com/jorainer/memacs/. After that, copy th
 4) Add user: =create user 'jo'@'localhost' identified by '<pass>';= and grant
    privileges: =grant all privileges on *.* to 'jo'@'localhost';=.
 
-
-*** VMware
+*** DEPRECATED VMware
 
 We will need the =unlocker= tool from DrDonk (cloned from github):
 =https://github.com/DrDonk/unlocker=. Best is to download a release directly
@@ -64,7 +62,7 @@ To create a new macOS virtual machine:
   =unlocker= repo. Eventually the tools have to be installed twice.
 - Seems it is required to start =vmplayer= with sudo.
 
-*** Qemu
+*** DEPRECATED Qemu
 
 To install macOS on linux: https://github.com/sickcodes/Docker-OSX . Best
 to install with the selected docker, then copy the created image to another
@@ -204,10 +202,16 @@ alsa: Reason: No such file or directory
 audio: Failed to create voice `adc'
 ```
 
-
 *** PREFERRED virtualization: KVM/virt-manager
 
 https://www.howtoforge.com/how-to-install-kvm-qemu-on-manjaro-archlinux/
+
+*** Access to iCloud and apple notes etc
+
+A convenient tool is icloud-for-linux that can be installed from snap. Source
+code repo is here:
+https://github.com/cross-platform/icloud-for-linux. Installation instructions
+are here: https://github.com/cross-platform/icloud-for-linux.
 
 ** Search/install additional stuff
 
@@ -228,6 +232,12 @@ Get GTK-themes from here: https://github.com/addy-dclxvi/gtk-theme-collections
 
 Copy them to the ~/.themes folder and use Xfce4 Settings Apperance
 or LC Appearence to set.
+
+Get tint2 (panel) themes from here:
+https://github.com/addy-dclxvi/tint2-theme-collections and copy them to the
+~/.config/tint2 folder. To activate: =tint2 -c
+~/.config/tint2/livia/livia.tint2rc= to enable on openbox startup put that
+command to the openbox autostart file (with a trailing =&=).
 
 *** Zsh
 

@@ -5,6 +5,7 @@ RforMassSpectrometry/Chromatograms
 RforMassSpectrometry/MsBackendHmdb
 RforMassSpectrometry/MsBackendMassbank
 RforMassSpectrometry/MsBackendMgf
+RforMassSpectrometry/MsBackendSql
 RforMassSpectrometry/MetaboCoreUtils
 RforMassSpectrometry/MetaboAnnotation
 RforMassSpectrometry/MsExperiment
