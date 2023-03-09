@@ -16,7 +16,7 @@ pacman -S --noconfirm cifs-utils dosfstools mtools ntfs-3g
 pacman -S --noconfirm wicd
 pacman -S --noconfirm gkrellm
 pacman -S --noconfirm owncloud-client
-pacman -S --noconfirm xdotool xsel keepass
+pacman -S --noconfirm xdotool xsel keepassxc
 pacman -S --noconfirm terminator
 pacman -S --noconfirm redshift
 pacman -S --noconfirm fping
@@ -28,6 +28,10 @@ pacman -S --noconfirm docker-compose
 
 echo "openbox"
 pacman -S --noconfirm openbox obconf archlabs-obkey archlabs-skel-openbox
+
+echo "xfce4"
+pacman -S --noconfirm xfce4-terminal xfce4-power-manager xfce4-screensaver xfce4-session xfce4-settings
+pacman -S --noconfirm thunar thunar-archive-plugin thunar-volman
 
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc
@@ -62,15 +66,17 @@ pacman -S --noconfirm pandoc pandoc-citeproc pandoc-crossref
 pacman -S --noconfirm libreoffice-still
 pacman -S --noconfirm ttf-inconsolata
 pacman -S --noconfirm thunderbird
+pacman -S --noconfirm mattermost mattermost-desktop
 
 echo "Installing multimedia packages"
-pacman -S --noconfirm gimp darktable
+pacman -S --noconfirm gimp darktable feh
 pacman -S --noconfirm vlc mpv
 pacman -S --noconfirm ffmpeg ffmpegthumbnailer
 pacman -S --noconfirm ario xmms2
 pacman -S --noconfirm handbrake
 pacman -S --noconfirm transmission-gtk
 pacman -S --noconfirm digikam hugin kipi-plugins
+pacman -S --noconfirm ncspot
 
 echo "Switching to JDK8"
 archlinux-java java-8-openjdk
