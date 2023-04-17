@@ -255,6 +255,15 @@ sudo pacman -Sy archlabs-keyring
 #+END_EXAMPLE
 
 
+*** snap =bluemail= not showing fonts correctly
+
+After removing the font cache it can happen that bluemail is not showing fonts
+properly (showing just empty rectangles instead). Workaround for that:
+
+- copy and replace everything from //var/cache/fontconfig/ to
+  /~/snap/bluemail/common//.cache/fontconfig/ (eventually do the same for
+  /~.cache/fontconfig/.
+
 * Old stuff
 
 ** DEPRECATED VMware
