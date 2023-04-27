@@ -11,4 +11,5 @@ RforMassSpectrometry/MetaboAnnotation
 RforMassSpectrometry/MsExperiment
 RforMassSpectrometry/CompoundDb
 EuracBiomedicalResearch/CompMetaboTools
+EuracBiomedicalResearch/tidyfr
 ugcd/solarius
