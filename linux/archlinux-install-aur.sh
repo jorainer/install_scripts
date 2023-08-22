@@ -7,13 +7,6 @@ git clone https://aur.archlinux.org/azcopy.git
 cd azcopy
 makepkg -sic
 
-echo "plex-media-player"
-cd ~/builds
-git clone https://aur.archlinux.org/plex-media-player.git
-curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plex-media-player.tar.gz
-cd plex-media-player
-makepkg -sic
-
 echo "gkrellm-themes"
 cd ~/builds
 git clone https://aur.archlinux.org/gkrellm-themes.git
@@ -84,15 +77,19 @@ curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/mons.tar.gz
 cd mons
 makepkg -sic
 
-echo "icloud-notes-linux-client"
+echo "snap"
 git clone https://aur.archlinux.org/snapd.git
 cd snapd
 makepkg -sic
 sudo systemctl enable --now snapd.socket
-sudo snap install icloud-notes-linux-client
+sudo snap install icloud-for-linux
+# sudo snap install icloud-notes-linux-client
 
 echo "bluemail"
 sudo snap install bluemail
+
+echo "plex desktop"
+sudo snap install plex-desktop
 
 echo "httpfs2-2gbplus"
 git clone https://aur.archlinux.org/httpfs2-2gbplus.git
