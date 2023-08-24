@@ -36,6 +36,7 @@ echo "xfce4"
 pacman -S --noconfirm xfce4-terminal xfce4-power-manager xfce4-screensaver xfce4-session xfce4-settings
 pacman -S --noconfirm thunar thunar-archive-plugin thunar-volman
 pacman -S --noconfirm xdg-desktop-portal-xapp
+pacman -S --noconfirm xfce4-pulseaudio-plugin
 
 echo "Installing development tools"
 pacman -S --noconfirm gcc gcc-fortran gcc-objc
