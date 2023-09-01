@@ -78,6 +78,7 @@ cd mons
 makepkg -sic
 
 echo "snap"
+cd ~/builds
 git clone https://aur.archlinux.org/snapd.git
 cd snapd
 makepkg -sic
@@ -92,51 +93,61 @@ echo "plex desktop"
 sudo snap install plex-desktop
 
 echo "httpfs2-2gbplus"
+cd ~/builds
 git clone https://aur.archlinux.org/httpfs2-2gbplus.git
 cd httpfs2-2gbplus
 makepkg -sic
 
 echo "Microsoft fonts"
+cd ~/builds
 git clone https://aur.archlinux.org/ttf-ms-win10-auto.git
 cd ttf-ms-win10-auto
 makepkg -sic
 
 echo "Google Chrome"
+cd ~/builds
 git clone https://aur.archlinux.org/google-chrome.git
 cd google-chrome
 makepkg -sic
 
 echo "jdownloader2"
+cd ~/builds
 git clone https://aur.archlinux.org/jdownloader2.git
 cd jdownloader2
 makepkg -sic
 
 echo "microsoft-edge-stable-bin"
+cd ~/builds
 git clone https://aur.archlinux.org/microsoft-edge-stable-bin.git
 cd microsoft-edge-stable-bin
 makepkg -sic
 
 echo "Quarto"
+cd ~/builds
 git clone https://aur.archlinux.org/quarto-cli-bin.git
 cd quarto-cli-bin
 makepkg -sic
 
 echo "moderncv"
+cd ~/builds
 git clone https://aur.archlinux.org/texlive-moderncv-git.git
 cd texlive-moderncv-git
 makepkg -sic
 
 echo "ttf-aller"
+cd ~/builds
 git clone https://aur.archlinux.org/ttf-aller.git
 cd ttf-aller
 makepkg -sic
 
 echo "font-awesome"
+cd ~/builds
 git clone https://aur.archlinux.org/ttf-font-awesome-5.git
 cd ttf-font-awesome-5
 makepkg -sic
 
 echo "gotop"
+cd ~/builds
 git clone https://aur.archlinux.org/gotop.git
 cd gotop
 makepkg -sic
