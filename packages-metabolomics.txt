@@ -16,3 +16,9 @@ MsBackendMassbank
 MsBackendMgf
 MsCoreUtils
 MetaboCoreUtils
+MsBackendSql
+MetaboAnnotation
+CompoundDb
+QFeatures
+MsFeatures
+MsExperiment
