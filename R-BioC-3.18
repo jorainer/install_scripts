@@ -1,0 +1,54 @@
+#!/bin/bash
+# This script runs a docker container
+# (bioconductor/bioconductor_docker:RELEASE_3_18), maps local folders to
+# folders accessible within the docker (using -v , e.g.
+# -v /run/media:/run/media maps the folder /run/media on the host to a
+# folder /host/run/media within docker - accessing this folder
+# within the docker thus accesses the mapped folder on the host), and starts
+# R passing all eventual passed parameters to it.
+#
+# Configurations for mapped folders needs to be adapted!
+#
+# Importantly, R packages will be installed into the (host) local folder
+# mapped to /usr/local/lib/R/host-site-library within the docker. Thus,
+# any R packages installed will also be avaiable when R is re-started.
+#
+# Also, R will be started in the present folder (through `pwd`).
+#
+# For definition of other parameters, such as --cpus, --memory, refer to the
+# documentation of the docker command.
+
+# Allow the docker to open X11 windows. Might need to be adapted/configures
+# based on the host operating system and security settings.
+xhost + local:docker
+# Eventual alternative:
+# HOSTNAME=`hostname`
+# /usr/X11/bin/xhost + $HOSTNAME
+
+# Run R in docker using R libraries defined in R_LIBS and mapping the home
+# directory.
+R_LIBS="/home/jo/R/docker/BioC-3.18"
+# in which folder should R be started
+DIR=`pwd`
+
+docker run \
+       --cpus="8" \
+       --memory="54g" \
+       --memory-swap=-1 \
+       -v $R_LIBS:/usr/local/lib/R/host-site-library \
+       -v $HOME:$HOME \
+       -v /tmp/.X11-unix:/tmp/.X11-unix \
+       -v $HOME/.Xauthority:/home/rstudio/.Xauthority \
+       -v $HOME/.Rprofile:/home/rstudio/.Rprofile \
+       -v $R_LIBS/.cache/:/home/rstudio/.cache/ \
+       -v /run/media:/run/media \
+       -v /home/jo/.R:/home/rstudio/.R \
+       -v /tmp:/tmp \
+       -e R_DEFAULT_DEVICE=pdf \
+       -e DISPLAY=$DISPLAY \
+       -e PASSWORD="rstudio" \
+       -e BIOCONDUCTOR_USE_CONTAINER_REPOSITORY="FALSE" \
+       -w $DIR \
+       --user rstudio \
+       -it bioconductor/bioconductor_docker:RELEASE_3_18 \
+       /usr/local/bin/R $*
