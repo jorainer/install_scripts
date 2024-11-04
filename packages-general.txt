@@ -28,3 +28,8 @@ dbplyr
 chron
 randomcoloR
 vioplot
+kableExtra
+reticulate
+quarto
+basilisk
+

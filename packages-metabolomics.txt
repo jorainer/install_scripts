@@ -22,3 +22,6 @@ CompoundDb
 QFeatures
 MsFeatures
 MsExperiment
+MsQuality
+MsBackendMetaboLights
+SpectraQL
