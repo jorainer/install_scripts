@@ -2,3 +2,7 @@ jorainer/atc
 EuracBiomedicalResearch/tidyfr
 ugcd/solarius
 RforMassSpectrometry/MsIO
+artifactdb/alabaster.base
+artifactdb/alabaster.matrix
+artifactdb/alabaster.ranges
+artifactdb/alabaster.se

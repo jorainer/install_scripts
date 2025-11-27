@@ -15,3 +15,5 @@ hexSticker
 rhdf5
 jsonlite
 vdiffr
+benchmarkme
+PeakRAM
